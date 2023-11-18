@@ -102,12 +102,12 @@ def train_model(X: ndarray, y: ndarray) -> Tuple[Sequential, float, float]:
     early_stopping = EarlyStopping(monitor='val_loss', patience=5)
     
     # Train the model with early stopping callback
-    model.fit(X_train, y_train, epochs=100, batch_size=32, validation_data=(X_val, y_val), callbacks=[early_stopping])
+    history = model.fit(X_train, y_train, epochs=100, batch_size=32, validation_data=(X_val, y_val), callbacks=[early_stopping])
     
     # Evaluate the model
     val_loss, val_acc = model.evaluate(X_val, y_val)
     
-    return model, val_loss, val_acc, X_val, y_val
+    return model, val_loss, val_acc, X_val, y_val, history
 
 if __name__ == "__main__":
     # Define the leagues
@@ -120,7 +120,7 @@ if __name__ == "__main__":
     X = standardScaler(X)
     
     # Train the model
-    model, val_loss, val_acc, X_val, y_val = train_model(X, y)
+    model, val_loss, val_acc, X_val, y_val, history = train_model(X, y)
 
     # Print the validation loss and accuracy
     print(f'Validation Loss: {val_loss}, Validation Accuracy: {val_acc}')
@@ -132,16 +132,22 @@ if __name__ == "__main__":
     # Evaluate other metrics
     metrics = evaluate_model(y_val, final_predictions)
     print(f"Evaluation Metrics: {metrics}")
-
+    
     # Save the model
-    model.save('ML-Football-matches-predictor/model.h5')
+    #model.save('ML-Football-matches-predictor/model.h5')
 
     # Plot confusion matrix
     plot_confusion_matrix(y_val, final_predictions)
-
+    
+    # Plot the learning curve
+    plot_learning_curve(history)
+    
+    
+    # plot the ROC curve
+    plot_multiclass_roc_auc(model, X_val, y_val, 3)
+    
     # Define the features
-    features = ['momentum', 'last_two_match_xpts', 
-                'last_two_match_result', 'xG_xGA_ratio', 'xG_xGA_diff',
+    features = ['momentum', 'last_two_match_xpts', 'last_two_match_result', 'xG_xGA_ratio', 'xG_xGA_diff',
                 'xG_squared', 'form_indicator_last_5', 'win_loss_ratio_last_5', 'momentum_squared', 
                 'momentum_cubed', 'xG_momentum_interaction','last_two_match_result_xpts_interaction', 
                 'last_two_match_result_xG_xGA_ratio_interaction','xpts_xG_xGA_ratio_interaction', 'win_ratio_last_5', 
@@ -149,5 +155,4 @@ if __name__ == "__main__":
     
     # select features importance
     select_featchres_importance(X, y, features)
-    
     

@@ -1,14 +1,18 @@
+from itertools import cycle
 import joblib
 from matplotlib import pyplot as plt
 import pandas as pd
 import numpy as np
-from sklearn.metrics import accuracy_score
+from sklearn.calibration import label_binarize
+from sklearn.metrics import accuracy_score, auc, roc_curve
 from sklearn.decomposition import PCA
 from sklearn.discriminant_analysis import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import confusion_matrix, f1_score, precision_score, recall_score
 import seaborn as sns
 from sklearn.model_selection import cross_val_score
+from tensorflow.keras.wrappers.scikit_learn import KerasClassifier
+
 
 def rolling_calculation(df, column, window, func):
     return df[column].rolling(window, min_periods=1).apply(func)
@@ -127,18 +131,102 @@ def plot_confusion_matrix(y_true: pd.Series, y_pred: pd.Series) -> None:
     plt.ylabel('True')
     plt.show()
 
-def cross_validation(X, y, model, cv=5):
+def cross_validation(X, y, build_fn, cv=5):
     """
-    This function is used to perform cross validation
-    :param X: the features
-    :param y: the target
-    :param model: the model
-    :param cv: the number of folds
-    :return: the accuracy
+    Perform cross validation.
+
+    Args:
+        X (array-like): The features.
+        y (array-like): The target.
+        build_fn (callable): Function to build the Keras model.
+        cv (int, optional): Number of folds. Defaults to 5.
+
+    Returns:
+        numpy.ndarray: Array of scores of the estimator for each run of the cross validation.
     """
-    # Perform cross validation
+    model = KerasClassifier(build_fn=build_fn)
     scores = cross_val_score(model, X, y, cv=cv)
     return scores.mean()
+
+def plot_learning_curve(history):
+    """
+    Trace la courbe d'apprentissage du modèle en fonction de l'historique d'entraînement.
+
+    Parameters:
+    - history: Historique de retour de la fonction fit de Keras, contenant les métriques d'entraînement.
+    """
+    # Récupération des données de précision et de perte
+    acc = history.history['accuracy']
+    val_acc = history.history['val_accuracy']
+    loss = history.history['loss']
+    val_loss = history.history['val_loss']
+    epochs = range(1, len(acc) + 1)
+
+    # Tracé de la précision
+    plt.figure(figsize=(12, 5))
+    plt.subplot(1, 2, 1)
+    plt.plot(epochs, acc, 'bo', label='Training accuracy')
+    plt.plot(epochs, val_acc, 'b', label='Validation accuracy')
+    plt.title('Training and Validation Accuracy')
+    plt.xlabel('Epochs')
+    plt.ylabel('Accuracy')
+    plt.legend()
+
+    # Tracé de la perte
+    plt.subplot(1, 2, 2)
+    plt.plot(epochs, loss, 'bo', label='Training loss')
+    plt.plot(epochs, val_loss, 'b', label='Validation loss')
+    plt.title('Training and Validation Loss')
+    plt.xlabel('Epochs')
+    plt.ylabel('Loss')
+    plt.legend()
+
+    plt.tight_layout()
+    plt.show()
+
+def plot_multiclass_roc_auc(model, X, y, n_classes):
+    """
+    Trace les courbes ROC et calcule l'AUC pour un modèle de classification multiclasse.
+
+    Parameters:
+    - model: Modèle entraîné.
+    - X: Données de test/validation.
+    - y: Étiquettes réelles.
+    - n_classes: Nombre de classes.
+    """
+    # Binarisation des étiquettes
+    y_bin = label_binarize(y, classes=range(n_classes))
+
+    # Calcul des scores de probabilité
+    y_score = model.predict(X)
+
+    # Structures pour le tracé
+    fpr = dict()
+    tpr = dict()
+    roc_auc = dict()
+
+    # Calcul des courbes ROC et AUC pour chaque classe
+    for i in range(n_classes):
+        fpr[i], tpr[i], _ = roc_curve(y_bin[:, i], y_score[:, i])
+        roc_auc[i] = auc(fpr[i], tpr[i])
+
+    # Configuration du tracé
+    colors = cycle(['blue', 'red', 'green', 'yellow', 'purple'])
+    plt.figure(figsize=(7, 7))
+
+    for i, color in zip(range(n_classes), colors):
+        plt.plot(fpr[i], tpr[i], color=color, lw=2,
+                 label='ROC curve of class {0} (area = {1:0.2f})'
+                 ''.format(i, roc_auc[i]))
+
+    plt.plot([0, 1], [0, 1], 'k--', lw=2)
+    plt.xlim([0.0, 1.0])
+    plt.ylim([0.0, 1.05])
+    plt.xlabel('False Positive Rate')
+    plt.ylabel('True Positive Rate')
+    plt.title('Multi-class ROC')
+    plt.legend(loc="lower right")
+    plt.show()
 
 def save_model(model):
     """
