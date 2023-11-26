@@ -109,6 +109,8 @@ if __name__ == "__main__":
     # Preprocessing the data
     X, y = pre_processing(leagues)
     
+    X = standardScaler(X)
+
     # Train the model
     model, val_loss, val_acc, X_val, y_val, history = train_model(X, y)
 

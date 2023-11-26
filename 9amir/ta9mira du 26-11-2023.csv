@@ -1,0 +1,18 @@
+CHAMP,Equipe1,cote,Equipe2,Predicted_Result_Equipe1,Confidence_Equipe1,Predicted_Result_Equipe2,Confidence_Equipe2,expectation of gain
+AL1,FC Cologne,"['7.25', '5.25', '1.15']",Bayern Munich,Lose,1.0,Win,1.0,1.15
+AL1,Werder Bremen,"['4.75', '4.10', '1.35']",Bayer Leverkusen,Lose,1.0,Win,1.0,1.35
+AL1,Wolfsburg,"['3.15', '3.40', '1.70']",RasenBallsport Leipzig,Lose,0.63,Win,0.66,1.071
+ANP,Newcastle United,"['2.35', '3.40', '2.50']",Chelsea,Win,0.52,Lose,0.62,1.2220000000000002
+ANP,Nottingham Forest,"['2.75', '3.20', '2.00']",Brighton,Draw,0.52,Draw,0.5,1.6640000000000001
+ANP,Brentford,"['3.90', '3.30', '1.60']",Arsenal,Draw,0.95,Draw,0.7,3.135
+ES1,Atletico Madrid,"['1.28', '3.90', '7.00']",Mallorca,Win,1.0,Lose,0.78,1.28
+FR1,Lorient,"['1.75', '3.00', '3.40']",Metz,Draw,0.79,Draw,0.57,2.37
+FR1,Montpellier,"['2.05', '3.00', '2.70']",Brest,Draw,0.93,Draw,0.97,2.79
+ES1,Real Sociedad,"['1.60', '3.20', '4.00']",Sevilla,Draw,0.67,Draw,0.99,2.144
+FR1,Rennes,"['1.75', '3.15', '3.25']",Reims,Draw,1.0,Draw,0.84,3.15
+AL1,Hoffenheim,"['1.68', '3.40', '3.25']",Mainz 05,Win,0.8,Lose,1.0,1.344
+ANP,Everton,"['2.45', '3.10', '2.20']",Manchester United,Lose,1.0,Win,0.88,2.2
+IT1,Roma,"['1.50', '3.35', '4.75']",Udinese,Draw,0.72,Draw,0.89,2.412
+ES1,Real Betis,"['1.55', '3.25', '4.40']",Las Palmas,Draw,0.89,Draw,0.6,2.8925
+IT1,Verona,"['2.35', '2.70', '2.60']",Lecce,Draw,0.88,Draw,1.0,2.3760000000000003
+IT1,Bologna,"['2.00', '2.85', '3.00']",Torino,Draw,1.0,Draw,0.86,2.85

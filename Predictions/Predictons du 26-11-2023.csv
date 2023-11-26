@@ -1,97 +1,97 @@
 team,Predicted_Result,Confidence
-Alaves,Lose,0.64
-Almeria,Draw,0.98
-Athletic Club,Draw,0.51
-Atletico Madrid,Win,0.76
-Barcelona,Win,0.56
-Cadiz,Draw,0.99
-Celta Vigo,Lose,0.65
-Getafe,Draw,1.0
-Girona,Win,0.96
-Granada,Lose,0.84
-Las Palmas,Win,0.5
-Mallorca,Draw,1.0
-Osasuna,Lose,0.67
-Rayo Vallecano,Win,0.75
-Real Betis,Draw,0.57
-Real Madrid,Win,0.84
-Real Sociedad,Draw,0.56
-Sevilla,Draw,1.0
-Valencia,Win,0.63
-Villarreal,Win,0.77
-Augsburg,Draw,0.63
-Bayer Leverkusen,Win,0.99
-Bayern Munich,Win,0.63
-Bochum,Draw,1.0
-Borussia Dortmund,Win,0.99
-Borussia M.Gladbach,Draw,0.89
-Darmstadt,Draw,0.43
-Eintracht Frankfurt,Draw,0.53
-FC Cologne,Lose,0.99
-FC Heidenheim,Win,0.7
-Freiburg,Win,1.0
-Hoffenheim,Win,0.64
-Mainz 05,Draw,0.86
-RasenBallsport Leipzig,Win,0.57
-Union Berlin,Draw,0.55
-VfB Stuttgart,Win,0.78
-Werder Bremen,Lose,0.51
-Wolfsburg,Win,1.0
-Arsenal,Win,0.78
-Aston Villa,Win,0.53
-Bournemouth,Lose,0.85
-Brentford,Draw,0.5
-Brighton,Win,0.84
+Alaves,Lose,0.86
+Almeria,Lose,1.0
+Athletic Club,Win,0.75
+Atletico Madrid,Win,1.0
+Barcelona,Win,0.63
+Cadiz,Draw,0.69
+Celta Vigo,Lose,1.0
+Getafe,Draw,0.99
+Girona,Win,1.0
+Granada,Lose,1.0
+Las Palmas,Draw,0.6
+Mallorca,Lose,0.78
+Osasuna,Lose,0.69
+Rayo Vallecano,Draw,0.99
+Real Betis,Draw,0.89
+Real Madrid,Win,1.0
+Real Sociedad,Draw,0.67
+Sevilla,Draw,0.99
+Valencia,Draw,0.93
+Villarreal,Lose,0.85
+Augsburg,Draw,0.68
+Bayer Leverkusen,Win,1.0
+Bayern Munich,Win,1.0
+Bochum,Draw,0.74
+Borussia Dortmund,Win,1.0
+Borussia M.Gladbach,Draw,0.85
+Darmstadt,Lose,1.0
+Eintracht Frankfurt,Draw,0.8
+FC Cologne,Lose,1.0
+FC Heidenheim,Lose,1.0
+Freiburg,Draw,0.68
+Hoffenheim,Win,0.8
+Mainz 05,Lose,1.0
+RasenBallsport Leipzig,Win,0.66
+Union Berlin,Lose,1.0
+VfB Stuttgart,Win,0.88
+Werder Bremen,Lose,1.0
+Wolfsburg,Lose,0.63
+Arsenal,Draw,0.7
+Aston Villa,Win,0.97
+Bournemouth,Lose,0.99
+Brentford,Draw,0.95
+Brighton,Draw,0.5
 Burnley,Lose,1.0
-Chelsea,Draw,0.61
-Crystal Palace,Win,0.95
-Everton,Lose,0.84
-Fulham,Win,0.92
-Liverpool,Win,0.57
-Luton,Lose,0.8
-Manchester City,Win,0.97
-Manchester United,Win,0.53
-Newcastle United,Win,0.59
-Nottingham Forest,Win,0.59
+Chelsea,Lose,0.62
+Crystal Palace,Lose,0.97
+Everton,Lose,1.0
+Fulham,Lose,0.58
+Liverpool,Draw,0.68
+Luton,Lose,1.0
+Manchester City,Win,1.0
+Manchester United,Win,0.88
+Newcastle United,Win,0.52
+Nottingham Forest,Draw,0.52
 Sheffield United,Lose,1.0
-Tottenham,Win,0.99
-West Ham,Win,0.56
-Wolverhampton Wanderers,Draw,0.63
-AC Milan,Win,0.98
-Atalanta,Win,0.84
-Bologna,Draw,0.65
-Cagliari,Draw,0.59
-Empoli,Lose,0.95
-Fiorentina,Win,0.65
-Frosinone,Win,0.63
-Genoa,Lose,0.59
-Inter,Win,0.91
-Juventus,Win,0.63
-Lazio,Draw,0.52
-Lecce,Draw,0.96
-Monza,Draw,0.58
-Napoli,Win,0.89
-Roma,Draw,0.55
-Salernitana,Draw,0.65
-Sassuolo,Draw,0.47
-Torino,Win,0.53
-Udinese,Draw,1.0
-Verona,Win,0.58
-Brest,Win,0.99
-Clermont Foot,Draw,0.59
-Le Havre,Draw,0.62
-Lens,Draw,0.74
-Lille,Draw,0.57
-Lorient,Draw,0.98
-Lyon,Draw,0.58
-Marseille,Win,0.67
-Metz,Draw,0.55
-Monaco,Win,0.87
-Montpellier,Draw,0.57
-Nantes,Win,0.53
-Nice,Win,0.6
-Paris Saint Germain,Draw,0.59
-Reims,Win,0.63
+Tottenham,Win,1.0
+West Ham,Draw,0.7
+Wolverhampton Wanderers,Lose,1.0
+AC Milan,Win,1.0
+Atalanta,Win,0.98
+Bologna,Draw,1.0
+Cagliari,Lose,1.0
+Empoli,Lose,1.0
+Fiorentina,Win,0.58
+Frosinone,Lose,0.59
+Genoa,Lose,0.76
+Inter,Win,1.0
+Juventus,Win,0.79
+Lazio,Lose,1.0
+Lecce,Draw,1.0
+Monza,Draw,0.86
+Napoli,Win,1.0
+Roma,Draw,0.72
+Salernitana,Draw,0.89
+Sassuolo,Lose,1.0
+Torino,Draw,0.86
+Udinese,Draw,0.89
+Verona,Draw,0.88
+Brest,Draw,0.97
+Clermont Foot,Lose,1.0
+Le Havre,Draw,0.99
+Lens,Draw,0.94
+Lille,Draw,0.76
+Lorient,Draw,0.79
+Lyon,Lose,0.95
+Marseille,Draw,1.0
+Metz,Draw,0.57
+Monaco,Win,1.0
+Montpellier,Draw,0.93
+Nantes,Lose,1.0
+Nice,Win,1.0
+Paris Saint Germain,Win,0.91
+Reims,Draw,0.84
 Rennes,Draw,1.0
-Strasbourg,Win,0.76
+Strasbourg,Lose,0.94
 Toulouse,Draw,1.0

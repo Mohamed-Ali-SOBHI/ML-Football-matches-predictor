@@ -73,6 +73,16 @@ def load_stats(leagues):
     data.to_csv("ML-Football-matches-predictor/StatsOfZisYear/2023.csv", index=False)
     return data
 
+# Define a function to load the scaler
+def load_scaler(path='ML-Football-matches-predictor/scaler.pkl'):
+    return joblib.load(path)
+
+# Define a function to standardize features using the saved scaler
+def standardize_features(X, scaler_path='ML-Football-matches-predictor/sc.pkl'):
+    scaler = load_scaler(scaler_path)
+    X_scaled = scaler.transform(X)
+    return X_scaled
+
 # Function to load the model and make predictions
 def predict_with_model(model_path: str, input_data: pd.DataFrame) -> np.ndarray:
     """
@@ -83,8 +93,9 @@ def predict_with_model(model_path: str, input_data: pd.DataFrame) -> np.ndarray:
     :return: Numpy array with the predictions.
     """
     model = load_model(model_path)
-    predictions = model.predict(input_data)
-    predictions = np.round(predictions, 3)
+    X_scaled = standardize_features(input_data)
+    predictions = model.predict(X_scaled)    
+    predictions = np.round(predictions, 2)
     return pd.DataFrame(predictions, columns=['Win%', 'Draw%', 'Lose%'])
     
 if __name__ == '__main__':

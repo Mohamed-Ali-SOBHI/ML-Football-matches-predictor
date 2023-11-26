@@ -70,6 +70,26 @@ def resolve_prediction_conflicts(row):
     
     return row
 
+
+def calculate_expectation_of_gain(row):
+    """
+    Calculates the expectation of gain for a given row.
+    :param row: Row of the DataFrame containing predictions for both teams.
+    :return: The same row with the expectation of gain calculated.
+    """
+    # Extract the odds from the 'cote' column, removing brackets and quotes
+    odds = [float(od.strip().replace("'", "")) for od in row['cote'].strip('[]').split(',')]
+    
+    # Calculate the expectation of gain based on the predicted result
+    if row['Predicted_Result_Equipe1'] == 'Win':
+        row['expectation of gain'] = row['Confidence_Equipe1'] * odds[0]
+    elif row['Predicted_Result_Equipe1'] == 'Draw':
+        row['expectation of gain'] = row['Confidence_Equipe1'] * odds[1]
+    elif row['Predicted_Result_Equipe1'] == 'Lose':
+        row['expectation of gain'] = row['Confidence_Equipe1'] * odds[2]
+    
+    return row
+
 def merge_data(matches, predictions):
     """
     Fusionne les données de match et de prédiction en appliquant une correspondance de noms d'équipe.
@@ -137,17 +157,19 @@ def merge_data(matches, predictions):
     filtred_final_merged = final_merged.apply(resolve_prediction_conflicts, axis=1)
     filtred_final_merged = filtred_final_merged[filtred_final_merged['conflict'] == False].drop(columns='conflict')
     
-    #filtred_final_merged['expectation of gain']
+    filtred_final_merged = filtred_final_merged.apply(calculate_expectation_of_gain, axis=1)
     
-    return final_merged, filtred_final_merged
+    return filtred_final_merged
 
-
+def save_te9mira(filtred_final_merged, day):
+    filtred_final_merged.to_csv(f"ML-Football-matches-predictor/9amir/ta9mira du {day}.csv", index=False)
+    
 current_day = time.strftime("%d-%m-%Y")
 matches = load_matches(current_day)
-print(matches)
 
 predictions = load_predictions(current_day)
-print(predictions)
 
-merge_df, filtred_merge_df = merge_data(matches, predictions) 
-print(merge_df, filtred_merge_df)
+filtred_merge_df = merge_data(matches, predictions) 
+print(filtred_merge_df)
+
+save_te9mira(filtred_merge_df, current_day)
