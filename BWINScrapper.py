@@ -21,7 +21,7 @@ def scrappe(urls):
         # Configuration du navigateur pour le mode headless
         options = webdriver.ChromeOptions()
         options.headless = True
-
+        
         # Ouvrir le navigateur et accéder à la page
         driver = webdriver.Chrome(options=options)  # Assurez-vous que ChromeDriver est dans votre PATH
         print('processing url:', url)
@@ -30,7 +30,10 @@ def scrappe(urls):
         try:
             # Utiliser une attente explicite pour attendre que les matchs soient chargés
             element_present = EC.presence_of_element_located((By.CLASS_NAME, 'grid-event-wrapper'))
-            WebDriverWait(driver, 20).until(element_present)
+            try:
+                WebDriverWait(driver, 10).until(element_present)
+            except:
+                print('Timed out waiting for page to load')
 
             # Obtenir le contenu de la page
             html = driver.page_source
@@ -103,7 +106,7 @@ if __name__ == '__main__':
         "https://sports.bwin.fr/fr/sports/football-4/aujourd-hui/france-16/ligue-1-102843", 
         "https://sports.bwin.fr/fr/sports/football-4/aujourd-hui/allemagne-17/bundesliga-102842", 
         "https://sports.bwin.fr/fr/sports/football-4/aujourd-hui/italie-20/serie-a-102846",
-        "https://sports.bwin.fr/fr/sports/football-4/aujourd-hui/russie-25/premier-league-102850"
+        
     ]
 
     # Pour aujourd'hui

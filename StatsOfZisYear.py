@@ -63,10 +63,10 @@ def save_data(stats):
         dir = team.split(' ')[0]
         #split the team name from the index 2 to the end of the string 
         teamName = team.split(' ')[2:]
-        season = team.split(' ')[1]
+        season = '2023'
         
         # Define the base directory
-        base_dir = 'ML-Football-matches-predictor/Data/' + dir
+        base_dir = 'ML-Football-matches-predictor/StatsOfZisYear/' + dir
         
         # Check if the directory exists. If not, create it.
         if not os.path.exists(base_dir):
@@ -98,7 +98,7 @@ if __name__ == '__main__':
     
     baseUrl = 'https://understat.com/league'
     leagues = ['La_liga', 'Bundesliga', 'EPL','Serie_A', 'Ligue_1',"RFPL"]
-    seasons = ['2022','2021','2020','2019','2018','2017','2016','2015','2014']
+    seasons = '2023'
     
     soup = get_soup(baseUrl)
     data = get_data_from_soup(soup,seasons,leagues,baseUrl)

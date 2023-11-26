@@ -27,45 +27,38 @@ def pre_processing(leagues):
         for dir in os.listdir("ML-Football-matches-predictor/Data/" + league):
             df = pd.read_csv(f"ML-Football-matches-predictor/Data/{league}/{dir}")
             df['result'] = df['result'].replace(result_mapping)
-            df['momentum'] = rolling_calculation(df, 'result', 5, np.sum)
-            df = ratio_calculation(df, 'xG', 'xGA')
-            df["xG_xGA_diff"] = df["xG"] - df["xGA"]
-            df['avg_xG_last_2'] = rolling_calculation(df, 'xG', 2, np.mean)
-            df['avg_xGA_last_2'] = rolling_calculation(df, 'xGA', 2, np.mean)
-            df['xG_squared'] = df['xG'] ** 2
-            df['xG_cubed'] = df['xG'] ** 3
-            df['form_indicator_last_5'] = form_indicator(df, 'result', 5)
-            df['win_loss_ratio_last_5'] = win_loss_ratio(df, 'result', 5)
+            
+            df['momentum'] = rolling_calculation(df, 'result', 2, np.sum)
             df['momentum_squared'] = df['momentum'] ** 2
             df['momentum_cubed'] = df['momentum'] ** 3
-            df['xG_momentum_interaction'] = df['xG'] * df['momentum']
+            
+            df['last_match_xG'] = last_match_metric(df, 'xG')
+            df['last_match_xGA'] = last_match_metric(df, 'xGA')
+            df['last_match_xpts'] = last_match_metric(df, 'xpts')
+
+            df['avg_xG_last_2'] = rolling_calculation(df, 'xG', 2, np.mean)
+            df['avg_xGA_last_2'] = rolling_calculation(df, 'xGA', 2, np.mean)
+            df['form_indicator_last_2'] = form_indicator(df, 'result', 2)
+            df['win_loss_ratio_last_2'] = win_loss_ratio(df, 'result', 2)            
 
             # Rolling calculations for last 2 matches
             rolling_columns = ['xG', 'xGA', 'xpts', 'result']
             for column in rolling_columns:
                 df[f'last_two_match_{column}'] = rolling_calculation(df, column, 2, np.sum)
             
-            df = interaction_terms(df, 'last_two_match_result', 'xpts')
-            df = interaction_terms(df, 'last_two_match_result', 'xG_xGA_ratio')
-            df = interaction_terms(df, 'xpts', 'xG_xGA_ratio')
             df['win_ratio_last_5'] = win_ratio_last_5(df, 'result')
             df['weighted_form_last_5'] = weighted_recent_form(df, 'result', 5)
             df['std_dev_result_last_5'] = rolling_calculation(df, 'result', 5, np.std)
-            df['net_form_last_5'] = rolling_calculation(df, 'xG', 5, np.sum) - rolling_calculation(df, 'xGA', 5, np.sum)
-            df['xG_xpts_interaction'] = df['xG'] * df['xpts']
-            df['momentum_xpts_ratio'] = df['momentum'] / df['xpts']
+           
             df.replace([np.inf, -np.inf], 0, inplace=True)  # Replace inf values
             data.append(df)
 
     data = pd.concat(data)
     print("Pre_processing done & the quantity of the data is: ", data.shape[0])
     data = data.dropna()
-    features = ['momentum', 'last_two_match_xpts', 
-                'last_two_match_result', 'xG_xGA_ratio', 'xG_xGA_diff',
-                'xG_squared', 'form_indicator_last_5', 'win_loss_ratio_last_5', 'momentum_squared', 
-                'momentum_cubed', 'xG_momentum_interaction','last_two_match_result_xpts_interaction', 
-                'last_two_match_result_xG_xGA_ratio_interaction','xpts_xG_xGA_ratio_interaction', 'win_ratio_last_5', 
-                'weighted_form_last_5', 'std_dev_result_last_5','xG_xpts_interaction', 'momentum_xpts_ratio']
+    features = ['momentum','last_two_match_result','form_indicator_last_2', 'win_loss_ratio_last_2', 'momentum_squared', 
+                'momentum_cubed','win_ratio_last_5', 'weighted_form_last_5', 'std_dev_result_last_5',
+                'last_match_xG', 'last_match_xGA', 'last_match_xpts']
     
     print("Updated pre_processing done & the quantity of the data is: ", data.shape[0])
     data[features].to_csv("updated_data.csv", index=False)
@@ -116,9 +109,6 @@ if __name__ == "__main__":
     # Preprocessing the data
     X, y = pre_processing(leagues)
     
-    # Standardize the features
-    X = standardScaler(X)
-    
     # Train the model
     model, val_loss, val_acc, X_val, y_val, history = train_model(X, y)
 
@@ -134,7 +124,7 @@ if __name__ == "__main__":
     print(f"Evaluation Metrics: {metrics}")
     
     # Save the model
-    #model.save('ML-Football-matches-predictor/model.h5')
+    model.save('ML-Football-matches-predictor/model.h5')
 
     # Plot confusion matrix
     plot_confusion_matrix(y_val, final_predictions)
@@ -147,12 +137,8 @@ if __name__ == "__main__":
     plot_multiclass_roc_auc(model, X_val, y_val, 3)
     
     # Define the features
-    features = ['momentum', 'last_two_match_xpts', 'last_two_match_result', 'xG_xGA_ratio', 'xG_xGA_diff',
-                'xG_squared', 'form_indicator_last_5', 'win_loss_ratio_last_5', 'momentum_squared', 
-                'momentum_cubed', 'xG_momentum_interaction','last_two_match_result_xpts_interaction', 
-                'last_two_match_result_xG_xGA_ratio_interaction','xpts_xG_xGA_ratio_interaction', 'win_ratio_last_5', 
-                'weighted_form_last_5', 'std_dev_result_last_5','xG_xpts_interaction', 'momentum_xpts_ratio']
-    
+    features = ['momentum','last_two_match_result','form_indicator_last_2', 'win_loss_ratio_last_2', 'momentum_squared', 
+                'momentum_cubed','win_ratio_last_5', 'weighted_form_last_5', 'std_dev_result_last_5',
+                'last_match_xG', 'last_match_xGA', 'last_match_xpts']    
     # select features importance
     select_featchres_importance(X, y, features)
-    

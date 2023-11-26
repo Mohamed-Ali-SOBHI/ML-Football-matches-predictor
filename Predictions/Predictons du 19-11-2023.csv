@@ -1,0 +1,113 @@
+team,Win%,Draw%,Lose%
+Alaves,1.0,0.0,0.0
+Almeria,1.0,0.0,0.0
+Athletic Club,0.0,0.0,1.0
+Atletico Madrid,0.001,0.0,0.999
+Barcelona,0.0,0.0,1.0
+Cadiz,1.0,0.0,0.0
+Celta Vigo,1.0,0.0,0.0
+Getafe,0.0,0.962,0.038
+Girona,0.0,0.0,1.0
+Granada,0.383,0.617,0.0
+Las Palmas,0.0,0.915,0.085
+Mallorca,0.829,0.171,0.0
+Osasuna,0.22,0.78,0.0
+Rayo Vallecano,0.156,0.844,0.0
+Real Betis,0.0,0.749,0.251
+Real Madrid,0.0,0.705,0.295
+Real Sociedad,0.003,0.0,0.997
+Sevilla,0.0,1.0,0.0
+Valencia,0.999,0.0,0.001
+Villarreal,1.0,0.0,0.0
+Augsburg,0.0,1.0,0.0
+Bayer Leverkusen,0.0,0.0,1.0
+Bayern Munich,0.0,0.0,1.0
+Bochum,0.0,0.472,0.528
+Borussia Dortmund,1.0,0.0,0.0
+Borussia M.Gladbach,0.0,0.938,0.062
+Darmstadt,0.01,0.99,0.0
+Eintracht Frankfurt,0.0,1.0,0.0
+FC Cologne,0.0,1.0,0.0
+FC Heidenheim,1.0,0.0,0.0
+Freiburg,0.877,0.123,0.0
+Hoffenheim,0.008,0.992,0.0
+Mainz 05,0.0,0.505,0.495
+RasenBallsport Leipzig,0.0,0.0,1.0
+Union Berlin,1.0,0.0,0.0
+VfB Stuttgart,0.862,0.0,0.138
+Werder Bremen,0.0,1.0,0.0
+Wolfsburg,1.0,0.0,0.0
+Arsenal,0.002,0.0,0.998
+Aston Villa,0.0,0.0,1.0
+Bournemouth,0.001,0.0,0.999
+Brentford,0.319,0.0,0.681
+Brighton,0.0,1.0,0.0
+Burnley,1.0,0.0,0.0
+Chelsea,0.0,1.0,0.0
+Crystal Palace,1.0,0.0,0.0
+Everton,0.0,0.017,0.983
+Fulham,1.0,0.0,0.0
+Liverpool,0.0,0.002,0.998
+Luton,0.325,0.675,0.0
+Manchester City,0.0,0.998,0.002
+Manchester United,0.0,0.0,1.0
+Newcastle United,0.999,0.0,0.001
+Nottingham Forest,1.0,0.0,0.0
+Sheffield United,0.0,1.0,0.0
+Tottenham,1.0,0.0,0.0
+West Ham,0.404,0.0,0.596
+Wolverhampton Wanderers,0.0,0.0,1.0
+AC Milan,0.043,0.957,0.0
+Atalanta,0.001,0.999,0.0
+Bologna,0.999,0.0,0.001
+Cagliari,0.983,0.0,0.017
+Empoli,0.731,0.0,0.269
+Fiorentina,0.427,0.0,0.573
+Frosinone,1.0,0.0,0.0
+Genoa,0.002,0.0,0.998
+Inter,0.0,0.0,1.0
+Juventus,0.0,0.0,1.0
+Lazio,0.001,0.999,0.0
+Lecce,0.274,0.726,0.0
+Monza,0.0,0.523,0.477
+Napoli,0.875,0.0,0.125
+Roma,0.0,1.0,0.0
+Salernitana,0.581,0.419,0.0
+Sassuolo,0.08,0.92,0.0
+Torino,0.0,0.999,0.001
+Udinese,0.0,0.994,0.006
+Verona,1.0,0.0,0.0
+Brest,1.0,0.0,0.0
+Clermont Foot,0.0,0.01,0.99
+Le Havre,0.0,0.102,0.897
+Lens,0.0,0.066,0.934
+Lille,0.0,1.0,0.0
+Lorient,0.813,0.187,0.0
+Lyon,0.0,0.722,0.278
+Marseille,0.96,0.04,0.0
+Metz,0.0,0.006,0.994
+Monaco,0.0,1.0,0.0
+Montpellier,0.005,0.995,0.0
+Nantes,1.0,0.0,0.0
+Nice,0.0,1.0,0.0
+Paris Saint Germain,0.0,0.0,1.0
+Reims,0.956,0.0,0.044
+Rennes,1.0,0.0,0.0
+Strasbourg,0.0,1.0,0.0
+Toulouse,0.653,0.347,0.0
+Baltika,0.674,0.326,0.0
+CSKA Moscow,0.0,0.556,0.444
+Dinamo Moscow,0.0,0.1,0.9
+Fakel,0.0,0.081,0.919
+FC Krasnodar,0.0,1.0,0.0
+FC Orenburg,0.738,0.262,0.0
+FC Rostov,0.996,0.004,0.0
+FK Akhmat,1.0,0.0,0.0
+Krylya Sovetov Samara,0.001,0.0,0.999
+Lokomotiv Moscow,0.0,0.499,0.5
+Nizhny Novgorod,0.004,0.996,0.0
+PFC Sochi,0.925,0.075,0.0
+Rubin Kazan,0.0,0.0,1.0
+Spartak Moscow,0.0,0.007,0.993
+Ural,1.0,0.0,0.0
+Zenit St. Petersburg,0.0,1.0,0.0

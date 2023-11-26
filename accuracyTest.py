@@ -62,11 +62,10 @@ def load_stats(leagues):
                 
                 features = ['team', 'momentum','last_two_match_result','form_indicator_last_2', 'win_loss_ratio_last_2', 'momentum_squared', 
                             'momentum_cubed','win_ratio_last_5', 'weighted_form_last_5', 'std_dev_result_last_5',
-                            'last_match_xG', 'last_match_xGA', 'last_match_xpts']
+                            'last_match_xG', 'last_match_xGA', 'last_match_xpts', 'result']
                 
                 df = df[features]
                 
-                df = df.groupby('team').mean().reset_index()
                 data.append(df)
                 
     data = pd.concat(data)
@@ -85,12 +84,9 @@ def predict_with_model(model_path: str, input_data: pd.DataFrame) -> np.ndarray:
     """
     model = load_model(model_path)
     predictions = model.predict(input_data)
-    predictions = np.round(predictions, 2)
-    return pd.DataFrame(predictions, columns=['Win', 'Draw', 'Lose'])
- 
-def save_predictions(predictions, path):
-    predictions.to_csv(path, index=False)
-       
+    predictions = np.round(predictions, 3)
+    return pd.DataFrame(predictions, columns=['Win%', 'Draw%', 'Lose%'])
+    
 if __name__ == '__main__':
     leagues = ['La_liga', 'Bundesliga', 'EPL', 'Serie_A', 'Ligue_1']
     
@@ -98,27 +94,31 @@ if __name__ == '__main__':
     df = load_stats(leagues)
     
     # Drop the 'team' column for prediction purposes
-    df_features = df.drop(['team'], axis=1)
+    df_features = df.drop(['team', 'result'], axis=1)
     
     # Make predictions
     predictions = predict_with_model('ML-Football-matches-predictor/model.h5', df_features)
     
     # Combine predictions with the team names for better interpretability
-    predictions_with_teams = df[['team']].reset_index(drop=True).join(predictions)
+    predictions_with_teams = df[['team', 'result']].reset_index(drop=True).join(predictions)
     
-    predictions_with_teams['Predicted_Result'] = predictions_with_teams[['Win', 'Draw', 'Lose']].idxmax(axis=1)
+    predictions_with_teams['Predicted_Result'] = predictions_with_teams[['Win%', 'Draw%', 'Lose%']].idxmax(axis=1)
     predictions_with_teams = predictions_with_teams.dropna()
     
-    predictions_with_teams['Predicted_Result'] = predictions_with_teams['Predicted_Result'].replace({'Win': 'Lose', 'Lose': 'Win'})
-    temp_win = predictions_with_teams['Win']
-    temp_lose = predictions_with_teams['Lose']
-    predictions_with_teams['Win'] = temp_lose
-    predictions_with_teams['Lose'] = temp_win
-    
-    predictions_with_teams['Confidence'] = predictions_with_teams[['Win', 'Draw', 'Lose']].max(axis=1)
-    predictions_with_teams = predictions_with_teams[['team', 'Predicted_Result', 'Confidence']]
+    predictions_with_teams['Predicted_Result'] = predictions_with_teams['Predicted_Result'].replace({'Win%': 'Lose%', 'Lose%': 'Win%'})
+    temp_win = predictions_with_teams['Win%']
+    temp_lose = predictions_with_teams['Lose%']
+    predictions_with_teams['Win%'] = temp_lose
+    predictions_with_teams['Lose%'] = temp_win
     print(predictions_with_teams)
     
-    today = time.strftime("%d-%m-%Y")
-    path = f"ML-Football-matches-predictor/Predictions/Predictons du {today}.csv"
-    save_predictions(predictions_with_teams, path)
+    # Créer un mapping des noms de colonnes aux valeurs de résultat
+    result_mapping = {'Win%': 2, 'Draw%': 1, 'Lose%': 0}
+
+    # Mapper les prédictions aux valeurs de résultat
+    predictions_with_teams['Predicted_Value'] = predictions_with_teams['Predicted_Result'].map(result_mapping)
+    predictions_with_teams.to_csv("ML-Football-matches-predictor/predictions.csv", index=False)
+    
+    # Calculer la précision
+    accuracy = (predictions_with_teams['Predicted_Value'] == predictions_with_teams['result']).mean()
+    print(f"Accuracy: {accuracy}")

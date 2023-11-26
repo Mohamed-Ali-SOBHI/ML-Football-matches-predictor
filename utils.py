@@ -43,6 +43,9 @@ def weighted_recent_form(df, column, window):
     weights = np.arange(1, window + 1)
     return df[column].rolling(window, min_periods=1).apply(lambda x: np.dot(x[-window:], weights[-len(x):]) / np.sum(weights[-len(x):]))
 
+def last_match_metric(df, column):
+    return df[column].shift(1)
+
 def standardScaler(X):
     """
     This function is used to standardize the data
@@ -236,3 +239,4 @@ def save_model(model):
     """
     model.save('model.h5')
     print("Model saved successfully")
+    

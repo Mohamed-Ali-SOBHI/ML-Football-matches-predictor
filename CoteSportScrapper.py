@@ -1,3 +1,4 @@
+from datetime import datetime, timedelta
 import json
 import os
 import time
@@ -22,7 +23,7 @@ def get_soup(url):
     soup = BeautifulSoup(page.content, 'html.parser')
     return soup
 
-def get_data(soup):
+def get_data(soup, date):
     """
     Extract the data of the matches of the day from the BeautifulSoup object
     and store it in a pandas DataFrame.
@@ -33,14 +34,12 @@ def get_data(soup):
     Returns:
     pandas.DataFrame: The pandas DataFrame containing the data of the matches of the day.
     """
-    date = soup.find_all('div', {'class': 'date bold'}) #get the dates of the matches
-    today = time.strftime("%d/%m/%Y") #get today's date
-    today = today[0:6] + today[8:10] #format the date to match the format of the dates in the HTML
+    table_date = soup.find_all('div', {'class': 'date bold'}) #get the dates of the matches
     
     # Find the index of today's date in the list of dates
-    for i in range(len(date)):
-        date[i] = date[i].text.strip()[0:8]
-        if date[i] == today:
+    for i in range(len(table_date)):
+        table_date[i] = table_date[i].text.strip()[0:8]
+        if table_date[i] == date:
             index = i
             break
         
@@ -86,17 +85,17 @@ def clean_data(MatchOfZeDay):
     MatchOfZeDay = MatchOfZeDay[MatchOfZeDay["CHAMP"].isin(["AL1", "ANP", "FR1", "IT1", "ES1"])]
     return MatchOfZeDay
 
-def store_data(MatchOfZeDay):
+def store_data(MatchOfZeDay, date):
     """
     Store the DataFrame in a CSV file.
 
     Parameters:
     MatchOfZeDay (pandas.DataFrame): The DataFrame to store.
     """
-    today = time.strftime("%d-%m-%Y") #get today's date
-    fileName = str(today) + '.csv' #create the name of the file
-    file_path = os.path.join('ML-Football-matches-predictor\MatchOfZeDay', fileName) #create the path of the file
-    MatchOfZeDay.to_csv(file_path, index = False) #store the DataFrame in a CSV file
+    dir = 'ML-Football-matches-predictor\MatchOfZeDay'
+    #format the date to %d-%m-%y
+    date = date[0:2] + '-' + date[3:5] + '-' + date[6:8]
+    MatchOfZeDay.to_csv(f"{dir}/matches_of_ze_day_{date}.csv", index=False)
     
     
 if __name__ == '__main__':
@@ -104,6 +103,22 @@ if __name__ == '__main__':
     url = 'https://mdjs.ma/resultats/programme-cote-sport.html'
     
     soup = get_soup(url)
-    MatchOfZeDay = get_data(soup)
+    today = time.strftime("%d/%m/%Y") #get today's date
+    today = today[0:6] + today[8:10] #format the date to match the format of the dates in the HTML
+    MatchOfZeDay = get_data(soup, today)
     MatchOfZeDay = clean_data(MatchOfZeDay)
-    store_data(MatchOfZeDay)
+    store_data(MatchOfZeDay, today)
+    
+    soup = get_soup(url)
+    tomorrow = (datetime.now() + timedelta(days=1)).strftime('%d/%m/%Y') #get tomorrow's date
+    tomorrow = tomorrow[0:6] + tomorrow[8:10] #format the date to match the format of the dates in the HTML
+    MatchOfZeDay = get_data(soup, tomorrow)
+    MatchOfZeDay = clean_data(MatchOfZeDay)
+    store_data(MatchOfZeDay, tomorrow)
+    
+    soup = get_soup(url)
+    plus_2 = (datetime.now() + timedelta(days=2)).strftime('%d/%m/%Y') #get the date after tomorrow
+    plus_2 = plus_2[0:6] + plus_2[8:10] #format the date to match the format of the dates in the HTML
+    MatchOfZeDay = get_data(soup, plus_2)
+    MatchOfZeDay = clean_data(MatchOfZeDay)
+    store_data(MatchOfZeDay, plus_2)
