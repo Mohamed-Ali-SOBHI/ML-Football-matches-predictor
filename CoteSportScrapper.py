@@ -122,3 +122,11 @@ if __name__ == '__main__':
     MatchOfZeDay = get_data(soup, plus_2)
     MatchOfZeDay = clean_data(MatchOfZeDay)
     store_data(MatchOfZeDay, plus_2)
+    """
+    soup = get_soup(url)
+    plus_3 = (datetime.now() + timedelta(days=3)).strftime('%d/%m/%Y') #get the date after tomorrow
+    plus_3 = plus_3[0:6] + plus_3[8:10] #format the date to match the format of the dates in the HTML
+    MatchOfZeDay = get_data(soup, plus_3)
+    MatchOfZeDay = clean_data(MatchOfZeDay)
+    store_data(MatchOfZeDay, plus_3)
+    """

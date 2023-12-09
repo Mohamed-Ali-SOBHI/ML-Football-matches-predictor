@@ -11,18 +11,17 @@ def load_matches(target_day):
     """
     data = []
     base_path = "ML-Football-matches-predictor/MatchOfZeDay"
-    dates = ['24-11-23', '25-11-23', '26-11-23', '27-11-23']
+    
     for file_name in os.listdir(base_path):
         date_str = file_name.split('.')[0].split('_')[-1]
         # Mettre à jour le format ici pour correspondre à 'jj-mm-aa'
-        #file_date = datetime.strptime(date_str, "%d-%m-%y")
+        file_date = datetime.strptime(date_str, "%d-%m-%y")
 
         # Convertit target_day en objet datetime pour la comparaison
         target_date = datetime.strptime(target_day, "%d-%m-%Y")
 
         # Vérifie si la date du fichier correspond à aujourd'hui, demain ou après-demain
-        #if file_date in [target_date, target_date + timedelta(days=1), target_date + timedelta(days=2)]:
-        if date_str in dates:
+        if file_date in [target_date, target_date + timedelta(days=1), target_date + timedelta(days=2)]:
             print(file_name)
             df = pd.read_csv(f"{base_path}/{file_name}")
             data.append(df)

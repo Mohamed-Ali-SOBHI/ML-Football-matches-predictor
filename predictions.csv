@@ -1,1049 +1,1267 @@
 team,result,Win%,Draw%,Lose%,Predicted_Result,Predicted_Value
-Alaves,2.0,1.0,0.0,0.0,Win%,2
-Alaves,0.0,0.01,0.0,0.99,Lose%,0
-Alaves,2.0,0.18,0.0,0.82,Lose%,0
-Alaves,0.0,0.1,0.0,0.9,Lose%,0
-Alaves,0.0,0.0,0.0,1.0,Lose%,0
-Alaves,1.0,0.0,0.97,0.03,Draw%,1
-Alaves,0.0,0.0,0.0,1.0,Lose%,0
-Alaves,1.0,0.0,0.47,0.53,Lose%,0
+Alaves,2.0,0.0,0.0,1.0,Lose%,0
+Alaves,0.0,1.0,0.0,0.0,Win%,2
+Alaves,2.0,0.02,0.0,0.98,Lose%,0
+Alaves,0.0,0.94,0.0,0.06,Win%,2
+Alaves,0.0,1.0,0.0,0.0,Win%,2
+Alaves,1.0,0.02,0.98,0.0,Draw%,1
+Alaves,0.0,1.0,0.0,0.0,Win%,2
+Alaves,1.0,0.3,0.7,0.0,Draw%,1
 Alaves,1.0,0.0,1.0,0.0,Draw%,1
-Alaves,0.0,0.0,0.51,0.49,Draw%,1
-Alaves,2.0,1.0,0.0,0.0,Win%,2
-Alaves,0.0,0.0,0.0,1.0,Lose%,0
-Almeria,0.0,0.0,0.0,1.0,Lose%,0
-Almeria,1.0,0.0,0.62,0.38,Draw%,1
-Almeria,0.0,0.0,0.0,1.0,Lose%,0
-Almeria,0.0,0.0,0.0,1.0,Lose%,0
-Almeria,1.0,0.0,0.08,0.92,Lose%,0
-Almeria,0.0,0.0,0.0,1.0,Lose%,0
-Almeria,1.0,0.0,0.76,0.24,Draw%,1
-Almeria,0.0,0.0,0.5,0.5,Lose%,0
-Almeria,0.0,0.0,0.0,1.0,Lose%,0
-Almeria,0.0,0.0,0.0,1.0,Lose%,0
-Almeria,0.0,0.0,0.0,1.0,Lose%,0
-Almeria,0.0,0.0,0.0,1.0,Lose%,0
-Athletic Club,2.0,1.0,0.0,0.0,Win%,2
-Athletic Club,2.0,1.0,0.0,0.0,Win%,2
+Alaves,0.0,0.26,0.74,0.0,Draw%,1
+Alaves,2.0,0.0,0.0,1.0,Lose%,0
+Alaves,0.0,1.0,0.0,0.0,Win%,2
+Alaves,2.0,0.02,0.0,0.98,Lose%,0
+Alaves,1.0,0.0,1.0,0.0,Draw%,1
+Almeria,0.0,1.0,0.0,0.0,Win%,2
+Almeria,1.0,0.21,0.79,0.0,Draw%,1
+Almeria,0.0,1.0,0.0,0.0,Win%,2
+Almeria,0.0,1.0,0.0,0.0,Win%,2
+Almeria,1.0,0.82,0.18,0.0,Win%,2
+Almeria,0.0,1.0,0.0,0.0,Win%,2
+Almeria,1.0,0.11,0.89,0.0,Draw%,1
+Almeria,0.0,0.35,0.65,0.0,Draw%,1
+Almeria,0.0,1.0,0.0,0.0,Win%,2
+Almeria,0.0,1.0,0.0,0.0,Win%,2
+Almeria,0.0,1.0,0.0,0.0,Win%,2
+Almeria,0.0,1.0,0.0,0.0,Win%,2
+Almeria,0.0,1.0,0.0,0.0,Win%,2
+Almeria,1.0,0.0,1.0,0.0,Draw%,1
+Athletic Club,2.0,0.0,0.0,1.0,Lose%,0
+Athletic Club,2.0,0.0,0.0,1.0,Lose%,0
+Athletic Club,1.0,0.0,0.98,0.02,Draw%,1
+Athletic Club,2.0,0.0,0.0,1.0,Lose%,0
+Athletic Club,2.0,0.0,0.0,1.0,Lose%,0
+Athletic Club,1.0,0.0,0.3,0.7,Lose%,0
+Athletic Club,0.0,0.31,0.69,0.0,Draw%,1
+Athletic Club,2.0,0.7,0.0,0.3,Win%,2
+Athletic Club,0.0,1.0,0.0,0.0,Win%,2
 Athletic Club,1.0,0.13,0.87,0.0,Draw%,1
-Athletic Club,2.0,1.0,0.0,0.0,Win%,2
-Athletic Club,2.0,1.0,0.0,0.0,Win%,2
-Athletic Club,1.0,0.49,0.51,0.0,Draw%,1
-Athletic Club,0.0,0.0,0.63,0.37,Draw%,1
-Athletic Club,2.0,0.36,0.0,0.64,Lose%,0
-Athletic Club,0.0,0.0,0.0,1.0,Lose%,0
-Athletic Club,1.0,0.0,0.71,0.29,Draw%,1
-Athletic Club,2.0,0.99,0.01,0.0,Win%,2
-Athletic Club,2.0,1.0,0.0,0.0,Win%,2
+Athletic Club,2.0,0.0,0.0,1.0,Lose%,0
+Athletic Club,2.0,0.0,0.0,1.0,Lose%,0
+Athletic Club,1.0,0.0,0.93,0.07,Draw%,1
+Athletic Club,2.0,0.0,0.0,1.0,Lose%,0
 Atletico Madrid,1.0,0.0,1.0,0.0,Draw%,1
-Atletico Madrid,2.0,1.0,0.0,0.0,Win%,2
-Atletico Madrid,0.0,0.01,0.0,0.99,Lose%,0
-Atletico Madrid,2.0,1.0,0.0,0.0,Win%,2
-Atletico Madrid,2.0,1.0,0.0,0.0,Win%,2
-Atletico Madrid,2.0,1.0,0.0,0.0,Win%,2
-Atletico Madrid,2.0,1.0,0.0,0.0,Win%,2
-Atletico Madrid,2.0,1.0,0.0,0.0,Win%,2
-Atletico Madrid,2.0,1.0,0.0,0.0,Win%,2
-Atletico Madrid,0.0,0.0,0.0,1.0,Lose%,0
-Atletico Madrid,2.0,1.0,0.0,0.0,Win%,2
-Barcelona,2.0,1.0,0.0,0.0,Win%,2
-Barcelona,2.0,1.0,0.0,0.0,Win%,2
-Barcelona,2.0,1.0,0.0,0.0,Win%,2
-Barcelona,2.0,1.0,0.0,0.0,Win%,2
-Barcelona,2.0,1.0,0.0,0.0,Win%,2
+Atletico Madrid,2.0,0.0,0.0,1.0,Lose%,0
+Atletico Madrid,0.0,1.0,0.0,0.0,Win%,2
+Atletico Madrid,2.0,0.0,0.0,1.0,Lose%,0
+Atletico Madrid,2.0,0.0,0.0,1.0,Lose%,0
+Atletico Madrid,2.0,0.0,0.0,1.0,Lose%,0
+Atletico Madrid,2.0,0.0,0.0,1.0,Lose%,0
+Atletico Madrid,2.0,0.0,0.0,1.0,Lose%,0
+Atletico Madrid,2.0,0.0,0.0,1.0,Lose%,0
+Atletico Madrid,0.0,1.0,0.0,0.0,Win%,2
+Atletico Madrid,2.0,0.0,0.0,1.0,Lose%,0
+Atletico Madrid,2.0,0.0,0.0,1.0,Lose%,0
+Atletico Madrid,0.0,0.83,0.0,0.17,Win%,2
+Barcelona,2.0,0.0,0.0,1.0,Lose%,0
+Barcelona,2.0,0.0,0.0,1.0,Lose%,0
+Barcelona,2.0,0.0,0.0,1.0,Lose%,0
+Barcelona,2.0,0.0,0.0,1.0,Lose%,0
+Barcelona,2.0,0.0,0.0,1.0,Lose%,0
 Barcelona,1.0,0.0,1.0,0.0,Draw%,1
-Barcelona,2.0,1.0,0.0,0.0,Win%,2
+Barcelona,2.0,0.0,0.0,1.0,Lose%,0
 Barcelona,1.0,0.0,1.0,0.0,Draw%,1
-Barcelona,2.0,0.17,0.83,0.0,Draw%,1
-Barcelona,0.0,0.0,0.0,1.0,Lose%,0
-Barcelona,2.0,1.0,0.0,0.0,Win%,2
-Barcelona,2.0,1.0,0.0,0.0,Win%,2
-Cadiz,0.0,0.0,0.0,1.0,Lose%,0
+Barcelona,2.0,0.0,0.74,0.26,Draw%,1
+Barcelona,0.0,1.0,0.0,0.0,Win%,2
+Barcelona,2.0,0.0,0.0,1.0,Lose%,0
+Barcelona,2.0,0.0,0.0,1.0,Lose%,0
+Barcelona,1.0,0.0,1.0,0.0,Draw%,1
+Barcelona,2.0,0.0,0.0,1.0,Lose%,0
+Cadiz,0.0,1.0,0.0,0.0,Win%,2
 Cadiz,1.0,0.0,1.0,0.0,Draw%,1
-Cadiz,2.0,0.08,0.92,0.0,Draw%,1
-Cadiz,0.0,0.0,0.0,1.0,Lose%,0
-Cadiz,1.0,0.0,0.86,0.14,Draw%,1
+Cadiz,2.0,0.0,0.16,0.84,Lose%,0
+Cadiz,0.0,1.0,0.0,0.0,Win%,2
 Cadiz,1.0,0.0,1.0,0.0,Draw%,1
-Cadiz,0.0,0.0,0.16,0.84,Lose%,0
-Cadiz,0.0,0.0,0.0,1.0,Lose%,0
-Cadiz,0.0,0.0,0.0,1.0,Lose%,0
-Cadiz,1.0,0.0,0.27,0.73,Lose%,0
-Cadiz,0.0,0.0,0.0,1.0,Lose%,0
-Celta Vigo,1.0,0.0,0.73,0.27,Draw%,1
-Celta Vigo,0.0,0.0,0.0,1.0,Lose%,0
-Celta Vigo,2.0,0.87,0.0,0.13,Win%,2
-Celta Vigo,0.0,0.68,0.0,0.32,Win%,2
-Celta Vigo,0.0,0.0,0.0,1.0,Lose%,0
-Celta Vigo,1.0,0.0,0.97,0.03,Draw%,1
-Celta Vigo,0.0,0.0,0.0,1.0,Lose%,0
-Celta Vigo,1.0,0.0,0.5,0.5,Lose%,0
-Celta Vigo,0.0,0.0,0.01,0.99,Lose%,0
-Celta Vigo,0.0,0.0,0.0,1.0,Lose%,0
-Celta Vigo,1.0,0.0,0.08,0.92,Lose%,0
-Celta Vigo,0.0,0.0,0.0,1.0,Lose%,0
-Getafe,0.0,0.0,0.07,0.93,Lose%,0
-Getafe,2.0,1.0,0.0,0.0,Win%,2
-Getafe,0.0,0.17,0.0,0.83,Lose%,0
-Getafe,2.0,1.0,0.0,0.0,Win%,2
-Getafe,0.0,0.69,0.0,0.31,Win%,2
-Getafe,1.0,0.0,0.99,0.01,Draw%,1
+Cadiz,1.0,0.0,1.0,0.0,Draw%,1
+Cadiz,0.0,0.76,0.24,0.0,Win%,2
+Cadiz,0.0,1.0,0.0,0.0,Win%,2
+Cadiz,0.0,1.0,0.0,0.0,Win%,2
+Cadiz,1.0,0.54,0.46,0.0,Win%,2
+Cadiz,0.0,1.0,0.0,0.0,Win%,2
+Cadiz,0.0,1.0,0.0,0.0,Win%,2
+Cadiz,1.0,0.71,0.29,0.0,Win%,2
+Cadiz,1.0,0.0,1.0,0.0,Draw%,1
+Celta Vigo,1.0,0.2,0.8,0.0,Draw%,1
+Celta Vigo,0.0,0.99,0.01,0.0,Win%,2
+Celta Vigo,2.0,0.59,0.0,0.41,Win%,2
+Celta Vigo,0.0,0.23,0.0,0.77,Lose%,0
+Celta Vigo,0.0,1.0,0.0,0.0,Win%,2
+Celta Vigo,1.0,0.02,0.98,0.0,Draw%,1
+Celta Vigo,0.0,0.99,0.01,0.0,Win%,2
+Celta Vigo,1.0,0.27,0.73,0.0,Draw%,1
+Celta Vigo,0.0,0.92,0.08,0.0,Win%,2
+Celta Vigo,0.0,1.0,0.0,0.0,Win%,2
+Celta Vigo,1.0,0.88,0.12,0.0,Win%,2
+Celta Vigo,0.0,1.0,0.0,0.0,Win%,2
+Celta Vigo,1.0,0.14,0.86,0.0,Draw%,1
+Celta Vigo,1.0,0.0,1.0,0.0,Draw%,1
+Getafe,0.0,0.85,0.15,0.0,Win%,2
+Getafe,2.0,0.0,0.0,1.0,Lose%,0
+Getafe,0.0,0.96,0.0,0.04,Win%,2
+Getafe,2.0,0.0,0.0,1.0,Lose%,0
+Getafe,0.0,0.3,0.0,0.7,Lose%,0
 Getafe,1.0,0.0,1.0,0.0,Draw%,1
 Getafe,1.0,0.0,1.0,0.0,Draw%,1
 Getafe,1.0,0.0,1.0,0.0,Draw%,1
 Getafe,1.0,0.0,1.0,0.0,Draw%,1
-Getafe,2.0,1.0,0.0,0.0,Win%,2
 Getafe,1.0,0.0,1.0,0.0,Draw%,1
-Girona,2.0,1.0,0.0,0.0,Win%,2
-Girona,2.0,1.0,0.0,0.0,Win%,2
-Girona,2.0,1.0,0.0,0.0,Win%,2
-Girona,2.0,1.0,0.0,0.0,Win%,2
-Girona,2.0,1.0,0.0,0.0,Win%,2
-Girona,2.0,1.0,0.0,0.0,Win%,2
-Girona,0.0,0.0,0.0,1.0,Lose%,0
-Girona,2.0,1.0,0.0,0.0,Win%,2
-Girona,2.0,1.0,0.0,0.0,Win%,2
-Girona,2.0,1.0,0.0,0.0,Win%,2
-Girona,2.0,1.0,0.0,0.0,Win%,2
-Girona,2.0,1.0,0.0,0.0,Win%,2
-Granada,0.0,0.0,0.0,1.0,Lose%,0
-Granada,2.0,0.99,0.0,0.01,Win%,2
-Granada,0.0,0.08,0.0,0.92,Lose%,0
-Granada,0.0,0.0,0.0,1.0,Lose%,0
-Granada,0.0,0.0,0.0,1.0,Lose%,0
-Granada,1.0,0.0,0.94,0.06,Draw%,1
+Getafe,2.0,0.0,0.0,1.0,Lose%,0
+Getafe,1.0,0.0,1.0,0.0,Draw%,1
+Getafe,2.0,0.0,0.16,0.84,Lose%,0
+Getafe,0.0,1.0,0.0,0.0,Win%,2
+Girona,2.0,0.0,0.0,1.0,Lose%,0
+Girona,2.0,0.0,0.0,1.0,Lose%,0
+Girona,2.0,0.0,0.0,1.0,Lose%,0
+Girona,2.0,0.0,0.0,1.0,Lose%,0
+Girona,2.0,0.0,0.0,1.0,Lose%,0
+Girona,2.0,0.0,0.0,1.0,Lose%,0
+Girona,0.0,1.0,0.0,0.0,Win%,2
+Girona,2.0,0.0,0.0,1.0,Lose%,0
+Girona,2.0,0.0,0.0,1.0,Lose%,0
+Girona,2.0,0.0,0.0,1.0,Lose%,0
+Girona,2.0,0.0,0.0,1.0,Lose%,0
+Girona,2.0,0.0,0.0,1.0,Lose%,0
+Girona,1.0,0.0,1.0,0.0,Draw%,1
+Girona,2.0,0.0,0.0,1.0,Lose%,0
+Granada,0.0,1.0,0.0,0.0,Win%,2
+Granada,2.0,0.0,0.0,1.0,Lose%,0
+Granada,0.0,0.9,0.0,0.1,Win%,2
+Granada,0.0,1.0,0.0,0.0,Win%,2
+Granada,0.0,1.0,0.0,0.0,Win%,2
 Granada,1.0,0.0,1.0,0.0,Draw%,1
 Granada,1.0,0.0,1.0,0.0,Draw%,1
-Granada,0.0,0.0,0.92,0.08,Draw%,1
-Granada,0.0,0.0,0.0,1.0,Lose%,0
-Granada,0.0,0.0,0.0,1.0,Lose%,0
-Granada,1.0,0.0,0.15,0.85,Lose%,0
-Las Palmas,0.0,0.0,0.07,0.93,Lose%,0
+Granada,1.0,0.0,1.0,0.0,Draw%,1
+Granada,0.0,0.02,0.98,0.0,Draw%,1
+Granada,0.0,1.0,0.0,0.0,Win%,2
+Granada,0.0,1.0,0.0,0.0,Win%,2
+Granada,1.0,0.66,0.34,0.0,Win%,2
+Granada,0.0,1.0,0.0,0.0,Win%,2
+Granada,0.0,1.0,0.0,0.0,Win%,2
+Las Palmas,0.0,0.86,0.14,0.0,Win%,2
+Las Palmas,1.0,0.0,1.0,0.0,Draw%,1
+Las Palmas,0.0,0.93,0.07,0.0,Win%,2
+Las Palmas,0.0,1.0,0.0,0.0,Win%,2
+Las Palmas,2.0,0.02,0.0,0.98,Lose%,0
+Las Palmas,0.0,1.0,0.0,0.0,Win%,2
+Las Palmas,2.0,0.0,0.0,1.0,Lose%,0
+Las Palmas,2.0,0.0,0.0,1.0,Lose%,0
+Las Palmas,0.0,0.46,0.0,0.54,Lose%,0
+Las Palmas,2.0,0.0,0.0,1.0,Lose%,0
+Las Palmas,2.0,0.0,0.0,1.0,Lose%,0
 Las Palmas,1.0,0.0,0.99,0.01,Draw%,1
-Las Palmas,0.0,0.0,0.02,0.98,Lose%,0
-Las Palmas,0.0,0.0,0.0,1.0,Lose%,0
-Las Palmas,2.0,1.0,0.0,0.0,Win%,2
-Las Palmas,0.0,0.0,0.0,1.0,Lose%,0
-Las Palmas,2.0,1.0,0.0,0.0,Win%,2
-Las Palmas,2.0,1.0,0.0,0.0,Win%,2
-Las Palmas,0.0,0.49,0.0,0.51,Lose%,0
-Las Palmas,2.0,1.0,0.0,0.0,Win%,2
-Las Palmas,2.0,1.0,0.0,0.0,Win%,2
-Las Palmas,1.0,0.02,0.98,0.0,Draw%,1
-Mallorca,0.0,0.0,0.02,0.98,Lose%,0
-Mallorca,0.0,0.0,0.0,1.0,Lose%,0
-Mallorca,1.0,0.0,0.18,0.82,Lose%,0
-Mallorca,2.0,0.63,0.37,0.0,Win%,2
-Mallorca,0.0,0.81,0.0,0.19,Win%,2
-Mallorca,1.0,0.0,0.97,0.03,Draw%,1
+Las Palmas,0.0,1.0,0.0,0.0,Win%,2
+Las Palmas,2.0,0.17,0.0,0.83,Lose%,0
+Mallorca,0.0,0.94,0.06,0.0,Win%,2
+Mallorca,0.0,1.0,0.0,0.0,Win%,2
+Mallorca,1.0,0.71,0.29,0.0,Win%,2
+Mallorca,2.0,0.0,0.26,0.74,Lose%,0
+Mallorca,0.0,0.23,0.0,0.77,Lose%,0
+Mallorca,1.0,0.22,0.78,0.0,Draw%,1
 Mallorca,1.0,0.0,1.0,0.0,Draw%,1
 Mallorca,1.0,0.0,1.0,0.0,Draw%,1
-Mallorca,0.0,0.0,0.17,0.83,Lose%,0
+Mallorca,0.0,0.4,0.6,0.0,Draw%,1
 Mallorca,1.0,0.0,1.0,0.0,Draw%,1
-Mallorca,0.0,0.0,0.03,0.97,Lose%,0
-Osasuna,0.0,0.0,0.0,1.0,Lose%,0
-Osasuna,2.0,1.0,0.0,0.0,Win%,2
-Osasuna,0.0,0.25,0.0,0.75,Lose%,0
-Osasuna,0.0,0.0,0.0,1.0,Lose%,0
-Osasuna,1.0,0.0,0.92,0.08,Draw%,1
-Osasuna,0.0,0.0,0.0,1.0,Lose%,0
-Osasuna,2.0,0.99,0.0,0.01,Win%,2
-Osasuna,0.0,0.57,0.0,0.43,Win%,2
-Osasuna,2.0,1.0,0.0,0.0,Win%,2
-Osasuna,0.0,0.12,0.0,0.88,Lose%,0
-Osasuna,0.0,0.0,0.0,1.0,Lose%,0
-Osasuna,1.0,0.0,0.97,0.03,Draw%,1
-Rayo Vallecano,2.0,1.0,0.0,0.0,Win%,2
-Rayo Vallecano,0.0,0.0,0.0,1.0,Lose%,0
-Rayo Vallecano,0.0,0.0,0.0,1.0,Lose%,0
-Rayo Vallecano,2.0,0.31,0.0,0.69,Lose%,0
+Mallorca,0.0,0.92,0.08,0.0,Win%,2
+Mallorca,0.0,1.0,0.0,0.0,Win%,2
+Mallorca,1.0,0.6,0.4,0.0,Win%,2
+Mallorca,1.0,0.0,1.0,0.0,Draw%,1
+Osasuna,0.0,1.0,0.0,0.0,Win%,2
+Osasuna,2.0,0.0,0.0,1.0,Lose%,0
+Osasuna,0.0,0.5,0.0,0.5,Win%,2
+Osasuna,0.0,1.0,0.0,0.0,Win%,2
+Osasuna,1.0,0.02,0.98,0.0,Draw%,1
+Osasuna,0.0,1.0,0.0,0.0,Win%,2
+Osasuna,2.0,0.01,0.0,0.99,Lose%,0
+Osasuna,0.0,0.49,0.0,0.51,Lose%,0
+Osasuna,2.0,0.0,0.0,1.0,Lose%,0
+Osasuna,0.0,0.93,0.0,0.07,Win%,2
+Osasuna,0.0,1.0,0.0,0.0,Win%,2
+Osasuna,1.0,0.02,0.98,0.0,Draw%,1
+Osasuna,0.0,1.0,0.0,0.0,Win%,2
+Osasuna,1.0,0.09,0.91,0.0,Draw%,1
+Rayo Vallecano,2.0,0.0,0.0,1.0,Lose%,0
+Rayo Vallecano,0.0,1.0,0.0,0.0,Win%,2
+Rayo Vallecano,0.0,1.0,0.0,0.0,Win%,2
+Rayo Vallecano,2.0,0.67,0.0,0.33,Win%,2
 Rayo Vallecano,1.0,0.0,1.0,0.0,Draw%,1
 Rayo Vallecano,1.0,0.0,1.0,0.0,Draw%,1
 Rayo Vallecano,1.0,0.0,1.0,0.0,Draw%,1
 Rayo Vallecano,1.0,0.0,1.0,0.0,Draw%,1
-Rayo Vallecano,2.0,1.0,0.0,0.0,Win%,2
+Rayo Vallecano,2.0,0.0,0.02,0.98,Lose%,0
 Rayo Vallecano,1.0,0.0,1.0,0.0,Draw%,1
 Rayo Vallecano,1.0,0.0,1.0,0.0,Draw%,1
-Rayo Vallecano,0.0,0.0,0.65,0.35,Draw%,1
+Rayo Vallecano,0.0,0.32,0.68,0.0,Draw%,1
+Rayo Vallecano,1.0,0.52,0.48,0.0,Win%,2
+Rayo Vallecano,0.0,0.78,0.22,0.0,Win%,2
 Real Betis,1.0,0.0,1.0,0.0,Draw%,1
-Real Betis,0.0,0.0,0.02,0.98,Lose%,0
-Real Betis,2.0,1.0,0.0,0.0,Win%,2
-Real Betis,0.0,0.0,0.0,1.0,Lose%,0
-Real Betis,1.0,0.0,0.79,0.21,Draw%,1
+Real Betis,0.0,1.0,0.0,0.0,Win%,2
+Real Betis,2.0,0.0,0.0,1.0,Lose%,0
+Real Betis,0.0,1.0,0.0,0.0,Win%,2
+Real Betis,1.0,0.07,0.93,0.0,Draw%,1
+Real Betis,1.0,0.01,0.99,0.0,Draw%,1
+Real Betis,2.0,0.0,0.01,0.99,Lose%,0
+Real Betis,1.0,0.0,0.81,0.19,Draw%,1
 Real Betis,1.0,0.0,1.0,0.0,Draw%,1
-Real Betis,2.0,0.98,0.02,0.0,Win%,2
-Real Betis,1.0,0.2,0.8,0.0,Draw%,1
+Real Betis,2.0,0.0,0.46,0.54,Lose%,0
+Real Betis,2.0,0.0,0.0,1.0,Lose%,0
+Real Betis,1.0,0.0,0.86,0.14,Draw%,1
+Real Betis,2.0,0.0,0.0,1.0,Lose%,0
 Real Betis,1.0,0.0,1.0,0.0,Draw%,1
-Real Betis,2.0,0.24,0.76,0.0,Draw%,1
-Real Betis,2.0,1.0,0.0,0.0,Win%,2
-Real Betis,1.0,0.1,0.9,0.0,Draw%,1
-Real Madrid,2.0,1.0,0.0,0.0,Win%,2
-Real Madrid,2.0,1.0,0.0,0.0,Win%,2
-Real Madrid,2.0,1.0,0.0,0.0,Win%,2
-Real Madrid,2.0,1.0,0.0,0.0,Win%,2
-Real Madrid,0.0,0.0,0.0,1.0,Lose%,0
-Real Madrid,2.0,1.0,0.0,0.0,Win%,2
-Real Madrid,2.0,1.0,0.0,0.0,Win%,2
-Real Madrid,2.0,1.0,0.0,0.0,Win%,2
+Real Madrid,2.0,0.0,0.0,1.0,Lose%,0
+Real Madrid,2.0,0.0,0.0,1.0,Lose%,0
+Real Madrid,2.0,0.0,0.0,1.0,Lose%,0
+Real Madrid,2.0,0.0,0.0,1.0,Lose%,0
+Real Madrid,0.0,1.0,0.0,0.0,Win%,2
+Real Madrid,2.0,0.0,0.0,1.0,Lose%,0
+Real Madrid,2.0,0.0,0.0,1.0,Lose%,0
+Real Madrid,2.0,0.0,0.0,1.0,Lose%,0
 Real Madrid,1.0,0.0,1.0,0.0,Draw%,1
-Real Madrid,2.0,1.0,0.0,0.0,Win%,2
-Real Madrid,1.0,0.0,1.0,0.0,Draw%,1
-Real Madrid,2.0,0.23,0.77,0.0,Draw%,1
+Real Madrid,2.0,0.0,0.0,1.0,Lose%,0
+Real Madrid,1.0,0.0,0.99,0.0,Draw%,1
+Real Madrid,2.0,0.0,0.61,0.39,Draw%,1
+Real Madrid,2.0,0.0,0.0,1.0,Lose%,0
+Real Madrid,2.0,0.0,0.0,1.0,Lose%,0
 Real Sociedad,1.0,0.0,1.0,0.0,Draw%,1
 Real Sociedad,1.0,0.0,1.0,0.0,Draw%,1
-Real Sociedad,2.0,0.87,0.13,0.0,Win%,2
-Real Sociedad,0.0,0.0,0.0,1.0,Lose%,0
-Real Sociedad,2.0,1.0,0.0,0.0,Win%,2
-Real Sociedad,2.0,1.0,0.0,0.0,Win%,2
-Real Sociedad,2.0,1.0,0.0,0.0,Win%,2
-Real Sociedad,0.0,0.7,0.0,0.3,Win%,2
-Real Sociedad,2.0,1.0,0.0,0.0,Win%,2
+Real Sociedad,2.0,0.0,0.05,0.95,Lose%,0
+Real Sociedad,0.0,1.0,0.0,0.0,Win%,2
+Real Sociedad,2.0,0.0,0.0,1.0,Lose%,0
+Real Sociedad,2.0,0.0,0.0,1.0,Lose%,0
+Real Sociedad,2.0,0.0,0.0,1.0,Lose%,0
+Real Sociedad,0.0,0.23,0.0,0.77,Lose%,0
+Real Sociedad,2.0,0.0,0.0,1.0,Lose%,0
 Real Sociedad,1.0,0.0,1.0,0.0,Draw%,1
-Real Sociedad,0.0,0.0,0.03,0.97,Lose%,0
-Real Sociedad,2.0,0.99,0.0,0.01,Win%,2
-Sevilla,0.0,0.0,0.0,1.0,Lose%,0
-Sevilla,0.0,0.0,0.0,1.0,Lose%,0
-Sevilla,2.0,0.57,0.0,0.43,Win%,2
+Real Sociedad,0.0,1.0,0.0,0.0,Win%,2
+Real Sociedad,2.0,0.01,0.0,0.99,Lose%,0
+Real Sociedad,2.0,0.0,0.0,1.0,Lose%,0
+Real Sociedad,1.0,0.0,0.99,0.01,Draw%,1
+Sevilla,0.0,1.0,0.0,0.0,Win%,2
+Sevilla,0.0,1.0,0.0,0.0,Win%,2
+Sevilla,2.0,0.67,0.0,0.33,Win%,2
 Sevilla,1.0,0.0,1.0,0.0,Draw%,1
-Sevilla,2.0,1.0,0.0,0.0,Win%,2
-Sevilla,0.0,0.14,0.0,0.86,Lose%,0
-Sevilla,1.0,0.0,0.84,0.16,Draw%,1
+Sevilla,2.0,0.0,0.0,1.0,Lose%,0
+Sevilla,0.0,0.85,0.0,0.15,Win%,2
+Sevilla,1.0,0.16,0.84,0.0,Draw%,1
 Sevilla,1.0,0.0,1.0,0.0,Draw%,1
 Sevilla,1.0,0.0,1.0,0.0,Draw%,1
 Sevilla,1.0,0.0,1.0,0.0,Draw%,1
 Sevilla,1.0,0.0,1.0,0.0,Draw%,1
-Valencia,2.0,1.0,0.0,0.0,Win%,2
-Valencia,0.0,0.0,0.0,1.0,Lose%,0
-Valencia,0.0,0.0,0.0,1.0,Lose%,0
-Valencia,2.0,0.84,0.0,0.16,Win%,2
+Sevilla,0.0,0.17,0.83,0.0,Draw%,1
+Sevilla,1.0,0.0,1.0,0.0,Draw%,1
+Valencia,2.0,0.0,0.0,1.0,Lose%,0
+Valencia,0.0,1.0,0.0,0.0,Win%,2
+Valencia,0.0,1.0,0.0,0.0,Win%,2
+Valencia,2.0,0.1,0.0,0.9,Lose%,0
 Valencia,1.0,0.0,1.0,0.0,Draw%,1
-Valencia,0.0,0.0,0.06,0.94,Lose%,0
-Valencia,0.0,0.0,0.0,1.0,Lose%,0
-Valencia,1.0,0.0,0.72,0.28,Draw%,1
-Valencia,2.0,0.62,0.38,0.0,Win%,2
-Valencia,1.0,0.24,0.76,0.0,Draw%,1
-Valencia,2.0,1.0,0.0,0.0,Win%,2
-Valencia,0.0,0.0,0.0,1.0,Lose%,0
-Villarreal,2.0,1.0,0.0,0.0,Win%,2
-Villarreal,0.0,0.01,0.0,0.99,Lose%,0
-Villarreal,0.0,0.0,0.0,1.0,Lose%,0
-Villarreal,2.0,0.8,0.0,0.2,Win%,2
+Valencia,0.0,0.97,0.03,0.0,Win%,2
+Valencia,0.0,1.0,0.0,0.0,Win%,2
+Valencia,1.0,0.3,0.7,0.0,Draw%,1
+Valencia,2.0,0.0,0.3,0.7,Lose%,0
+Valencia,1.0,0.0,0.89,0.11,Draw%,1
+Valencia,2.0,0.0,0.0,1.0,Lose%,0
+Valencia,0.0,1.0,0.0,0.0,Win%,2
+Valencia,1.0,0.4,0.6,0.0,Draw%,1
+Valencia,0.0,0.6,0.4,0.0,Win%,2
+Villarreal,2.0,0.0,0.0,1.0,Lose%,0
+Villarreal,0.0,1.0,0.0,0.0,Win%,2
+Villarreal,0.0,1.0,0.0,0.0,Win%,2
+Villarreal,2.0,0.12,0.0,0.88,Lose%,0
 Villarreal,1.0,0.0,1.0,0.0,Draw%,1
-Villarreal,0.0,0.0,0.03,0.97,Lose%,0
-Villarreal,1.0,0.0,0.61,0.39,Draw%,1
-Villarreal,0.0,0.0,0.01,0.99,Lose%,0
-Villarreal,1.0,0.0,0.25,0.75,Lose%,0
-Villarreal,2.0,0.56,0.44,0.0,Win%,2
-Villarreal,0.0,0.02,0.0,0.98,Lose%,0
-Villarreal,0.0,0.0,0.0,1.0,Lose%,0
-Augsburg,0.0,0.0,0.04,0.96,Lose%,0
+Villarreal,0.0,0.99,0.01,0.0,Win%,2
+Villarreal,1.0,0.16,0.84,0.0,Draw%,1
+Villarreal,0.0,0.99,0.01,0.0,Win%,2
+Villarreal,1.0,0.27,0.73,0.01,Draw%,1
+Villarreal,2.0,0.0,0.59,0.41,Draw%,1
+Villarreal,0.0,0.99,0.0,0.01,Win%,2
+Villarreal,0.0,1.0,0.0,0.0,Win%,2
+Villarreal,2.0,0.01,0.0,0.99,Lose%,0
+Villarreal,1.0,0.0,1.0,0.0,Draw%,1
+Augsburg,0.0,0.91,0.09,0.0,Win%,2
 Augsburg,1.0,0.0,1.0,0.0,Draw%,1
-Augsburg,0.0,0.0,0.05,0.95,Lose%,0
-Augsburg,2.0,1.0,0.0,0.0,Win%,2
-Augsburg,0.0,0.23,0.0,0.77,Lose%,0
-Augsburg,0.0,0.0,0.0,1.0,Lose%,0
-Augsburg,2.0,0.61,0.0,0.39,Win%,2
-Augsburg,2.0,1.0,0.0,0.0,Win%,2
+Augsburg,0.0,0.89,0.11,0.0,Win%,2
+Augsburg,2.0,0.0,0.0,1.0,Lose%,0
+Augsburg,0.0,0.79,0.0,0.21,Win%,2
+Augsburg,0.0,1.0,0.0,0.0,Win%,2
+Augsburg,2.0,0.25,0.0,0.75,Lose%,0
+Augsburg,2.0,0.0,0.0,1.0,Lose%,0
 Augsburg,1.0,0.0,1.0,0.0,Draw%,1
 Augsburg,1.0,0.0,1.0,0.0,Draw%,1
-Bayer Leverkusen,2.0,1.0,0.0,0.0,Win%,2
-Bayer Leverkusen,2.0,1.0,0.0,0.0,Win%,2
-Bayer Leverkusen,1.0,0.09,0.91,0.0,Draw%,1
-Bayer Leverkusen,2.0,1.0,0.0,0.0,Win%,2
-Bayer Leverkusen,2.0,1.0,0.0,0.0,Win%,2
-Bayer Leverkusen,2.0,1.0,0.0,0.0,Win%,2
-Bayer Leverkusen,2.0,1.0,0.0,0.0,Win%,2
-Bayer Leverkusen,2.0,1.0,0.0,0.0,Win%,2
-Bayer Leverkusen,2.0,1.0,0.0,0.0,Win%,2
-Bayer Leverkusen,2.0,1.0,0.0,0.0,Win%,2
-Bayern Munich,2.0,1.0,0.0,0.0,Win%,2
-Bayern Munich,2.0,1.0,0.0,0.0,Win%,2
-Bayern Munich,1.0,0.19,0.81,0.0,Draw%,1
-Bayern Munich,2.0,0.99,0.01,0.0,Win%,2
+Augsburg,1.0,0.0,1.0,0.0,Draw%,1
+Augsburg,2.0,0.0,0.32,0.68,Lose%,0
+Bayer Leverkusen,2.0,0.0,0.0,1.0,Lose%,0
+Bayer Leverkusen,2.0,0.0,0.0,1.0,Lose%,0
+Bayer Leverkusen,1.0,0.0,0.84,0.16,Draw%,1
+Bayer Leverkusen,2.0,0.0,0.0,1.0,Lose%,0
+Bayer Leverkusen,2.0,0.0,0.0,1.0,Lose%,0
+Bayer Leverkusen,2.0,0.0,0.0,1.0,Lose%,0
+Bayer Leverkusen,2.0,0.0,0.0,1.0,Lose%,0
+Bayer Leverkusen,2.0,0.0,0.0,1.0,Lose%,0
+Bayer Leverkusen,2.0,0.0,0.0,1.0,Lose%,0
+Bayer Leverkusen,2.0,0.0,0.0,1.0,Lose%,0
+Bayer Leverkusen,2.0,0.0,0.0,1.0,Lose%,0
+Bayer Leverkusen,1.0,0.0,1.0,0.0,Draw%,1
+Bayern Munich,2.0,0.0,0.0,1.0,Lose%,0
+Bayern Munich,2.0,0.0,0.0,1.0,Lose%,0
+Bayern Munich,1.0,0.0,0.78,0.22,Draw%,1
+Bayern Munich,2.0,0.0,0.0,1.0,Lose%,0
 Bayern Munich,1.0,0.0,1.0,0.0,Draw%,1
-Bayern Munich,2.0,0.34,0.66,0.0,Draw%,1
-Bayern Munich,2.0,1.0,0.0,0.0,Win%,2
-Bayern Munich,2.0,1.0,0.0,0.0,Win%,2
-Bayern Munich,2.0,1.0,0.0,0.0,Win%,2
-Bayern Munich,2.0,1.0,0.0,0.0,Win%,2
-Bochum,1.0,0.0,0.98,0.02,Draw%,1
+Bayern Munich,2.0,0.0,0.5,0.5,Draw%,1
+Bayern Munich,2.0,0.0,0.0,1.0,Lose%,0
+Bayern Munich,2.0,0.0,0.0,1.0,Lose%,0
+Bayern Munich,2.0,0.0,0.0,1.0,Lose%,0
+Bayern Munich,2.0,0.0,0.0,1.0,Lose%,0
+Bayern Munich,2.0,0.0,0.0,1.0,Lose%,0
+Bochum,1.0,0.04,0.96,0.0,Draw%,1
 Bochum,1.0,0.0,1.0,0.0,Draw%,1
 Bochum,1.0,0.0,1.0,0.0,Draw%,1
-Bochum,0.0,0.0,0.21,0.79,Lose%,0
-Bochum,0.0,0.0,0.02,0.98,Lose%,0
-Bochum,1.0,0.0,0.73,0.27,Draw%,1
-Bochum,0.0,0.0,0.0,1.0,Lose%,0
-Bochum,1.0,0.0,0.68,0.32,Draw%,1
-Bochum,2.0,0.16,0.84,0.0,Draw%,1
-Bochum,1.0,0.36,0.64,0.0,Draw%,1
+Bochum,0.0,0.32,0.68,0.0,Draw%,1
+Bochum,0.0,0.98,0.02,0.0,Win%,2
+Bochum,1.0,0.12,0.88,0.0,Draw%,1
+Bochum,0.0,0.95,0.05,0.0,Win%,2
+Bochum,1.0,0.13,0.87,0.0,Draw%,1
+Bochum,2.0,0.0,0.93,0.07,Draw%,1
+Bochum,1.0,0.0,0.53,0.47,Draw%,1
+Bochum,1.0,0.0,1.0,0.0,Draw%,1
+Bochum,2.0,0.0,0.07,0.93,Lose%,0
 Borussia Dortmund,1.0,0.0,1.0,0.0,Draw%,1
 Borussia Dortmund,1.0,0.0,1.0,0.0,Draw%,1
-Borussia Dortmund,2.0,0.24,0.76,0.0,Draw%,1
-Borussia Dortmund,2.0,1.0,0.0,0.0,Win%,2
-Borussia Dortmund,2.0,1.0,0.0,0.0,Win%,2
-Borussia Dortmund,2.0,1.0,0.0,0.0,Win%,2
-Borussia Dortmund,2.0,1.0,0.0,0.0,Win%,2
+Borussia Dortmund,2.0,0.0,0.38,0.62,Lose%,0
+Borussia Dortmund,2.0,0.0,0.0,1.0,Lose%,0
+Borussia Dortmund,2.0,0.0,0.0,1.0,Lose%,0
+Borussia Dortmund,2.0,0.0,0.0,1.0,Lose%,0
+Borussia Dortmund,2.0,0.0,0.0,1.0,Lose%,0
 Borussia Dortmund,1.0,0.0,1.0,0.0,Draw%,1
-Borussia Dortmund,0.0,0.0,0.0,1.0,Lose%,0
-Borussia Dortmund,0.0,0.0,0.0,1.0,Lose%,0
-Borussia M.Gladbach,0.0,0.0,0.07,0.93,Lose%,0
-Borussia M.Gladbach,0.0,0.0,0.0,1.0,Lose%,0
-Borussia M.Gladbach,1.0,0.0,0.68,0.32,Draw%,1
-Borussia M.Gladbach,0.0,0.0,0.0,1.0,Lose%,0
-Borussia M.Gladbach,2.0,0.99,0.0,0.01,Win%,2
-Borussia M.Gladbach,1.0,0.36,0.64,0.0,Draw%,1
-Borussia M.Gladbach,0.0,0.0,0.01,0.99,Lose%,0
-Borussia M.Gladbach,2.0,1.0,0.0,0.0,Win%,2
+Borussia Dortmund,0.0,1.0,0.0,0.0,Win%,2
+Borussia Dortmund,0.0,1.0,0.0,0.0,Win%,2
+Borussia Dortmund,2.0,0.0,0.0,1.0,Lose%,0
+Borussia Dortmund,1.0,0.0,1.0,0.0,Draw%,1
+Borussia M.Gladbach,0.0,0.8,0.2,0.0,Win%,2
+Borussia M.Gladbach,0.0,1.0,0.0,0.0,Win%,2
+Borussia M.Gladbach,1.0,0.18,0.82,0.0,Draw%,1
+Borussia M.Gladbach,0.0,1.0,0.0,0.0,Win%,2
+Borussia M.Gladbach,2.0,0.02,0.0,0.98,Lose%,0
+Borussia M.Gladbach,1.0,0.0,0.78,0.22,Draw%,1
+Borussia M.Gladbach,0.0,0.99,0.01,0.0,Win%,2
+Borussia M.Gladbach,2.0,0.0,0.0,1.0,Lose%,0
 Borussia M.Gladbach,1.0,0.0,1.0,0.0,Draw%,1
-Borussia M.Gladbach,2.0,0.63,0.37,0.0,Win%,2
-Darmstadt,0.0,0.0,0.0,1.0,Lose%,0
-Darmstadt,0.0,0.0,0.0,1.0,Lose%,0
+Borussia M.Gladbach,2.0,0.0,0.36,0.64,Lose%,0
+Borussia M.Gladbach,0.0,0.91,0.0,0.09,Win%,2
+Borussia M.Gladbach,2.0,0.0,0.0,1.0,Lose%,0
+Darmstadt,0.0,1.0,0.0,0.0,Win%,2
+Darmstadt,0.0,1.0,0.0,0.0,Win%,2
 Darmstadt,1.0,0.0,1.0,0.0,Draw%,1
-Darmstadt,0.0,0.0,0.0,1.0,Lose%,0
-Darmstadt,2.0,1.0,0.0,0.0,Win%,2
-Darmstadt,2.0,1.0,0.0,0.0,Win%,2
-Darmstadt,0.0,0.26,0.0,0.74,Lose%,0
-Darmstadt,0.0,0.0,0.0,1.0,Lose%,0
-Darmstadt,0.0,0.0,0.0,1.0,Lose%,0
-Darmstadt,1.0,0.0,0.98,0.02,Draw%,1
+Darmstadt,0.0,0.65,0.35,0.0,Win%,2
+Darmstadt,2.0,0.0,0.0,1.0,Lose%,0
+Darmstadt,2.0,0.0,0.0,1.0,Lose%,0
+Darmstadt,0.0,0.71,0.0,0.29,Win%,2
+Darmstadt,0.0,1.0,0.0,0.0,Win%,2
+Darmstadt,0.0,1.0,0.0,0.0,Win%,2
+Darmstadt,1.0,0.0,1.0,0.0,Draw%,1
+Darmstadt,1.0,0.0,1.0,0.0,Draw%,1
+Darmstadt,0.0,0.76,0.24,0.0,Win%,2
 Eintracht Frankfurt,1.0,0.0,1.0,0.0,Draw%,1
 Eintracht Frankfurt,1.0,0.0,1.0,0.0,Draw%,1
 Eintracht Frankfurt,1.0,0.0,1.0,0.0,Draw%,1
 Eintracht Frankfurt,1.0,0.0,1.0,0.0,Draw%,1
-Eintracht Frankfurt,0.0,0.0,0.0,1.0,Lose%,0
-Eintracht Frankfurt,2.0,1.0,0.0,0.0,Win%,2
-Eintracht Frankfurt,2.0,1.0,0.0,0.0,Win%,2
-Eintracht Frankfurt,1.0,0.01,0.99,0.0,Draw%,1
-Eintracht Frankfurt,2.0,0.98,0.02,0.0,Win%,2
+Eintracht Frankfurt,0.0,0.79,0.21,0.0,Win%,2
+Eintracht Frankfurt,2.0,0.0,0.0,1.0,Lose%,0
+Eintracht Frankfurt,2.0,0.0,0.0,1.0,Lose%,0
+Eintracht Frankfurt,1.0,0.0,0.99,0.01,Draw%,1
+Eintracht Frankfurt,2.0,0.0,0.0,1.0,Lose%,0
 Eintracht Frankfurt,1.0,0.0,1.0,0.0,Draw%,1
-FC Cologne,0.0,0.0,0.0,1.0,Lose%,0
-FC Cologne,1.0,0.0,0.67,0.33,Draw%,1
-FC Cologne,0.0,0.0,0.0,1.0,Lose%,0
-FC Cologne,0.0,0.0,0.0,1.0,Lose%,0
-FC Cologne,0.0,0.0,0.0,1.0,Lose%,0
-FC Cologne,0.0,0.0,0.0,1.0,Lose%,0
-FC Cologne,2.0,0.89,0.0,0.11,Win%,2
-FC Cologne,0.0,0.0,0.0,1.0,Lose%,0
-FC Cologne,1.0,0.0,0.99,0.01,Draw%,1
+Eintracht Frankfurt,0.0,0.56,0.44,0.0,Win%,2
+Eintracht Frankfurt,0.0,1.0,0.0,0.0,Win%,2
+FC Cologne,0.0,1.0,0.0,0.0,Win%,2
+FC Cologne,1.0,0.23,0.77,0.0,Draw%,1
+FC Cologne,0.0,1.0,0.0,0.0,Win%,2
+FC Cologne,0.0,1.0,0.0,0.0,Win%,2
+FC Cologne,0.0,1.0,0.0,0.0,Win%,2
+FC Cologne,0.0,1.0,0.0,0.0,Win%,2
+FC Cologne,2.0,0.07,0.0,0.93,Lose%,0
+FC Cologne,0.0,1.0,0.0,0.0,Win%,2
+FC Cologne,1.0,0.04,0.96,0.0,Draw%,1
 FC Cologne,1.0,0.0,1.0,0.0,Draw%,1
-FC Heidenheim,0.0,0.0,0.0,1.0,Lose%,0
-FC Heidenheim,1.0,0.0,0.53,0.47,Draw%,1
-FC Heidenheim,2.0,0.95,0.05,0.0,Win%,2
-FC Heidenheim,0.0,0.62,0.0,0.38,Win%,2
-FC Heidenheim,2.0,1.0,0.0,0.0,Win%,2
-FC Heidenheim,0.0,0.06,0.0,0.94,Lose%,0
-FC Heidenheim,0.0,0.0,0.0,1.0,Lose%,0
-FC Heidenheim,0.0,0.0,0.0,1.0,Lose%,0
-FC Heidenheim,2.0,0.68,0.0,0.32,Win%,2
-FC Heidenheim,0.0,0.0,0.0,1.0,Lose%,0
-Freiburg,2.0,1.0,0.0,0.0,Win%,2
-Freiburg,0.0,0.0,0.0,1.0,Lose%,0
-Freiburg,0.0,0.0,0.0,1.0,Lose%,0
+FC Cologne,0.0,0.01,0.99,0.0,Draw%,1
+FC Cologne,2.0,0.0,0.0,1.0,Lose%,0
+FC Heidenheim,0.0,1.0,0.0,0.0,Win%,2
+FC Heidenheim,1.0,0.36,0.64,0.0,Draw%,1
+FC Heidenheim,2.0,0.0,0.03,0.97,Lose%,0
+FC Heidenheim,0.0,0.37,0.0,0.63,Lose%,0
+FC Heidenheim,2.0,0.01,0.0,0.99,Lose%,0
+FC Heidenheim,0.0,1.0,0.0,0.0,Win%,2
+FC Heidenheim,0.0,1.0,0.0,0.0,Win%,2
+FC Heidenheim,0.0,1.0,0.0,0.0,Win%,2
+FC Heidenheim,2.0,0.32,0.0,0.68,Lose%,0
+FC Heidenheim,0.0,1.0,0.0,0.0,Win%,2
+FC Heidenheim,1.0,0.03,0.97,0.0,Draw%,1
+FC Heidenheim,0.0,1.0,0.0,0.0,Win%,2
+Freiburg,2.0,0.0,0.0,1.0,Lose%,0
+Freiburg,0.0,1.0,0.0,0.0,Win%,2
+Freiburg,0.0,1.0,0.0,0.0,Win%,2
 Freiburg,1.0,0.0,1.0,0.0,Draw%,1
-Freiburg,2.0,1.0,0.0,0.0,Win%,2
-Freiburg,0.0,0.37,0.0,0.63,Lose%,0
-Freiburg,2.0,1.0,0.0,0.0,Win%,2
-Freiburg,0.0,0.0,0.0,1.0,Lose%,0
-Freiburg,1.0,0.0,0.99,0.01,Draw%,1
-Freiburg,0.0,0.0,0.01,0.99,Lose%,0
-Hoffenheim,2.0,1.0,0.0,0.0,Win%,2
-Hoffenheim,2.0,1.0,0.0,0.0,Win%,2
-Hoffenheim,2.0,1.0,0.0,0.0,Win%,2
-Hoffenheim,2.0,1.0,0.0,0.0,Win%,2
-Hoffenheim,0.0,0.0,0.0,1.0,Lose%,0
-Hoffenheim,2.0,1.0,0.0,0.0,Win%,2
-Hoffenheim,0.0,0.0,0.0,1.0,Lose%,0
-Hoffenheim,2.0,0.78,0.0,0.22,Win%,2
-Hoffenheim,0.0,0.84,0.0,0.16,Win%,2
-Hoffenheim,1.0,0.0,0.98,0.02,Draw%,1
-Mainz 05,1.0,0.0,0.74,0.26,Draw%,1
-Mainz 05,0.0,0.0,0.0,1.0,Lose%,0
-Mainz 05,0.0,0.0,0.0,1.0,Lose%,0
-Mainz 05,0.0,0.0,0.0,1.0,Lose%,0
-Mainz 05,0.0,0.0,0.0,1.0,Lose%,0
+Freiburg,2.0,0.0,0.0,1.0,Lose%,0
+Freiburg,0.0,0.76,0.0,0.24,Win%,2
+Freiburg,2.0,0.01,0.0,0.99,Lose%,0
+Freiburg,0.0,1.0,0.0,0.0,Win%,2
+Freiburg,1.0,0.0,1.0,0.0,Draw%,1
+Freiburg,0.0,0.98,0.02,0.0,Win%,2
+Freiburg,1.0,0.02,0.98,0.0,Draw%,1
+Freiburg,2.0,0.0,0.87,0.13,Draw%,1
+Hoffenheim,2.0,0.0,0.0,1.0,Lose%,0
+Hoffenheim,2.0,0.0,0.0,1.0,Lose%,0
+Hoffenheim,2.0,0.0,0.0,1.0,Lose%,0
+Hoffenheim,2.0,0.0,0.0,1.0,Lose%,0
+Hoffenheim,0.0,1.0,0.0,0.0,Win%,2
+Hoffenheim,2.0,0.0,0.0,1.0,Lose%,0
+Hoffenheim,0.0,1.0,0.0,0.0,Win%,2
+Hoffenheim,2.0,0.13,0.0,0.87,Lose%,0
+Hoffenheim,0.0,0.1,0.0,0.9,Lose%,0
+Hoffenheim,1.0,0.0,1.0,0.0,Draw%,1
+Hoffenheim,1.0,0.0,1.0,0.0,Draw%,1
+Hoffenheim,0.0,0.37,0.63,0.0,Draw%,1
+Mainz 05,1.0,0.2,0.8,0.0,Draw%,1
+Mainz 05,0.0,0.97,0.03,0.0,Win%,2
+Mainz 05,0.0,1.0,0.0,0.0,Win%,2
+Mainz 05,0.0,1.0,0.0,0.0,Win%,2
+Mainz 05,0.0,1.0,0.0,0.0,Win%,2
 Mainz 05,1.0,0.0,1.0,0.0,Draw%,1
-Mainz 05,0.0,0.0,0.0,1.0,Lose%,0
-Mainz 05,1.0,0.0,0.58,0.42,Draw%,1
-Mainz 05,2.0,0.92,0.08,0.0,Win%,2
-Mainz 05,1.0,0.36,0.64,0.0,Draw%,1
-RasenBallsport Leipzig,2.0,1.0,0.0,0.0,Win%,2
-RasenBallsport Leipzig,2.0,1.0,0.0,0.0,Win%,2
-RasenBallsport Leipzig,2.0,1.0,0.0,0.0,Win%,2
-RasenBallsport Leipzig,2.0,1.0,0.0,0.0,Win%,2
+Mainz 05,0.0,0.91,0.09,0.0,Win%,2
+Mainz 05,1.0,0.19,0.81,0.0,Draw%,1
+Mainz 05,2.0,0.0,0.07,0.93,Lose%,0
+Mainz 05,1.0,0.0,0.55,0.45,Draw%,1
+Mainz 05,1.0,0.0,1.0,0.0,Draw%,1
+Mainz 05,0.0,0.83,0.17,0.0,Win%,2
+RasenBallsport Leipzig,2.0,0.0,0.0,1.0,Lose%,0
+RasenBallsport Leipzig,2.0,0.0,0.0,1.0,Lose%,0
+RasenBallsport Leipzig,2.0,0.0,0.0,1.0,Lose%,0
+RasenBallsport Leipzig,2.0,0.0,0.0,1.0,Lose%,0
 RasenBallsport Leipzig,1.0,0.0,1.0,0.0,Draw%,1
 RasenBallsport Leipzig,1.0,0.0,1.0,0.0,Draw%,1
-RasenBallsport Leipzig,2.0,0.33,0.67,0.0,Draw%,1
-RasenBallsport Leipzig,2.0,1.0,0.0,0.0,Win%,2
-RasenBallsport Leipzig,0.0,0.02,0.0,0.98,Lose%,0
-RasenBallsport Leipzig,2.0,1.0,0.0,0.0,Win%,2
-Union Berlin,2.0,1.0,0.0,0.0,Win%,2
-Union Berlin,0.0,0.01,0.0,0.99,Lose%,0
-Union Berlin,0.0,0.0,0.0,1.0,Lose%,0
-Union Berlin,0.0,0.0,0.0,1.0,Lose%,0
-Union Berlin,0.0,0.0,0.0,1.0,Lose%,0
-Union Berlin,0.0,0.0,0.0,1.0,Lose%,0
-Union Berlin,0.0,0.0,0.0,1.0,Lose%,0
-Union Berlin,0.0,0.0,0.0,1.0,Lose%,0
-Union Berlin,0.0,0.0,0.0,1.0,Lose%,0
-Union Berlin,0.0,0.0,0.0,1.0,Lose%,0
-VfB Stuttgart,0.0,0.0,0.0,1.0,Lose%,0
-VfB Stuttgart,2.0,1.0,0.0,0.0,Win%,2
-VfB Stuttgart,2.0,1.0,0.0,0.0,Win%,2
-VfB Stuttgart,2.0,1.0,0.0,0.0,Win%,2
-VfB Stuttgart,2.0,1.0,0.0,0.0,Win%,2
-VfB Stuttgart,2.0,1.0,0.0,0.0,Win%,2
-VfB Stuttgart,2.0,1.0,0.0,0.0,Win%,2
-VfB Stuttgart,0.0,0.0,0.0,1.0,Lose%,0
-VfB Stuttgart,0.0,0.0,0.0,1.0,Lose%,0
-VfB Stuttgart,2.0,0.08,0.0,0.92,Lose%,0
-Werder Bremen,0.0,0.0,0.0,1.0,Lose%,0
-Werder Bremen,2.0,0.97,0.0,0.03,Win%,2
-Werder Bremen,0.0,0.0,0.0,1.0,Lose%,0
-Werder Bremen,2.0,0.99,0.0,0.01,Win%,2
-Werder Bremen,0.0,0.62,0.0,0.38,Win%,2
-Werder Bremen,0.0,0.0,0.0,1.0,Lose%,0
-Werder Bremen,0.0,0.0,0.0,1.0,Lose%,0
-Werder Bremen,2.0,0.95,0.0,0.05,Win%,2
+RasenBallsport Leipzig,2.0,0.0,0.55,0.45,Draw%,1
+RasenBallsport Leipzig,2.0,0.0,0.0,1.0,Lose%,0
+RasenBallsport Leipzig,0.0,1.0,0.0,0.0,Win%,2
+RasenBallsport Leipzig,2.0,0.0,0.0,1.0,Lose%,0
+RasenBallsport Leipzig,0.0,1.0,0.0,0.0,Win%,2
+RasenBallsport Leipzig,2.0,0.88,0.0,0.12,Win%,2
+Union Berlin,2.0,0.0,0.0,1.0,Lose%,0
+Union Berlin,0.0,0.95,0.0,0.05,Win%,2
+Union Berlin,0.0,1.0,0.0,0.0,Win%,2
+Union Berlin,0.0,1.0,0.0,0.0,Win%,2
+Union Berlin,0.0,1.0,0.0,0.0,Win%,2
+Union Berlin,0.0,1.0,0.0,0.0,Win%,2
+Union Berlin,0.0,1.0,0.0,0.0,Win%,2
+Union Berlin,0.0,1.0,0.0,0.0,Win%,2
+Union Berlin,0.0,1.0,0.0,0.0,Win%,2
+Union Berlin,0.0,1.0,0.0,0.0,Win%,2
+Union Berlin,1.0,0.0,1.0,0.0,Draw%,1
+VfB Stuttgart,0.0,1.0,0.0,0.0,Win%,2
+VfB Stuttgart,2.0,0.0,0.0,1.0,Lose%,0
+VfB Stuttgart,2.0,0.0,0.0,1.0,Lose%,0
+VfB Stuttgart,2.0,0.0,0.0,1.0,Lose%,0
+VfB Stuttgart,2.0,0.0,0.0,1.0,Lose%,0
+VfB Stuttgart,2.0,0.0,0.0,1.0,Lose%,0
+VfB Stuttgart,2.0,0.0,0.0,1.0,Lose%,0
+VfB Stuttgart,0.0,1.0,0.0,0.0,Win%,2
+VfB Stuttgart,0.0,1.0,0.0,0.0,Win%,2
+VfB Stuttgart,2.0,0.92,0.0,0.08,Win%,2
+VfB Stuttgart,2.0,0.0,0.0,1.0,Lose%,0
+VfB Stuttgart,2.0,0.0,0.0,1.0,Lose%,0
+Werder Bremen,0.0,1.0,0.0,0.0,Win%,2
+Werder Bremen,2.0,0.01,0.0,0.99,Lose%,0
+Werder Bremen,0.0,1.0,0.0,0.0,Win%,2
+Werder Bremen,2.0,0.0,0.0,1.0,Lose%,0
+Werder Bremen,0.0,0.39,0.0,0.61,Lose%,0
+Werder Bremen,0.0,1.0,0.0,0.0,Win%,2
+Werder Bremen,0.0,1.0,0.0,0.0,Win%,2
+Werder Bremen,2.0,0.04,0.0,0.96,Lose%,0
 Werder Bremen,1.0,0.0,1.0,0.0,Draw%,1
 Werder Bremen,1.0,0.0,1.0,0.0,Draw%,1
-Wolfsburg,2.0,1.0,0.0,0.0,Win%,2
-Wolfsburg,0.0,0.0,0.0,1.0,Lose%,0
-Wolfsburg,2.0,1.0,0.0,0.0,Win%,2
-Wolfsburg,0.0,0.0,0.0,1.0,Lose%,0
-Wolfsburg,2.0,0.94,0.0,0.06,Win%,2
-Wolfsburg,0.0,0.06,0.0,0.94,Lose%,0
-Wolfsburg,0.0,0.0,0.0,1.0,Lose%,0
-Wolfsburg,0.0,0.0,0.0,1.0,Lose%,0
-Wolfsburg,1.0,0.0,0.98,0.02,Draw%,1
-Wolfsburg,0.0,0.0,0.0,1.0,Lose%,0
-Arsenal,2.0,1.0,0.0,0.0,Win%,2
-Arsenal,1.0,0.01,0.99,0.0,Draw%,1
-Arsenal,2.0,1.0,0.0,0.0,Win%,2
-Arsenal,2.0,1.0,0.0,0.0,Win%,2
-Arsenal,1.0,0.62,0.38,0.0,Win%,2
-Arsenal,2.0,1.0,0.0,0.0,Win%,2
-Arsenal,2.0,1.0,0.0,0.0,Win%,2
-Arsenal,1.0,0.66,0.34,0.0,Win%,2
-Arsenal,2.0,1.0,0.0,0.0,Win%,2
-Arsenal,0.0,0.0,0.0,1.0,Lose%,0
-Arsenal,2.0,1.0,0.0,0.0,Win%,2
-Aston Villa,2.0,1.0,0.0,0.0,Win%,2
-Aston Villa,2.0,1.0,0.0,0.0,Win%,2
-Aston Villa,0.0,0.02,0.0,0.98,Lose%,0
-Aston Villa,2.0,1.0,0.0,0.0,Win%,2
-Aston Villa,2.0,1.0,0.0,0.0,Win%,2
-Aston Villa,2.0,1.0,0.0,0.0,Win%,2
+Werder Bremen,0.0,0.99,0.01,0.0,Win%,2
+Werder Bremen,0.0,1.0,0.0,0.0,Win%,2
+Wolfsburg,2.0,0.0,0.0,1.0,Lose%,0
+Wolfsburg,0.0,1.0,0.0,0.0,Win%,2
+Wolfsburg,2.0,0.0,0.0,1.0,Lose%,0
+Wolfsburg,0.0,1.0,0.0,0.0,Win%,2
+Wolfsburg,2.0,0.01,0.0,0.99,Lose%,0
+Wolfsburg,0.0,0.96,0.0,0.04,Win%,2
+Wolfsburg,0.0,1.0,0.0,0.0,Win%,2
+Wolfsburg,0.0,1.0,0.0,0.0,Win%,2
+Wolfsburg,1.0,0.0,1.0,0.0,Draw%,1
+Wolfsburg,0.0,1.0,0.0,0.0,Win%,2
+Wolfsburg,2.0,0.01,0.0,0.99,Lose%,0
+Wolfsburg,0.0,0.05,0.0,0.95,Lose%,0
+Arsenal,2.0,0.0,0.0,1.0,Lose%,0
+Arsenal,1.0,0.0,0.96,0.04,Draw%,1
+Arsenal,2.0,0.0,0.0,1.0,Lose%,0
+Arsenal,2.0,0.0,0.0,1.0,Lose%,0
+Arsenal,1.0,0.0,0.22,0.78,Lose%,0
+Arsenal,2.0,0.0,0.0,1.0,Lose%,0
+Arsenal,2.0,0.0,0.0,1.0,Lose%,0
+Arsenal,1.0,0.0,0.12,0.88,Lose%,0
+Arsenal,2.0,0.0,0.0,1.0,Lose%,0
+Arsenal,0.0,1.0,0.0,0.0,Win%,2
+Arsenal,2.0,0.0,0.0,1.0,Lose%,0
+Arsenal,2.0,0.0,0.0,1.0,Lose%,0
+Arsenal,2.0,0.0,0.0,1.0,Lose%,0
+Arsenal,2.0,0.0,0.0,1.0,Lose%,0
+Aston Villa,2.0,0.0,0.0,1.0,Lose%,0
+Aston Villa,2.0,0.0,0.0,1.0,Lose%,0
+Aston Villa,0.0,0.95,0.0,0.05,Win%,2
+Aston Villa,2.0,0.0,0.0,1.0,Lose%,0
+Aston Villa,2.0,0.0,0.0,1.0,Lose%,0
+Aston Villa,2.0,0.0,0.0,1.0,Lose%,0
 Aston Villa,1.0,0.0,1.0,0.0,Draw%,1
-Aston Villa,2.0,1.0,0.0,0.0,Win%,2
-Aston Villa,2.0,1.0,0.0,0.0,Win%,2
-Aston Villa,0.0,0.0,0.0,1.0,Lose%,0
-Aston Villa,2.0,1.0,0.0,0.0,Win%,2
-Bournemouth,0.0,0.0,0.04,0.96,Lose%,0
-Bournemouth,0.0,0.0,0.0,1.0,Lose%,0
-Bournemouth,1.0,0.0,0.61,0.39,Draw%,1
+Aston Villa,2.0,0.0,0.0,1.0,Lose%,0
+Aston Villa,2.0,0.0,0.0,1.0,Lose%,0
+Aston Villa,0.0,1.0,0.0,0.0,Win%,2
+Aston Villa,2.0,0.0,0.0,1.0,Lose%,0
+Aston Villa,2.0,0.0,0.0,1.0,Lose%,0
+Aston Villa,1.0,0.0,0.99,0.01,Draw%,1
+Aston Villa,2.0,0.0,0.0,1.0,Lose%,0
+Bournemouth,0.0,0.9,0.1,0.0,Win%,2
+Bournemouth,0.0,1.0,0.0,0.0,Win%,2
+Bournemouth,1.0,0.22,0.78,0.0,Draw%,1
 Bournemouth,1.0,0.0,1.0,0.0,Draw%,1
-Bournemouth,0.0,0.0,0.09,0.91,Lose%,0
-Bournemouth,0.0,0.0,0.0,1.0,Lose%,0
-Bournemouth,0.0,0.0,0.0,1.0,Lose%,0
-Bournemouth,0.0,0.0,0.0,1.0,Lose%,0
-Bournemouth,2.0,0.77,0.0,0.23,Win%,2
-Bournemouth,0.0,0.0,0.0,1.0,Lose%,0
-Bournemouth,2.0,1.0,0.0,0.0,Win%,2
-Brentford,2.0,1.0,0.0,0.0,Win%,2
-Brentford,1.0,0.03,0.97,0.0,Draw%,1
-Brentford,1.0,0.01,0.99,0.0,Draw%,1
-Brentford,0.0,0.0,0.08,0.92,Lose%,0
-Brentford,0.0,0.0,0.0,1.0,Lose%,0
-Brentford,1.0,0.0,0.65,0.35,Draw%,1
-Brentford,0.0,0.0,0.0,1.0,Lose%,0
-Brentford,2.0,0.99,0.0,0.01,Win%,2
-Brentford,2.0,1.0,0.0,0.0,Win%,2
-Brentford,2.0,1.0,0.0,0.0,Win%,2
-Brentford,0.0,0.53,0.0,0.47,Win%,2
-Brighton,2.0,1.0,0.0,0.0,Win%,2
-Brighton,0.0,0.01,0.0,0.99,Lose%,0
-Brighton,2.0,1.0,0.0,0.0,Win%,2
-Brighton,2.0,1.0,0.0,0.0,Win%,2
-Brighton,2.0,1.0,0.0,0.0,Win%,2
-Brighton,0.0,0.38,0.0,0.62,Lose%,0
+Bournemouth,0.0,0.8,0.2,0.0,Win%,2
+Bournemouth,0.0,1.0,0.0,0.0,Win%,2
+Bournemouth,0.0,1.0,0.0,0.0,Win%,2
+Bournemouth,0.0,1.0,0.0,0.0,Win%,2
+Bournemouth,2.0,0.14,0.0,0.86,Lose%,0
+Bournemouth,0.0,1.0,0.0,0.0,Win%,2
+Bournemouth,2.0,0.0,0.0,1.0,Lose%,0
+Bournemouth,2.0,0.0,0.0,1.0,Lose%,0
+Bournemouth,1.0,0.0,1.0,0.0,Draw%,1
+Bournemouth,2.0,0.0,0.0,1.0,Lose%,0
+Brentford,2.0,0.0,0.0,1.0,Lose%,0
+Brentford,1.0,0.0,0.93,0.07,Draw%,1
+Brentford,1.0,0.0,1.0,0.0,Draw%,1
+Brentford,0.0,0.9,0.1,0.0,Win%,2
+Brentford,0.0,1.0,0.0,0.0,Win%,2
+Brentford,1.0,0.17,0.83,0.0,Draw%,1
+Brentford,0.0,1.0,0.0,0.0,Win%,2
+Brentford,2.0,0.02,0.0,0.98,Lose%,0
+Brentford,2.0,0.0,0.0,1.0,Lose%,0
+Brentford,2.0,0.0,0.0,1.0,Lose%,0
+Brentford,0.0,0.42,0.0,0.58,Lose%,0
+Brentford,0.0,1.0,0.0,0.0,Win%,2
+Brentford,2.0,0.38,0.0,0.62,Lose%,0
+Brentford,0.0,1.0,0.0,0.0,Win%,2
+Brighton,2.0,0.0,0.0,1.0,Lose%,0
+Brighton,0.0,0.88,0.0,0.12,Win%,2
+Brighton,2.0,0.0,0.0,1.0,Lose%,0
+Brighton,2.0,0.0,0.0,1.0,Lose%,0
+Brighton,2.0,0.0,0.0,1.0,Lose%,0
+Brighton,0.0,0.6,0.0,0.4,Win%,2
 Brighton,1.0,0.0,1.0,0.0,Draw%,1
-Brighton,0.0,0.0,0.0,1.0,Lose%,0
-Brighton,1.0,0.0,0.98,0.02,Draw%,1
+Brighton,0.0,1.0,0.0,0.0,Win%,2
+Brighton,1.0,0.01,0.99,0.0,Draw%,1
 Brighton,1.0,0.0,1.0,0.0,Draw%,1
 Brighton,1.0,0.0,1.0,0.0,Draw%,1
-Burnley,0.0,0.0,0.0,1.0,Lose%,0
-Burnley,0.0,0.0,0.0,1.0,Lose%,0
-Burnley,1.0,0.0,0.99,0.01,Draw%,1
-Burnley,0.0,0.0,0.0,1.0,Lose%,0
-Burnley,0.0,0.0,0.0,1.0,Lose%,0
-Burnley,2.0,1.0,0.0,0.0,Win%,2
-Burnley,0.0,0.0,0.0,1.0,Lose%,0
-Burnley,0.0,0.0,0.0,1.0,Lose%,0
-Burnley,0.0,0.0,0.0,1.0,Lose%,0
-Burnley,0.0,0.0,0.0,1.0,Lose%,0
-Burnley,0.0,0.0,0.0,1.0,Lose%,0
-Chelsea,0.0,0.0,0.03,0.97,Lose%,0
-Chelsea,2.0,1.0,0.0,0.0,Win%,2
-Chelsea,0.0,0.05,0.0,0.95,Lose%,0
-Chelsea,1.0,0.0,0.28,0.72,Lose%,0
-Chelsea,0.0,0.0,0.02,0.98,Lose%,0
-Chelsea,2.0,0.34,0.0,0.66,Lose%,0
-Chelsea,2.0,1.0,0.0,0.0,Win%,2
-Chelsea,1.0,0.01,0.99,0.0,Draw%,1
-Chelsea,0.0,0.0,0.0,1.0,Lose%,0
-Chelsea,2.0,0.82,0.0,0.18,Win%,2
+Brighton,2.0,0.0,0.03,0.97,Lose%,0
+Brighton,0.0,1.0,0.0,0.0,Win%,2
+Brighton,2.0,0.0,0.0,1.0,Lose%,0
+Burnley,0.0,1.0,0.0,0.0,Win%,2
+Burnley,0.0,1.0,0.0,0.0,Win%,2
+Burnley,1.0,0.01,0.99,0.0,Draw%,1
+Burnley,0.0,1.0,0.0,0.0,Win%,2
+Burnley,0.0,1.0,0.0,0.0,Win%,2
+Burnley,2.0,0.01,0.0,0.99,Lose%,0
+Burnley,0.0,1.0,0.0,0.0,Win%,2
+Burnley,0.0,1.0,0.0,0.0,Win%,2
+Burnley,0.0,1.0,0.0,0.0,Win%,2
+Burnley,0.0,1.0,0.0,0.0,Win%,2
+Burnley,0.0,1.0,0.0,0.0,Win%,2
+Burnley,0.0,1.0,0.0,0.0,Win%,2
+Burnley,2.0,0.61,0.0,0.39,Win%,2
+Burnley,0.0,1.0,0.0,0.0,Win%,2
+Chelsea,0.0,0.93,0.07,0.0,Win%,2
+Chelsea,2.0,0.0,0.0,1.0,Lose%,0
+Chelsea,0.0,0.99,0.0,0.01,Win%,2
+Chelsea,1.0,0.56,0.44,0.0,Win%,2
+Chelsea,0.0,0.98,0.02,0.0,Win%,2
+Chelsea,2.0,0.52,0.0,0.48,Win%,2
+Chelsea,2.0,0.0,0.0,1.0,Lose%,0
+Chelsea,1.0,0.0,0.99,0.0,Draw%,1
+Chelsea,0.0,1.0,0.0,0.0,Win%,2
+Chelsea,2.0,0.23,0.0,0.77,Lose%,0
 Chelsea,1.0,0.0,1.0,0.0,Draw%,1
-Crystal Palace,0.0,0.0,0.0,1.0,Lose%,0
+Chelsea,0.0,0.99,0.01,0.0,Win%,2
+Chelsea,2.0,0.0,0.0,1.0,Lose%,0
+Chelsea,0.0,1.0,0.0,0.0,Win%,2
+Crystal Palace,0.0,1.0,0.0,0.0,Win%,2
 Crystal Palace,1.0,0.0,1.0,0.0,Draw%,1
-Crystal Palace,2.0,0.12,0.88,0.0,Draw%,1
-Crystal Palace,0.0,0.0,0.0,1.0,Lose%,0
-Crystal Palace,1.0,0.0,0.93,0.07,Draw%,1
-Crystal Palace,2.0,0.99,0.01,0.0,Win%,2
-Crystal Palace,1.0,0.37,0.63,0.0,Draw%,1
-Crystal Palace,0.0,0.0,0.56,0.44,Draw%,1
-Crystal Palace,0.0,0.0,0.0,1.0,Lose%,0
-Crystal Palace,2.0,0.93,0.0,0.07,Win%,2
-Crystal Palace,0.0,0.0,0.0,1.0,Lose%,0
-Everton,0.0,0.0,0.0,1.0,Lose%,0
-Everton,0.0,0.0,0.0,1.0,Lose%,0
-Everton,1.0,0.0,0.94,0.06,Draw%,1
-Everton,0.0,0.0,0.0,1.0,Lose%,0
-Everton,2.0,0.99,0.0,0.01,Win%,2
-Everton,0.0,0.29,0.0,0.71,Lose%,0
-Everton,2.0,0.1,0.0,0.9,Lose%,0
-Everton,0.0,0.03,0.0,0.97,Lose%,0
-Everton,2.0,0.97,0.0,0.03,Win%,2
-Everton,1.0,0.01,0.99,0.0,Draw%,1
-Everton,2.0,0.99,0.01,0.0,Win%,2
-Fulham,0.0,0.0,0.0,1.0,Lose%,0
-Fulham,1.0,0.0,1.0,0.0,Draw%,1
-Fulham,0.0,0.0,0.91,0.09,Draw%,1
-Fulham,2.0,0.59,0.0,0.41,Win%,2
-Fulham,1.0,0.47,0.53,0.0,Draw%,1
-Fulham,0.0,0.0,0.02,0.98,Lose%,0
-Fulham,2.0,1.0,0.0,0.0,Win%,2
-Fulham,0.0,0.0,0.0,1.0,Lose%,0
-Fulham,1.0,0.0,0.67,0.33,Draw%,1
-Fulham,0.0,0.0,0.03,0.97,Lose%,0
-Fulham,0.0,0.0,0.0,1.0,Lose%,0
-Liverpool,2.0,1.0,0.0,0.0,Win%,2
-Liverpool,2.0,1.0,0.0,0.0,Win%,2
-Liverpool,2.0,1.0,0.0,0.0,Win%,2
-Liverpool,2.0,1.0,0.0,0.0,Win%,2
-Liverpool,2.0,1.0,0.0,0.0,Win%,2
-Liverpool,0.0,0.0,0.0,1.0,Lose%,0
+Crystal Palace,2.0,0.0,0.1,0.9,Lose%,0
+Crystal Palace,0.0,1.0,0.0,0.0,Win%,2
+Crystal Palace,1.0,0.01,0.99,0.0,Draw%,1
+Crystal Palace,2.0,0.0,0.01,0.99,Lose%,0
+Crystal Palace,1.0,0.0,0.41,0.59,Lose%,0
+Crystal Palace,0.0,0.22,0.78,0.0,Draw%,1
+Crystal Palace,0.0,1.0,0.0,0.0,Win%,2
+Crystal Palace,2.0,0.05,0.0,0.95,Lose%,0
+Crystal Palace,0.0,1.0,0.0,0.0,Win%,2
+Crystal Palace,0.0,1.0,0.0,0.0,Win%,2
+Crystal Palace,1.0,0.01,0.99,0.0,Draw%,1
+Crystal Palace,0.0,1.0,0.0,0.0,Win%,2
+Everton,0.0,1.0,0.0,0.0,Win%,2
+Everton,0.0,1.0,0.0,0.0,Win%,2
+Everton,1.0,0.02,0.98,0.0,Draw%,1
+Everton,0.0,1.0,0.0,0.0,Win%,2
+Everton,2.0,0.03,0.0,0.97,Lose%,0
+Everton,0.0,0.75,0.0,0.25,Win%,2
+Everton,2.0,0.13,0.0,0.87,Lose%,0
+Everton,0.0,0.98,0.0,0.02,Win%,2
+Everton,2.0,0.0,0.0,1.0,Lose%,0
+Everton,1.0,0.0,1.0,0.0,Draw%,1
+Everton,2.0,0.0,0.0,1.0,Lose%,0
+Everton,0.0,0.42,0.0,0.58,Lose%,0
+Everton,2.0,0.0,0.0,1.0,Lose%,0
+Everton,2.0,0.0,0.0,1.0,Lose%,0
+Fulham,0.0,0.99,0.0,0.01,Win%,2
+Fulham,1.0,0.02,0.98,0.0,Draw%,1
+Fulham,0.0,0.59,0.41,0.0,Win%,2
+Fulham,2.0,0.27,0.0,0.73,Lose%,0
+Fulham,1.0,0.0,0.63,0.37,Draw%,1
+Fulham,0.0,0.99,0.01,0.0,Win%,2
+Fulham,2.0,0.0,0.0,1.0,Lose%,0
+Fulham,0.0,1.0,0.0,0.0,Win%,2
+Fulham,1.0,0.15,0.85,0.0,Draw%,1
+Fulham,0.0,0.97,0.03,0.0,Win%,2
+Fulham,0.0,1.0,0.0,0.0,Win%,2
+Fulham,2.0,0.01,0.0,0.99,Lose%,0
+Fulham,0.0,1.0,0.0,0.0,Win%,2
+Fulham,2.0,0.0,0.0,1.0,Lose%,0
+Liverpool,2.0,0.0,0.0,1.0,Lose%,0
+Liverpool,2.0,0.0,0.0,1.0,Lose%,0
+Liverpool,2.0,0.0,0.0,1.0,Lose%,0
+Liverpool,2.0,0.0,0.0,1.0,Lose%,0
+Liverpool,2.0,0.0,0.0,1.0,Lose%,0
+Liverpool,0.0,1.0,0.0,0.0,Win%,2
 Liverpool,1.0,0.0,1.0,0.0,Draw%,1
-Liverpool,2.0,1.0,0.0,0.0,Win%,2
-Liverpool,2.0,1.0,0.0,0.0,Win%,2
-Liverpool,1.0,0.46,0.54,0.0,Draw%,1
-Liverpool,2.0,1.0,0.0,0.0,Win%,2
-Luton,0.0,0.0,0.0,1.0,Lose%,0
-Luton,0.0,0.0,0.0,1.0,Lose%,0
-Luton,0.0,0.0,0.0,1.0,Lose%,0
+Liverpool,2.0,0.0,0.0,1.0,Lose%,0
+Liverpool,2.0,0.0,0.0,1.0,Lose%,0
+Liverpool,1.0,0.0,0.87,0.13,Draw%,1
+Liverpool,2.0,0.0,0.0,1.0,Lose%,0
+Liverpool,1.0,0.0,1.0,0.0,Draw%,1
+Liverpool,2.0,0.0,0.21,0.79,Lose%,0
+Liverpool,2.0,0.0,0.0,1.0,Lose%,0
+Luton,0.0,1.0,0.0,0.0,Win%,2
+Luton,0.0,1.0,0.0,0.0,Win%,2
+Luton,0.0,1.0,0.0,0.0,Win%,2
 Luton,1.0,0.0,1.0,0.0,Draw%,1
-Luton,2.0,0.91,0.09,0.0,Win%,2
-Luton,0.0,0.85,0.0,0.15,Win%,2
-Luton,0.0,0.0,0.0,1.0,Lose%,0
-Luton,1.0,0.0,0.98,0.02,Draw%,1
-Luton,0.0,0.0,0.0,1.0,Lose%,0
-Luton,1.0,0.0,0.95,0.05,Draw%,1
-Luton,0.0,0.0,0.51,0.49,Draw%,1
-Manchester City,2.0,1.0,0.0,0.0,Win%,2
-Manchester City,2.0,1.0,0.0,0.0,Win%,2
-Manchester City,2.0,1.0,0.0,0.0,Win%,2
-Manchester City,2.0,1.0,0.0,0.0,Win%,2
-Manchester City,2.0,1.0,0.0,0.0,Win%,2
-Manchester City,0.0,0.0,0.0,1.0,Lose%,0
-Manchester City,0.0,0.0,0.0,1.0,Lose%,0
-Manchester City,2.0,0.2,0.0,0.8,Lose%,0
-Manchester City,2.0,1.0,0.0,0.0,Win%,2
-Manchester City,2.0,1.0,0.0,0.0,Win%,2
+Luton,2.0,0.0,0.03,0.97,Lose%,0
+Luton,0.0,0.15,0.0,0.85,Lose%,0
+Luton,0.0,1.0,0.0,0.0,Win%,2
+Luton,1.0,0.03,0.97,0.0,Draw%,1
+Luton,0.0,0.99,0.01,0.0,Win%,2
+Luton,1.0,0.05,0.95,0.0,Draw%,1
+Luton,0.0,0.32,0.68,0.0,Draw%,1
+Luton,2.0,0.0,0.0,1.0,Lose%,0
+Luton,0.0,0.25,0.0,0.75,Lose%,0
+Luton,0.0,1.0,0.0,0.0,Win%,2
+Manchester City,2.0,0.0,0.0,1.0,Lose%,0
+Manchester City,2.0,0.0,0.0,1.0,Lose%,0
+Manchester City,2.0,0.0,0.0,1.0,Lose%,0
+Manchester City,2.0,0.0,0.0,1.0,Lose%,0
+Manchester City,2.0,0.0,0.0,1.0,Lose%,0
+Manchester City,0.0,1.0,0.0,0.0,Win%,2
+Manchester City,0.0,1.0,0.0,0.0,Win%,2
+Manchester City,2.0,0.81,0.0,0.19,Win%,2
+Manchester City,2.0,0.0,0.0,1.0,Lose%,0
+Manchester City,2.0,0.0,0.0,1.0,Lose%,0
 Manchester City,1.0,0.0,1.0,0.0,Draw%,1
-Manchester United,0.0,0.0,0.0,1.0,Lose%,0
-Manchester United,2.0,1.0,0.0,0.0,Win%,2
-Manchester United,0.0,0.02,0.0,0.98,Lose%,0
-Manchester United,0.0,0.0,0.0,1.0,Lose%,0
-Manchester United,2.0,0.73,0.0,0.27,Win%,2
-Manchester United,0.0,0.0,0.0,1.0,Lose%,0
-Manchester United,2.0,0.99,0.0,0.01,Win%,2
-Manchester United,2.0,1.0,0.0,0.0,Win%,2
-Manchester United,0.0,0.51,0.0,0.49,Win%,2
-Manchester United,2.0,1.0,0.0,0.0,Win%,2
-Manchester United,2.0,1.0,0.0,0.0,Win%,2
-Newcastle United,0.0,0.0,0.0,1.0,Lose%,0
-Newcastle United,0.0,0.0,0.0,1.0,Lose%,0
-Newcastle United,0.0,0.0,0.0,1.0,Lose%,0
-Newcastle United,2.0,0.6,0.0,0.4,Win%,2
-Newcastle United,2.0,1.0,0.0,0.0,Win%,2
-Newcastle United,2.0,1.0,0.0,0.0,Win%,2
+Manchester City,1.0,0.0,1.0,0.0,Draw%,1
+Manchester City,1.0,0.0,1.0,0.0,Draw%,1
+Manchester City,0.0,1.0,0.0,0.0,Win%,2
+Manchester United,0.0,1.0,0.0,0.0,Win%,2
+Manchester United,2.0,0.0,0.0,1.0,Lose%,0
+Manchester United,0.0,0.95,0.0,0.05,Win%,2
+Manchester United,0.0,1.0,0.0,0.0,Win%,2
+Manchester United,2.0,0.16,0.0,0.84,Lose%,0
+Manchester United,0.0,1.0,0.0,0.0,Win%,2
+Manchester United,2.0,0.01,0.0,0.99,Lose%,0
+Manchester United,2.0,0.0,0.0,1.0,Lose%,0
+Manchester United,0.0,0.44,0.0,0.56,Lose%,0
+Manchester United,2.0,0.0,0.0,1.0,Lose%,0
+Manchester United,2.0,0.0,0.0,1.0,Lose%,0
+Manchester United,2.0,0.0,0.0,1.0,Lose%,0
+Manchester United,0.0,0.29,0.0,0.71,Lose%,0
+Manchester United,2.0,0.0,0.0,1.0,Lose%,0
+Newcastle United,0.0,1.0,0.0,0.0,Win%,2
+Newcastle United,0.0,1.0,0.0,0.0,Win%,2
+Newcastle United,0.0,1.0,0.0,0.0,Win%,2
+Newcastle United,2.0,0.39,0.0,0.61,Lose%,0
+Newcastle United,2.0,0.0,0.0,1.0,Lose%,0
+Newcastle United,2.0,0.0,0.0,1.0,Lose%,0
 Newcastle United,1.0,0.0,1.0,0.0,Draw%,1
-Newcastle United,2.0,1.0,0.0,0.0,Win%,2
+Newcastle United,2.0,0.0,0.0,1.0,Lose%,0
 Newcastle United,1.0,0.0,1.0,0.0,Draw%,1
-Newcastle United,2.0,0.3,0.7,0.0,Draw%,1
-Newcastle United,0.0,0.0,0.0,1.0,Lose%,0
-Nottingham Forest,2.0,1.0,0.0,0.0,Win%,2
-Nottingham Forest,0.0,0.02,0.0,0.98,Lose%,0
-Nottingham Forest,2.0,0.33,0.0,0.67,Lose%,0
-Nottingham Forest,1.0,0.02,0.98,0.0,Draw%,1
-Nottingham Forest,0.0,0.0,0.05,0.95,Lose%,0
-Nottingham Forest,1.0,0.0,0.64,0.36,Draw%,1
+Newcastle United,2.0,0.0,0.58,0.42,Draw%,1
+Newcastle United,0.0,1.0,0.0,0.0,Win%,2
+Newcastle United,2.0,0.0,0.0,1.0,Lose%,0
+Newcastle United,2.0,0.0,0.0,1.0,Lose%,0
+Newcastle United,0.0,0.97,0.0,0.03,Win%,2
+Nottingham Forest,2.0,0.0,0.0,1.0,Lose%,0
+Nottingham Forest,0.0,0.99,0.0,0.01,Win%,2
+Nottingham Forest,2.0,0.02,0.0,0.98,Lose%,0
+Nottingham Forest,1.0,0.0,1.0,0.0,Draw%,1
+Nottingham Forest,0.0,1.0,0.0,0.0,Win%,2
+Nottingham Forest,1.0,0.2,0.8,0.0,Draw%,1
 Nottingham Forest,1.0,0.0,1.0,0.0,Draw%,1
 Nottingham Forest,1.0,0.0,1.0,0.0,Draw%,1
-Nottingham Forest,0.0,0.0,0.18,0.82,Lose%,0
-Nottingham Forest,2.0,1.0,0.0,0.0,Win%,2
-Nottingham Forest,0.0,0.0,0.0,1.0,Lose%,0
-Sheffield United,0.0,0.0,0.0,1.0,Lose%,0
-Sheffield United,0.0,0.0,0.0,1.0,Lose%,0
+Nottingham Forest,0.0,0.5,0.5,0.0,Win%,2
+Nottingham Forest,2.0,0.0,0.0,1.0,Lose%,0
+Nottingham Forest,0.0,1.0,0.0,0.0,Win%,2
+Nottingham Forest,0.0,1.0,0.0,0.0,Win%,2
+Nottingham Forest,0.0,1.0,0.0,0.0,Win%,2
+Nottingham Forest,0.0,1.0,0.0,0.0,Win%,2
+Sheffield United,0.0,1.0,0.0,0.0,Win%,2
+Sheffield United,0.0,1.0,0.0,0.0,Win%,2
 Sheffield United,1.0,0.0,1.0,0.0,Draw%,1
-Sheffield United,0.0,0.0,0.0,1.0,Lose%,0
-Sheffield United,0.0,0.0,0.0,1.0,Lose%,0
-Sheffield United,0.0,0.0,0.0,1.0,Lose%,0
-Sheffield United,0.0,0.0,0.0,1.0,Lose%,0
-Sheffield United,0.0,0.0,0.0,1.0,Lose%,0
-Sheffield United,0.0,0.0,0.0,1.0,Lose%,0
-Sheffield United,2.0,0.99,0.0,0.01,Win%,2
+Sheffield United,0.0,0.98,0.02,0.0,Win%,2
+Sheffield United,0.0,1.0,0.0,0.0,Win%,2
+Sheffield United,0.0,1.0,0.0,0.0,Win%,2
+Sheffield United,0.0,1.0,0.0,0.0,Win%,2
+Sheffield United,0.0,1.0,0.0,0.0,Win%,2
+Sheffield United,0.0,1.0,0.0,0.0,Win%,2
+Sheffield United,2.0,0.01,0.0,0.99,Lose%,0
 Sheffield United,1.0,0.0,1.0,0.0,Draw%,1
-Tottenham,2.0,1.0,0.0,0.0,Win%,2
-Tottenham,2.0,1.0,0.0,0.0,Win%,2
-Tottenham,2.0,1.0,0.0,0.0,Win%,2
-Tottenham,2.0,1.0,0.0,0.0,Win%,2
+Sheffield United,0.0,0.99,0.01,0.0,Win%,2
+Sheffield United,0.0,1.0,0.0,0.0,Win%,2
+Sheffield United,0.0,1.0,0.0,0.0,Win%,2
+Tottenham,2.0,0.0,0.0,1.0,Lose%,0
+Tottenham,2.0,0.0,0.0,1.0,Lose%,0
+Tottenham,2.0,0.0,0.0,1.0,Lose%,0
+Tottenham,2.0,0.0,0.0,1.0,Lose%,0
 Tottenham,1.0,0.0,1.0,0.0,Draw%,1
-Tottenham,2.0,1.0,0.0,0.0,Win%,2
-Tottenham,2.0,1.0,0.0,0.0,Win%,2
-Tottenham,2.0,1.0,0.0,0.0,Win%,2
-Tottenham,2.0,1.0,0.0,0.0,Win%,2
-Tottenham,0.0,0.0,0.0,1.0,Lose%,0
-Tottenham,0.0,0.0,0.0,1.0,Lose%,0
-West Ham,2.0,1.0,0.0,0.0,Win%,2
-West Ham,2.0,1.0,0.0,0.0,Win%,2
-West Ham,2.0,1.0,0.0,0.0,Win%,2
-West Ham,0.0,0.81,0.0,0.19,Win%,2
-West Ham,0.0,0.0,0.0,1.0,Lose%,0
-West Ham,2.0,0.99,0.0,0.01,Win%,2
+Tottenham,2.0,0.0,0.0,1.0,Lose%,0
+Tottenham,2.0,0.0,0.0,1.0,Lose%,0
+Tottenham,2.0,0.0,0.0,1.0,Lose%,0
+Tottenham,2.0,0.0,0.0,1.0,Lose%,0
+Tottenham,0.0,1.0,0.0,0.0,Win%,2
+Tottenham,0.0,1.0,0.0,0.0,Win%,2
+Tottenham,0.0,1.0,0.0,0.0,Win%,2
+Tottenham,1.0,0.0,1.0,0.0,Draw%,1
+Tottenham,0.0,0.74,0.26,0.0,Win%,2
+West Ham,2.0,0.0,0.0,1.0,Lose%,0
+West Ham,2.0,0.0,0.0,1.0,Lose%,0
+West Ham,2.0,0.0,0.0,1.0,Lose%,0
+West Ham,0.0,0.24,0.0,0.76,Lose%,0
+West Ham,0.0,1.0,0.0,0.0,Win%,2
+West Ham,2.0,0.02,0.0,0.98,Lose%,0
 West Ham,1.0,0.0,1.0,0.0,Draw%,1
-West Ham,0.0,0.0,0.05,0.95,Lose%,0
-West Ham,0.0,0.0,0.0,1.0,Lose%,0
-West Ham,0.0,0.0,0.0,1.0,Lose%,0
-West Ham,2.0,0.51,0.0,0.49,Win%,2
-Wolverhampton Wanderers,0.0,0.0,0.0,1.0,Lose%,0
-Wolverhampton Wanderers,2.0,0.98,0.0,0.02,Win%,2
-Wolverhampton Wanderers,0.0,0.1,0.0,0.9,Lose%,0
-Wolverhampton Wanderers,0.0,0.0,0.0,1.0,Lose%,0
-Wolverhampton Wanderers,1.0,0.0,0.98,0.02,Draw%,1
-Wolverhampton Wanderers,2.0,1.0,0.0,0.0,Win%,2
-Wolverhampton Wanderers,1.0,0.65,0.35,0.0,Win%,2
-Wolverhampton Wanderers,2.0,1.0,0.0,0.0,Win%,2
-Wolverhampton Wanderers,1.0,0.32,0.68,0.0,Draw%,1
-Wolverhampton Wanderers,0.0,0.0,0.71,0.29,Draw%,1
-Wolverhampton Wanderers,2.0,1.0,0.0,0.0,Win%,2
-AC Milan,2.0,1.0,0.0,0.0,Win%,2
-AC Milan,2.0,1.0,0.0,0.0,Win%,2
-AC Milan,0.0,0.03,0.0,0.97,Lose%,0
-AC Milan,2.0,1.0,0.0,0.0,Win%,2
-AC Milan,2.0,1.0,0.0,0.0,Win%,2
-AC Milan,2.0,1.0,0.0,0.0,Win%,2
-AC Milan,2.0,1.0,0.0,0.0,Win%,2
-AC Milan,0.0,0.0,0.0,1.0,Lose%,0
+West Ham,0.0,0.98,0.02,0.0,Win%,2
+West Ham,0.0,1.0,0.0,0.0,Win%,2
+West Ham,0.0,1.0,0.0,0.0,Win%,2
+West Ham,2.0,0.6,0.0,0.4,Win%,2
+West Ham,2.0,0.0,0.0,1.0,Lose%,0
+West Ham,1.0,0.0,1.0,0.0,Draw%,1
+West Ham,2.0,0.0,0.0,1.0,Lose%,0
+Wolverhampton Wanderers,0.0,1.0,0.0,0.0,Win%,2
+Wolverhampton Wanderers,2.0,0.0,0.0,1.0,Lose%,0
+Wolverhampton Wanderers,0.0,0.94,0.0,0.06,Win%,2
+Wolverhampton Wanderers,0.0,1.0,0.0,0.0,Win%,2
+Wolverhampton Wanderers,1.0,0.02,0.98,0.0,Draw%,1
+Wolverhampton Wanderers,2.0,0.0,0.0,1.0,Lose%,0
+Wolverhampton Wanderers,1.0,0.0,0.37,0.63,Lose%,0
+Wolverhampton Wanderers,2.0,0.0,0.0,1.0,Lose%,0
+Wolverhampton Wanderers,1.0,0.0,0.61,0.39,Draw%,1
+Wolverhampton Wanderers,0.0,0.34,0.66,0.0,Draw%,1
+Wolverhampton Wanderers,2.0,0.0,0.0,1.0,Lose%,0
+Wolverhampton Wanderers,0.0,1.0,0.0,0.0,Win%,2
+Wolverhampton Wanderers,0.0,1.0,0.0,0.0,Win%,2
+Wolverhampton Wanderers,2.0,0.04,0.0,0.96,Lose%,0
+AC Milan,2.0,0.0,0.0,1.0,Lose%,0
+AC Milan,2.0,0.0,0.0,1.0,Lose%,0
+AC Milan,0.0,0.98,0.0,0.02,Win%,2
+AC Milan,2.0,0.0,0.0,1.0,Lose%,0
+AC Milan,2.0,0.0,0.0,1.0,Lose%,0
+AC Milan,2.0,0.0,0.0,1.0,Lose%,0
+AC Milan,2.0,0.0,0.0,1.0,Lose%,0
+AC Milan,0.0,1.0,0.0,0.0,Win%,2
 AC Milan,1.0,0.0,1.0,0.0,Draw%,1
-AC Milan,0.0,0.0,0.0,1.0,Lose%,0
-AC Milan,1.0,0.0,0.98,0.02,Draw%,1
-Atalanta,0.0,0.0,0.0,1.0,Lose%,0
-Atalanta,2.0,1.0,0.0,0.0,Win%,2
-Atalanta,0.0,0.03,0.0,0.97,Lose%,0
-Atalanta,2.0,0.74,0.0,0.26,Win%,2
-Atalanta,2.0,1.0,0.0,0.0,Win%,2
-Atalanta,1.0,0.01,0.99,0.0,Draw%,1
-Atalanta,0.0,0.0,0.0,1.0,Lose%,0
-Atalanta,2.0,0.74,0.0,0.26,Win%,2
-Atalanta,2.0,1.0,0.0,0.0,Win%,2
-Atalanta,0.0,0.05,0.0,0.95,Lose%,0
+AC Milan,0.0,1.0,0.0,0.0,Win%,2
+AC Milan,1.0,0.02,0.98,0.0,Draw%,1
+AC Milan,2.0,0.0,0.63,0.37,Draw%,1
+AC Milan,2.0,0.0,0.0,1.0,Lose%,0
+Atalanta,0.0,1.0,0.0,0.0,Win%,2
+Atalanta,2.0,0.0,0.0,1.0,Lose%,0
+Atalanta,0.0,0.95,0.0,0.05,Win%,2
+Atalanta,2.0,0.17,0.0,0.83,Lose%,0
+Atalanta,2.0,0.0,0.0,1.0,Lose%,0
 Atalanta,1.0,0.0,1.0,0.0,Draw%,1
-Bologna,1.0,0.0,0.74,0.26,Draw%,1
-Bologna,2.0,1.0,0.0,0.0,Win%,2
-Bologna,1.0,0.39,0.61,0.0,Draw%,1
+Atalanta,0.0,1.0,0.0,0.0,Win%,2
+Atalanta,2.0,0.29,0.0,0.71,Lose%,0
+Atalanta,2.0,0.0,0.0,1.0,Lose%,0
+Atalanta,0.0,0.95,0.0,0.05,Win%,2
+Atalanta,1.0,0.0,1.0,0.0,Draw%,1
+Atalanta,0.0,1.0,0.0,0.0,Win%,2
+Atalanta,0.0,1.0,0.0,0.0,Win%,2
+Bologna,1.0,0.19,0.81,0.0,Draw%,1
+Bologna,2.0,0.0,0.01,0.99,Lose%,0
+Bologna,1.0,0.0,0.93,0.07,Draw%,1
 Bologna,1.0,0.0,1.0,0.0,Draw%,1
 Bologna,1.0,0.0,1.0,0.0,Draw%,1
-Bologna,2.0,0.56,0.44,0.0,Win%,2
+Bologna,2.0,0.0,0.39,0.61,Lose%,0
 Bologna,1.0,0.0,1.0,0.0,Draw%,1
-Bologna,2.0,0.85,0.15,0.0,Win%,2
-Bologna,1.0,0.54,0.46,0.0,Win%,2
-Bologna,2.0,0.54,0.46,0.0,Win%,2
-Bologna,0.0,0.0,0.0,1.0,Lose%,0
-Cagliari,0.0,0.0,0.05,0.95,Lose%,0
-Cagliari,0.0,0.0,0.0,1.0,Lose%,0
-Cagliari,1.0,0.0,0.74,0.26,Draw%,1
-Cagliari,0.0,0.0,0.0,1.0,Lose%,0
-Cagliari,0.0,0.0,0.0,1.0,Lose%,0
-Cagliari,0.0,0.0,0.0,1.0,Lose%,0
-Cagliari,0.0,0.0,0.0,1.0,Lose%,0
+Bologna,2.0,0.0,0.12,0.88,Lose%,0
+Bologna,1.0,0.0,0.41,0.59,Lose%,0
+Bologna,2.0,0.0,0.22,0.78,Lose%,0
+Bologna,0.0,1.0,0.0,0.0,Win%,2
+Bologna,2.0,0.0,0.0,1.0,Lose%,0
+Bologna,1.0,0.0,0.59,0.41,Draw%,1
+Cagliari,0.0,0.9,0.1,0.0,Win%,2
+Cagliari,0.0,1.0,0.0,0.0,Win%,2
+Cagliari,1.0,0.14,0.86,0.0,Draw%,1
+Cagliari,0.0,1.0,0.0,0.0,Win%,2
+Cagliari,0.0,1.0,0.0,0.0,Win%,2
+Cagliari,0.0,1.0,0.0,0.0,Win%,2
+Cagliari,0.0,1.0,0.0,0.0,Win%,2
 Cagliari,1.0,0.0,1.0,0.0,Draw%,1
-Cagliari,2.0,0.95,0.05,0.0,Win%,2
-Cagliari,2.0,1.0,0.0,0.0,Win%,2
-Cagliari,0.0,0.01,0.0,0.99,Lose%,0
-Empoli,0.0,0.0,0.0,1.0,Lose%,0
-Empoli,0.0,0.0,0.0,1.0,Lose%,0
-Empoli,0.0,0.0,0.0,1.0,Lose%,0
-Empoli,0.0,0.0,0.0,1.0,Lose%,0
-Empoli,2.0,0.84,0.0,0.16,Win%,2
-Empoli,0.0,0.0,0.0,1.0,Lose%,0
-Empoli,1.0,0.0,0.92,0.08,Draw%,1
-Empoli,2.0,0.99,0.01,0.0,Win%,2
-Empoli,0.0,0.0,0.0,1.0,Lose%,0
-Empoli,0.0,0.0,0.0,1.0,Lose%,0
-Empoli,2.0,0.17,0.0,0.83,Lose%,0
+Cagliari,2.0,0.0,0.01,0.99,Lose%,0
+Cagliari,2.0,0.0,0.0,1.0,Lose%,0
+Cagliari,0.0,0.99,0.0,0.01,Win%,2
+Cagliari,1.0,0.0,1.0,0.0,Draw%,1
+Cagliari,0.0,1.0,0.0,0.0,Win%,2
+Empoli,0.0,1.0,0.0,0.0,Win%,2
+Empoli,0.0,1.0,0.0,0.0,Win%,2
+Empoli,0.0,1.0,0.0,0.0,Win%,2
+Empoli,0.0,1.0,0.0,0.0,Win%,2
+Empoli,2.0,0.12,0.0,0.88,Lose%,0
+Empoli,0.0,1.0,0.0,0.0,Win%,2
+Empoli,1.0,0.04,0.96,0.0,Draw%,1
+Empoli,2.0,0.0,0.0,1.0,Lose%,0
+Empoli,0.0,1.0,0.0,0.0,Win%,2
+Empoli,0.0,1.0,0.0,0.0,Win%,2
+Empoli,2.0,0.82,0.0,0.18,Win%,2
+Empoli,0.0,1.0,0.0,0.0,Win%,2
+Empoli,1.0,0.02,0.98,0.0,Draw%,1
 Fiorentina,1.0,0.0,1.0,0.0,Draw%,1
-Fiorentina,0.0,0.0,0.01,0.99,Lose%,0
-Fiorentina,2.0,1.0,0.0,0.0,Win%,2
-Fiorentina,2.0,1.0,0.0,0.0,Win%,2
-Fiorentina,1.0,0.1,0.9,0.0,Draw%,1
-Fiorentina,2.0,1.0,0.0,0.0,Win%,2
-Fiorentina,2.0,1.0,0.0,0.0,Win%,2
-Fiorentina,0.0,0.0,0.0,1.0,Lose%,0
-Fiorentina,0.0,0.0,0.0,1.0,Lose%,0
-Fiorentina,0.0,0.0,0.0,1.0,Lose%,0
-Fiorentina,2.0,0.42,0.0,0.58,Lose%,0
-Frosinone,2.0,1.0,0.0,0.0,Win%,2
-Frosinone,1.0,0.12,0.88,0.0,Draw%,1
-Frosinone,2.0,1.0,0.0,0.0,Win%,2
-Frosinone,1.0,0.02,0.98,0.0,Draw%,1
+Fiorentina,0.0,1.0,0.0,0.0,Win%,2
+Fiorentina,2.0,0.0,0.0,1.0,Lose%,0
+Fiorentina,2.0,0.0,0.0,1.0,Lose%,0
+Fiorentina,1.0,0.0,0.97,0.03,Draw%,1
+Fiorentina,2.0,0.0,0.0,1.0,Lose%,0
+Fiorentina,2.0,0.0,0.0,1.0,Lose%,0
+Fiorentina,0.0,1.0,0.0,0.0,Win%,2
+Fiorentina,0.0,1.0,0.0,0.0,Win%,2
+Fiorentina,0.0,1.0,0.0,0.0,Win%,2
+Fiorentina,2.0,0.64,0.0,0.36,Win%,2
+Fiorentina,0.0,1.0,0.0,0.0,Win%,2
+Fiorentina,2.0,0.0,0.0,1.0,Lose%,0
+Frosinone,2.0,0.0,0.0,1.0,Lose%,0
+Frosinone,1.0,0.0,0.99,0.01,Draw%,1
+Frosinone,2.0,0.0,0.0,1.0,Lose%,0
+Frosinone,1.0,0.0,0.99,0.01,Draw%,1
 Frosinone,1.0,0.0,1.0,0.0,Draw%,1
-Frosinone,0.0,0.0,0.33,0.67,Lose%,0
-Frosinone,2.0,0.41,0.0,0.59,Lose%,0
-Frosinone,0.0,0.0,0.0,1.0,Lose%,0
-Frosinone,0.0,0.0,0.0,1.0,Lose%,0
-Frosinone,2.0,0.94,0.0,0.06,Win%,2
-Frosinone,0.0,0.0,0.0,1.0,Lose%,0
-Genoa,2.0,1.0,0.0,0.0,Win%,2
-Genoa,0.0,0.04,0.0,0.96,Lose%,0
-Genoa,1.0,0.0,0.87,0.13,Draw%,1
-Genoa,0.0,0.0,0.01,0.99,Lose%,0
-Genoa,2.0,0.48,0.0,0.52,Lose%,0
-Genoa,1.0,0.46,0.54,0.0,Draw%,1
-Genoa,0.0,0.0,0.02,0.98,Lose%,0
-Genoa,0.0,0.0,0.0,1.0,Lose%,0
-Genoa,2.0,0.96,0.0,0.04,Win%,2
-Genoa,0.0,0.0,0.0,1.0,Lose%,0
-Genoa,2.0,1.0,0.0,0.0,Win%,2
-Inter,2.0,1.0,0.0,0.0,Win%,2
-Inter,2.0,1.0,0.0,0.0,Win%,2
-Inter,2.0,1.0,0.0,0.0,Win%,2
-Inter,2.0,1.0,0.0,0.0,Win%,2
-Inter,0.0,0.0,0.0,1.0,Lose%,0
-Inter,2.0,1.0,0.0,0.0,Win%,2
+Frosinone,0.0,0.59,0.41,0.0,Win%,2
+Frosinone,2.0,0.75,0.0,0.25,Win%,2
+Frosinone,0.0,1.0,0.0,0.0,Win%,2
+Frosinone,0.0,1.0,0.0,0.0,Win%,2
+Frosinone,2.0,0.02,0.0,0.98,Lose%,0
+Frosinone,0.0,1.0,0.0,0.0,Win%,2
+Frosinone,2.0,0.0,0.0,1.0,Lose%,0
+Frosinone,0.0,0.21,0.0,0.79,Lose%,0
+Genoa,2.0,0.0,0.0,1.0,Lose%,0
+Genoa,0.0,0.98,0.0,0.02,Win%,2
+Genoa,1.0,0.31,0.69,0.0,Draw%,1
+Genoa,0.0,0.99,0.01,0.0,Win%,2
+Genoa,2.0,0.34,0.0,0.66,Lose%,0
+Genoa,1.0,0.0,0.64,0.36,Draw%,1
+Genoa,0.0,0.98,0.02,0.0,Win%,2
+Genoa,0.0,1.0,0.0,0.0,Win%,2
+Genoa,2.0,0.03,0.0,0.97,Lose%,0
+Genoa,0.0,1.0,0.0,0.0,Win%,2
+Genoa,2.0,0.0,0.0,1.0,Lose%,0
+Genoa,0.0,0.97,0.0,0.03,Win%,2
+Genoa,1.0,0.0,1.0,0.0,Draw%,1
+Inter,2.0,0.0,0.0,1.0,Lose%,0
+Inter,2.0,0.0,0.0,1.0,Lose%,0
+Inter,2.0,0.0,0.0,1.0,Lose%,0
+Inter,2.0,0.0,0.0,1.0,Lose%,0
+Inter,0.0,1.0,0.0,0.0,Win%,2
+Inter,2.0,0.0,0.0,1.0,Lose%,0
 Inter,1.0,0.0,1.0,0.0,Draw%,1
-Inter,2.0,0.99,0.01,0.0,Win%,2
-Inter,2.0,1.0,0.0,0.0,Win%,2
-Inter,2.0,1.0,0.0,0.0,Win%,2
-Inter,2.0,1.0,0.0,0.0,Win%,2
+Inter,2.0,0.0,0.0,1.0,Lose%,0
+Inter,2.0,0.0,0.0,1.0,Lose%,0
+Inter,2.0,0.0,0.0,1.0,Lose%,0
+Inter,2.0,0.0,0.0,1.0,Lose%,0
+Inter,1.0,0.0,1.0,0.0,Draw%,1
+Inter,2.0,0.0,0.0,1.0,Lose%,0
 Juventus,1.0,0.0,1.0,0.0,Draw%,1
-Juventus,2.0,1.0,0.0,0.0,Win%,2
-Juventus,2.0,1.0,0.0,0.0,Win%,2
-Juventus,0.0,0.0,0.0,1.0,Lose%,0
-Juventus,2.0,1.0,0.0,0.0,Win%,2
+Juventus,2.0,0.0,0.0,1.0,Lose%,0
+Juventus,2.0,0.0,0.0,1.0,Lose%,0
+Juventus,0.0,1.0,0.0,0.0,Win%,2
+Juventus,2.0,0.0,0.0,1.0,Lose%,0
 Juventus,1.0,0.0,1.0,0.0,Draw%,1
-Juventus,2.0,0.99,0.01,0.0,Win%,2
-Juventus,2.0,1.0,0.0,0.0,Win%,2
-Juventus,2.0,1.0,0.0,0.0,Win%,2
-Juventus,2.0,1.0,0.0,0.0,Win%,2
-Juventus,2.0,1.0,0.0,0.0,Win%,2
-Lazio,0.0,0.0,0.0,1.0,Lose%,0
-Lazio,2.0,0.97,0.0,0.03,Win%,2
-Lazio,0.0,0.04,0.0,0.96,Lose%,0
-Lazio,1.0,0.0,0.9,0.1,Draw%,1
-Lazio,2.0,0.99,0.01,0.0,Win%,2
-Lazio,0.0,0.0,0.0,1.0,Lose%,0
-Lazio,2.0,1.0,0.0,0.0,Win%,2
-Lazio,2.0,1.0,0.0,0.0,Win%,2
-Lazio,2.0,1.0,0.0,0.0,Win%,2
-Lazio,0.0,0.09,0.0,0.91,Lose%,0
+Juventus,2.0,0.0,0.0,1.0,Lose%,0
+Juventus,2.0,0.0,0.0,1.0,Lose%,0
+Juventus,2.0,0.0,0.0,1.0,Lose%,0
+Juventus,2.0,0.0,0.0,1.0,Lose%,0
+Juventus,2.0,0.0,0.0,1.0,Lose%,0
+Juventus,1.0,0.0,1.0,0.0,Draw%,1
+Juventus,2.0,0.0,0.0,1.0,Lose%,0
+Lazio,0.0,1.0,0.0,0.0,Win%,2
+Lazio,2.0,0.04,0.0,0.96,Lose%,0
+Lazio,0.0,0.97,0.0,0.03,Win%,2
+Lazio,1.0,0.03,0.97,0.0,Draw%,1
+Lazio,2.0,0.0,0.0,1.0,Lose%,0
+Lazio,0.0,1.0,0.0,0.0,Win%,2
+Lazio,2.0,0.01,0.0,0.99,Lose%,0
+Lazio,2.0,0.0,0.0,1.0,Lose%,0
+Lazio,2.0,0.0,0.0,1.0,Lose%,0
+Lazio,0.0,0.88,0.0,0.12,Win%,2
 Lazio,1.0,0.0,1.0,0.0,Draw%,1
+Lazio,0.0,1.0,0.0,0.0,Win%,2
+Lazio,2.0,0.62,0.0,0.38,Win%,2
 Lecce,1.0,0.0,1.0,0.0,Draw%,1
-Lecce,2.0,1.0,0.0,0.0,Win%,2
-Lecce,1.0,0.28,0.72,0.0,Draw%,1
-Lecce,2.0,0.44,0.56,0.0,Draw%,1
-Lecce,0.0,0.0,0.0,1.0,Lose%,0
-Lecce,0.0,0.0,0.0,1.0,Lose%,0
-Lecce,1.0,0.0,0.98,0.02,Draw%,1
+Lecce,2.0,0.0,0.0,1.0,Lose%,0
+Lecce,1.0,0.0,0.55,0.45,Draw%,1
+Lecce,2.0,0.0,0.2,0.8,Lose%,0
+Lecce,0.0,1.0,0.0,0.0,Win%,2
+Lecce,0.0,1.0,0.0,0.0,Win%,2
+Lecce,1.0,0.02,0.98,0.0,Draw%,1
 Lecce,1.0,0.0,1.0,0.0,Draw%,1
-Lecce,0.0,0.0,0.34,0.66,Lose%,0
-Lecce,0.0,0.0,0.0,1.0,Lose%,0
-Lecce,1.0,0.0,0.73,0.27,Draw%,1
-Monza,2.0,1.0,0.0,0.0,Win%,2
-Monza,0.0,0.02,0.0,0.98,Lose%,0
-Monza,1.0,0.0,0.87,0.13,Draw%,1
+Lecce,0.0,0.45,0.55,0.0,Draw%,1
+Lecce,0.0,1.0,0.0,0.0,Win%,2
+Lecce,1.0,0.1,0.9,0.0,Draw%,1
+Lecce,1.0,0.0,1.0,0.0,Draw%,1
+Lecce,1.0,0.0,1.0,0.0,Draw%,1
+Monza,2.0,0.0,0.0,1.0,Lose%,0
+Monza,0.0,0.99,0.0,0.01,Win%,2
+Monza,1.0,0.32,0.68,0.0,Draw%,1
+Monza,1.0,0.01,0.99,0.0,Draw%,1
 Monza,1.0,0.0,1.0,0.0,Draw%,1
+Monza,2.0,0.0,0.02,0.98,Lose%,0
+Monza,2.0,0.0,0.0,1.0,Lose%,0
+Monza,0.0,1.0,0.0,0.0,Win%,2
 Monza,1.0,0.0,1.0,0.0,Draw%,1
-Monza,2.0,0.99,0.01,0.0,Win%,2
-Monza,2.0,1.0,0.0,0.0,Win%,2
-Monza,0.0,0.04,0.0,0.96,Lose%,0
+Monza,2.0,0.0,0.0,1.0,Lose%,0
+Monza,1.0,0.0,0.48,0.52,Lose%,0
 Monza,1.0,0.0,1.0,0.0,Draw%,1
-Monza,2.0,1.0,0.0,0.0,Win%,2
-Monza,1.0,0.36,0.64,0.0,Draw%,1
-Napoli,2.0,1.0,0.0,0.0,Win%,2
-Napoli,0.0,0.0,0.0,1.0,Lose%,0
+Monza,0.0,0.54,0.46,0.0,Win%,2
+Napoli,2.0,0.0,0.0,1.0,Lose%,0
+Napoli,0.0,1.0,0.0,0.0,Win%,2
 Napoli,1.0,0.0,1.0,0.0,Draw%,1
 Napoli,1.0,0.0,1.0,0.0,Draw%,1
-Napoli,2.0,0.95,0.05,0.0,Win%,2
-Napoli,2.0,1.0,0.0,0.0,Win%,2
-Napoli,0.0,0.05,0.0,0.95,Lose%,0
-Napoli,2.0,1.0,0.0,0.0,Win%,2
+Napoli,2.0,0.0,0.04,0.96,Lose%,0
+Napoli,2.0,0.0,0.0,1.0,Lose%,0
+Napoli,0.0,0.98,0.0,0.02,Win%,2
+Napoli,2.0,0.0,0.0,1.0,Lose%,0
 Napoli,1.0,0.0,1.0,0.0,Draw%,1
-Napoli,2.0,0.99,0.01,0.0,Win%,2
-Napoli,0.0,0.12,0.0,0.88,Lose%,0
-Roma,0.0,0.0,0.0,1.0,Lose%,0
-Roma,0.0,0.0,0.0,1.0,Lose%,0
-Roma,2.0,0.97,0.0,0.03,Win%,2
+Napoli,2.0,0.0,0.0,1.0,Lose%,0
+Napoli,0.0,0.89,0.0,0.11,Win%,2
+Napoli,2.0,0.0,0.0,1.0,Lose%,0
+Napoli,0.0,1.0,0.0,0.0,Win%,2
+Roma,0.0,0.98,0.02,0.0,Win%,2
+Roma,0.0,1.0,0.0,0.0,Win%,2
+Roma,2.0,0.02,0.0,0.98,Lose%,0
 Roma,1.0,0.0,1.0,0.0,Draw%,1
-Roma,0.0,0.0,0.03,0.97,Lose%,0
-Roma,2.0,0.99,0.0,0.01,Win%,2
-Roma,2.0,1.0,0.0,0.0,Win%,2
-Roma,2.0,1.0,0.0,0.0,Win%,2
-Roma,0.0,0.09,0.0,0.91,Lose%,0
-Roma,2.0,1.0,0.0,0.0,Win%,2
+Roma,0.0,0.99,0.01,0.0,Win%,2
+Roma,2.0,0.01,0.0,0.99,Lose%,0
+Roma,2.0,0.0,0.0,1.0,Lose%,0
+Roma,2.0,0.0,0.0,1.0,Lose%,0
+Roma,0.0,0.88,0.0,0.12,Win%,2
+Roma,2.0,0.0,0.0,1.0,Lose%,0
 Roma,1.0,0.0,1.0,0.0,Draw%,1
+Roma,2.0,0.0,0.0,1.0,Lose%,0
+Roma,2.0,0.0,0.0,1.0,Lose%,0
 Salernitana,1.0,0.0,1.0,0.0,Draw%,1
-Salernitana,0.0,0.0,0.05,0.95,Lose%,0
-Salernitana,0.0,0.0,0.0,1.0,Lose%,0
-Salernitana,1.0,0.0,0.61,0.39,Draw%,1
-Salernitana,0.0,0.0,0.0,1.0,Lose%,0
-Salernitana,0.0,0.0,0.0,1.0,Lose%,0
-Salernitana,0.0,0.0,0.0,1.0,Lose%,0
-Salernitana,1.0,0.0,0.78,0.22,Draw%,1
-Salernitana,0.0,0.0,0.0,1.0,Lose%,0
-Salernitana,0.0,0.0,0.0,1.0,Lose%,0
-Salernitana,1.0,0.0,0.22,0.78,Lose%,0
-Sassuolo,0.0,0.0,0.0,1.0,Lose%,0
-Sassuolo,2.0,0.99,0.0,0.01,Win%,2
-Sassuolo,0.0,0.0,0.0,1.0,Lose%,0
-Sassuolo,2.0,1.0,0.0,0.0,Win%,2
-Sassuolo,2.0,1.0,0.0,0.0,Win%,2
+Salernitana,0.0,0.62,0.38,0.0,Win%,2
+Salernitana,0.0,1.0,0.0,0.0,Win%,2
+Salernitana,1.0,0.15,0.85,0.0,Draw%,1
+Salernitana,0.0,1.0,0.0,0.0,Win%,2
+Salernitana,0.0,1.0,0.0,0.0,Win%,2
+Salernitana,0.0,1.0,0.0,0.0,Win%,2
+Salernitana,1.0,0.2,0.8,0.0,Draw%,1
+Salernitana,0.0,1.0,0.0,0.0,Win%,2
+Salernitana,0.0,1.0,0.0,0.0,Win%,2
+Salernitana,1.0,0.63,0.37,0.0,Win%,2
+Salernitana,2.0,0.0,0.25,0.75,Lose%,0
+Salernitana,0.0,0.44,0.0,0.56,Lose%,0
+Sassuolo,0.0,1.0,0.0,0.0,Win%,2
+Sassuolo,2.0,0.0,0.0,1.0,Lose%,0
+Sassuolo,0.0,1.0,0.0,0.0,Win%,2
+Sassuolo,2.0,0.0,0.0,1.0,Lose%,0
+Sassuolo,2.0,0.0,0.0,1.0,Lose%,0
 Sassuolo,0.0,0.47,0.0,0.53,Lose%,0
 Sassuolo,1.0,0.0,1.0,0.0,Draw%,1
-Sassuolo,0.0,0.0,0.0,1.0,Lose%,0
-Sassuolo,1.0,0.0,0.98,0.02,Draw%,1
-Sassuolo,0.0,0.0,0.09,0.91,Lose%,0
-Sassuolo,1.0,0.0,0.98,0.02,Draw%,1
-Torino,0.0,0.0,0.01,0.99,Lose%,0
-Torino,2.0,1.0,0.0,0.0,Win%,2
-Torino,2.0,1.0,0.0,0.0,Win%,2
-Torino,1.0,0.02,0.98,0.0,Draw%,1
-Torino,0.0,0.0,0.0,1.0,Lose%,0
-Torino,1.0,0.0,0.41,0.59,Lose%,0
-Torino,0.0,0.0,0.01,0.99,Lose%,0
-Torino,0.0,0.0,0.0,1.0,Lose%,0
-Torino,2.0,1.0,0.0,0.0,Win%,2
-Torino,2.0,1.0,0.0,0.0,Win%,2
-Torino,1.0,0.0,1.0,0.0,Draw%,1
-Udinese,1.0,0.0,0.81,0.19,Draw%,1
+Sassuolo,0.0,1.0,0.0,0.0,Win%,2
+Sassuolo,1.0,0.01,0.99,0.0,Draw%,1
+Sassuolo,0.0,0.79,0.21,0.0,Win%,2
+Sassuolo,1.0,0.02,0.98,0.0,Draw%,1
+Sassuolo,2.0,0.0,0.88,0.12,Draw%,1
+Sassuolo,0.0,1.0,0.0,0.0,Win%,2
+Torino,0.0,0.97,0.03,0.0,Win%,2
+Torino,2.0,0.0,0.0,1.0,Lose%,0
+Torino,2.0,0.0,0.0,1.0,Lose%,0
+Torino,1.0,0.0,0.99,0.01,Draw%,1
+Torino,0.0,1.0,0.0,0.0,Win%,2
+Torino,1.0,0.59,0.41,0.0,Win%,2
+Torino,0.0,0.99,0.01,0.0,Win%,2
+Torino,0.0,1.0,0.0,0.0,Win%,2
+Torino,2.0,0.01,0.0,0.99,Lose%,0
+Torino,2.0,0.0,0.0,1.0,Lose%,0
+Torino,1.0,0.0,0.99,0.01,Draw%,1
+Torino,0.0,1.0,0.0,0.0,Win%,2
+Torino,2.0,0.29,0.0,0.71,Lose%,0
+Udinese,1.0,0.14,0.86,0.0,Draw%,1
 Udinese,1.0,0.0,1.0,0.0,Draw%,1
 Udinese,1.0,0.0,1.0,0.0,Draw%,1
-Udinese,0.0,0.0,0.46,0.54,Lose%,0
-Udinese,0.0,0.0,0.0,1.0,Lose%,0
-Udinese,1.0,0.0,0.96,0.04,Draw%,1
+Udinese,0.0,0.07,0.93,0.0,Draw%,1
+Udinese,0.0,1.0,0.0,0.0,Win%,2
+Udinese,1.0,0.05,0.95,0.0,Draw%,1
 Udinese,1.0,0.0,1.0,0.0,Draw%,1
 Udinese,1.0,0.0,1.0,0.0,Draw%,1
 Udinese,1.0,0.0,1.0,0.0,Draw%,1
-Udinese,2.0,1.0,0.0,0.0,Win%,2
+Udinese,2.0,0.0,0.04,0.96,Lose%,0
 Udinese,1.0,0.0,1.0,0.0,Draw%,1
-Verona,2.0,1.0,0.0,0.0,Win%,2
-Verona,0.0,0.0,0.0,1.0,Lose%,0
+Udinese,0.0,0.77,0.23,0.0,Win%,2
+Udinese,1.0,0.48,0.52,0.0,Draw%,1
+Verona,2.0,0.0,0.0,1.0,Lose%,0
+Verona,0.0,0.97,0.0,0.03,Win%,2
 Verona,1.0,0.0,1.0,0.0,Draw%,1
-Verona,0.0,0.0,0.0,1.0,Lose%,0
-Verona,0.0,0.0,0.0,1.0,Lose%,0
-Verona,1.0,0.0,0.16,0.84,Lose%,0
-Verona,0.0,0.0,0.0,1.0,Lose%,0
-Verona,0.0,0.0,0.0,1.0,Lose%,0
-Verona,0.0,0.0,0.0,1.0,Lose%,0
-Verona,0.0,0.0,0.0,1.0,Lose%,0
-Verona,0.0,0.0,0.0,1.0,Lose%,0
-Brest,2.0,1.0,0.0,0.0,Win%,2
-Brest,0.0,0.0,0.0,1.0,Lose%,0
+Verona,0.0,1.0,0.0,0.0,Win%,2
+Verona,0.0,1.0,0.0,0.0,Win%,2
+Verona,1.0,0.74,0.26,0.0,Win%,2
+Verona,0.0,1.0,0.0,0.0,Win%,2
+Verona,0.0,1.0,0.0,0.0,Win%,2
+Verona,0.0,1.0,0.0,0.0,Win%,2
+Verona,0.0,1.0,0.0,0.0,Win%,2
+Verona,0.0,1.0,0.0,0.0,Win%,2
+Verona,1.0,0.0,1.0,0.0,Draw%,1
+Verona,1.0,0.0,1.0,0.0,Draw%,1
+Brest,2.0,0.0,0.0,1.0,Lose%,0
+Brest,0.0,1.0,0.0,0.0,Win%,2
 Brest,1.0,0.0,1.0,0.0,Draw%,1
-Brest,2.0,0.98,0.02,0.0,Win%,2
-Brest,2.0,1.0,0.0,0.0,Win%,2
-Brest,1.0,0.36,0.64,0.0,Draw%,1
+Brest,2.0,0.0,0.0,1.0,Lose%,0
+Brest,2.0,0.0,0.0,1.0,Lose%,0
+Brest,1.0,0.0,0.91,0.09,Draw%,1
 Brest,1.0,0.0,1.0,0.0,Draw%,1
-Brest,0.0,0.0,0.0,1.0,Lose%,0
-Brest,0.0,0.0,0.0,1.0,Lose%,0
-Brest,0.0,0.0,0.0,1.0,Lose%,0
-Clermont Foot,0.0,0.0,0.0,1.0,Lose%,0
-Clermont Foot,0.0,0.0,0.0,1.0,Lose%,0
-Clermont Foot,1.0,0.0,0.97,0.03,Draw%,1
-Clermont Foot,0.0,0.0,0.0,1.0,Lose%,0
-Clermont Foot,0.0,0.0,0.0,1.0,Lose%,0
-Clermont Foot,1.0,0.0,0.09,0.91,Lose%,0
-Clermont Foot,2.0,0.66,0.34,0.0,Win%,2
-Clermont Foot,0.0,0.66,0.0,0.34,Win%,2
-Clermont Foot,1.0,0.0,0.94,0.06,Draw%,1
-Clermont Foot,2.0,0.98,0.02,0.0,Win%,2
-Le Havre,0.0,0.0,0.05,0.95,Lose%,0
-Le Havre,1.0,0.0,0.99,0.01,Draw%,1
-Le Havre,2.0,0.92,0.08,0.0,Win%,2
-Le Havre,1.0,0.35,0.65,0.0,Draw%,1
-Le Havre,2.0,1.0,0.0,0.0,Win%,2
-Le Havre,0.0,0.0,0.0,1.0,Lose%,0
-Le Havre,0.0,0.0,0.0,1.0,Lose%,0
-Le Havre,1.0,0.0,0.99,0.01,Draw%,1
+Brest,0.0,1.0,0.0,0.0,Win%,2
+Brest,0.0,1.0,0.0,0.0,Win%,2
+Brest,0.0,1.0,0.0,0.0,Win%,2
+Brest,2.0,0.53,0.0,0.47,Win%,2
+Brest,2.0,0.0,0.0,1.0,Lose%,0
+Brest,1.0,0.0,1.0,0.0,Draw%,1
+Clermont Foot,0.0,1.0,0.0,0.0,Win%,2
+Clermont Foot,0.0,1.0,0.0,0.0,Win%,2
+Clermont Foot,1.0,0.03,0.97,0.0,Draw%,1
+Clermont Foot,0.0,1.0,0.0,0.0,Win%,2
+Clermont Foot,0.0,1.0,0.0,0.0,Win%,2
+Clermont Foot,1.0,0.82,0.18,0.0,Win%,2
+Clermont Foot,2.0,0.0,0.22,0.78,Lose%,0
+Clermont Foot,0.0,0.48,0.0,0.52,Lose%,0
+Clermont Foot,1.0,0.0,1.0,0.0,Draw%,1
+Clermont Foot,2.0,0.0,0.01,0.99,Lose%,0
+Clermont Foot,0.0,1.0,0.0,0.0,Win%,2
+Clermont Foot,1.0,0.04,0.96,0.0,Draw%,1
+Clermont Foot,0.0,0.31,0.69,0.0,Draw%,1
+Le Havre,0.0,0.9,0.1,0.0,Win%,2
 Le Havre,1.0,0.0,1.0,0.0,Draw%,1
-Le Havre,2.0,0.99,0.01,0.0,Win%,2
-Le Havre,1.0,0.68,0.32,0.0,Win%,2
-Lens,1.0,0.0,0.94,0.06,Draw%,1
-Lens,0.0,0.0,0.0,1.0,Lose%,0
-Lens,0.0,0.0,0.0,1.0,Lose%,0
-Lens,0.0,0.0,0.0,1.0,Lose%,0
-Lens,2.0,0.16,0.0,0.84,Lose%,0
-Lens,2.0,1.0,0.0,0.0,Win%,2
+Le Havre,2.0,0.0,0.04,0.96,Lose%,0
+Le Havre,1.0,0.0,0.54,0.46,Draw%,1
+Le Havre,2.0,0.0,0.0,1.0,Lose%,0
+Le Havre,0.0,1.0,0.0,0.0,Win%,2
+Le Havre,0.0,1.0,0.0,0.0,Win%,2
+Le Havre,1.0,0.01,0.99,0.0,Draw%,1
+Le Havre,1.0,0.0,1.0,0.0,Draw%,1
+Le Havre,2.0,0.0,0.07,0.93,Lose%,0
+Le Havre,1.0,0.0,0.13,0.87,Lose%,0
+Le Havre,1.0,0.0,1.0,0.0,Draw%,1
+Le Havre,0.0,0.39,0.61,0.0,Draw%,1
+Lens,1.0,0.05,0.95,0.0,Draw%,1
+Lens,0.0,0.88,0.12,0.0,Win%,2
+Lens,0.0,1.0,0.0,0.0,Win%,2
+Lens,0.0,1.0,0.0,0.0,Win%,2
+Lens,2.0,0.88,0.0,0.12,Win%,2
+Lens,2.0,0.0,0.0,1.0,Lose%,0
 Lens,1.0,0.0,1.0,0.0,Draw%,1
 Lens,1.0,0.0,1.0,0.0,Draw%,1
-Lens,2.0,0.48,0.52,0.0,Draw%,1
+Lens,2.0,0.0,0.31,0.69,Lose%,0
 Lens,1.0,0.0,1.0,0.0,Draw%,1
-Lens,2.0,0.95,0.05,0.0,Win%,2
-Lille,2.0,1.0,0.0,0.0,Win%,2
-Lille,0.0,0.0,0.0,1.0,Lose%,0
-Lille,2.0,1.0,0.0,0.0,Win%,2
-Lille,1.0,0.35,0.65,0.0,Draw%,1
-Lille,0.0,0.0,0.01,0.99,Lose%,0
-Lille,2.0,0.99,0.0,0.01,Win%,2
+Lens,2.0,0.0,0.04,0.96,Lose%,0
+Lens,2.0,0.0,0.0,1.0,Lose%,0
+Lens,2.0,0.0,0.0,1.0,Lose%,0
+Lille,2.0,0.0,0.0,1.0,Lose%,0
+Lille,0.0,0.93,0.0,0.07,Win%,2
+Lille,2.0,0.0,0.0,1.0,Lose%,0
+Lille,1.0,0.0,0.52,0.48,Draw%,1
+Lille,0.0,1.0,0.0,0.0,Win%,2
+Lille,2.0,0.02,0.0,0.98,Lose%,0
 Lille,1.0,0.0,1.0,0.0,Draw%,1
-Lille,2.0,0.82,0.18,0.0,Win%,2
-Lille,2.0,1.0,0.0,0.0,Win%,2
-Lille,1.0,0.6,0.4,0.0,Win%,2
+Lille,2.0,0.0,0.22,0.78,Lose%,0
+Lille,2.0,0.0,0.0,1.0,Lose%,0
+Lille,1.0,0.0,0.18,0.82,Lose%,0
 Lille,1.0,0.0,1.0,0.0,Draw%,1
+Lille,2.0,0.0,0.7,0.3,Draw%,1
+Lille,2.0,0.0,0.0,1.0,Lose%,0
 Lorient,1.0,0.0,1.0,0.0,Draw%,1
-Lorient,2.0,0.99,0.01,0.0,Win%,2
-Lorient,0.0,0.26,0.0,0.74,Lose%,0
+Lorient,2.0,0.0,0.08,0.92,Lose%,0
+Lorient,0.0,0.99,0.0,0.01,Win%,2
 Lorient,1.0,0.0,1.0,0.0,Draw%,1
-Lorient,0.0,0.0,0.45,0.55,Lose%,0
-Lorient,0.0,0.0,0.0,1.0,Lose%,0
-Lorient,1.0,0.0,0.39,0.61,Lose%,0
-Lorient,2.0,0.54,0.46,0.0,Win%,2
-Lorient,0.0,0.59,0.0,0.41,Win%,2
-Lorient,1.0,0.0,0.83,0.17,Draw%,1
-Lorient,0.0,0.0,0.26,0.74,Lose%,0
-Lyon,0.0,0.0,0.0,1.0,Lose%,0
-Lyon,1.0,0.0,0.52,0.48,Draw%,1
-Lyon,0.0,0.0,0.0,1.0,Lose%,0
-Lyon,1.0,0.0,0.93,0.07,Draw%,1
-Lyon,0.0,0.0,0.06,0.94,Lose%,0
-Lyon,0.0,0.0,0.0,1.0,Lose%,0
-Lyon,1.0,0.0,0.32,0.68,Lose%,0
-Lyon,0.0,0.0,0.0,1.0,Lose%,0
-Lyon,1.0,0.0,0.47,0.53,Lose%,0
-Lyon,2.0,0.25,0.75,0.0,Draw%,1
+Lorient,0.0,0.47,0.53,0.0,Draw%,1
+Lorient,0.0,1.0,0.0,0.0,Win%,2
+Lorient,1.0,0.42,0.58,0.0,Draw%,1
+Lorient,2.0,0.0,0.52,0.48,Draw%,1
+Lorient,0.0,0.56,0.0,0.44,Win%,2
+Lorient,1.0,0.01,0.99,0.0,Draw%,1
+Lorient,0.0,0.67,0.33,0.0,Win%,2
+Lorient,0.0,1.0,0.0,0.0,Win%,2
+Lorient,1.0,0.73,0.27,0.0,Win%,2
+Lyon,0.0,1.0,0.0,0.0,Win%,2
+Lyon,1.0,0.3,0.7,0.0,Draw%,1
+Lyon,0.0,0.99,0.01,0.0,Win%,2
+Lyon,1.0,0.15,0.85,0.0,Draw%,1
+Lyon,0.0,0.79,0.21,0.0,Win%,2
+Lyon,0.0,1.0,0.0,0.0,Win%,2
+Lyon,1.0,0.51,0.49,0.0,Win%,2
+Lyon,0.0,1.0,0.0,0.0,Win%,2
+Lyon,1.0,0.31,0.69,0.0,Draw%,1
+Lyon,2.0,0.0,0.88,0.12,Draw%,1
+Lyon,0.0,1.0,0.0,0.0,Win%,2
+Lyon,0.0,1.0,0.0,0.0,Win%,2
+Lyon,0.0,1.0,0.0,0.0,Win%,2
 Marseille,1.0,0.0,1.0,0.0,Draw%,1
-Marseille,2.0,1.0,0.0,0.0,Win%,2
-Marseille,1.0,0.16,0.84,0.0,Draw%,1
+Marseille,2.0,0.0,0.0,1.0,Lose%,0
+Marseille,1.0,0.0,0.76,0.24,Draw%,1
 Marseille,1.0,0.0,1.0,0.0,Draw%,1
-Marseille,0.0,0.0,0.21,0.79,Lose%,0
-Marseille,0.0,0.0,0.0,1.0,Lose%,0
-Marseille,2.0,0.88,0.0,0.12,Win%,2
-Marseille,0.0,0.0,0.0,1.0,Lose%,0
-Marseille,1.0,0.0,0.83,0.17,Draw%,1
-Marseille,0.0,0.0,0.01,0.99,Lose%,0
-Metz,1.0,0.0,0.99,0.01,Draw%,1
-Metz,2.0,1.0,0.0,0.0,Win%,2
-Metz,1.0,0.51,0.49,0.0,Win%,2
-Metz,2.0,1.0,0.0,0.0,Win%,2
-Metz,0.0,0.0,0.0,1.0,Lose%,0
-Metz,0.0,0.0,0.0,1.0,Lose%,0
-Metz,0.0,0.0,0.0,1.0,Lose%,0
-Metz,0.0,0.0,0.0,1.0,Lose%,0
+Marseille,0.0,0.68,0.32,0.0,Win%,2
+Marseille,0.0,1.0,0.0,0.0,Win%,2
+Marseille,2.0,0.08,0.0,0.92,Lose%,0
+Marseille,0.0,1.0,0.0,0.0,Win%,2
+Marseille,1.0,0.03,0.97,0.0,Draw%,1
+Marseille,0.0,1.0,0.0,0.0,Win%,2
+Marseille,1.0,0.01,0.99,0.0,Draw%,1
+Marseille,2.0,0.0,0.68,0.32,Draw%,1
+Marseille,2.0,0.0,0.0,1.0,Lose%,0
+Metz,1.0,0.03,0.97,0.0,Draw%,1
+Metz,2.0,0.0,0.0,1.0,Lose%,0
+Metz,1.0,0.0,0.61,0.39,Draw%,1
+Metz,2.0,0.0,0.0,1.0,Lose%,0
+Metz,0.0,0.99,0.0,0.01,Win%,2
+Metz,0.0,1.0,0.0,0.0,Win%,2
+Metz,0.0,1.0,0.0,0.0,Win%,2
+Metz,0.0,1.0,0.0,0.0,Win%,2
 Metz,1.0,0.0,1.0,0.0,Draw%,1
 Metz,1.0,0.0,1.0,0.0,Draw%,1
-Metz,2.0,0.99,0.01,0.0,Win%,2
-Monaco,2.0,1.0,0.0,0.0,Win%,2
-Monaco,1.0,0.02,0.98,0.0,Draw%,1
-Monaco,2.0,0.98,0.02,0.0,Win%,2
+Metz,2.0,0.0,0.0,1.0,Lose%,0
+Metz,2.0,0.0,0.0,1.0,Lose%,0
+Metz,0.0,0.85,0.0,0.15,Win%,2
+Monaco,2.0,0.0,0.0,1.0,Lose%,0
+Monaco,1.0,0.0,0.94,0.06,Draw%,1
+Monaco,2.0,0.0,0.02,0.98,Lose%,0
 Monaco,1.0,0.0,1.0,0.0,Draw%,1
-Monaco,0.0,0.0,0.35,0.65,Lose%,0
-Monaco,2.0,0.99,0.0,0.01,Win%,2
-Monaco,2.0,1.0,0.0,0.0,Win%,2
-Monaco,2.0,1.0,0.0,0.0,Win%,2
-Monaco,0.0,0.24,0.0,0.76,Lose%,0
-Monaco,2.0,1.0,0.0,0.0,Win%,2
+Monaco,0.0,0.6,0.4,0.0,Win%,2
+Monaco,2.0,0.0,0.0,1.0,Lose%,0
+Monaco,2.0,0.0,0.0,1.0,Lose%,0
+Monaco,2.0,0.0,0.0,1.0,Lose%,0
+Monaco,0.0,0.76,0.0,0.24,Win%,2
+Monaco,2.0,0.0,0.0,1.0,Lose%,0
 Monaco,1.0,0.0,1.0,0.0,Draw%,1
-Montpellier,2.0,1.0,0.0,0.0,Win%,2
-Montpellier,0.0,0.02,0.0,0.98,Lose%,0
-Montpellier,0.0,0.0,0.0,1.0,Lose%,0
-Montpellier,1.0,0.0,0.98,0.02,Draw%,1
+Monaco,0.0,1.0,0.0,0.0,Win%,2
+Monaco,2.0,0.0,0.0,1.0,Lose%,0
+Montpellier,2.0,0.0,0.0,1.0,Lose%,0
+Montpellier,0.0,0.97,0.0,0.03,Win%,2
+Montpellier,0.0,1.0,0.0,0.0,Win%,2
+Montpellier,1.0,0.01,0.99,0.0,Draw%,1
 Montpellier,1.0,0.0,1.0,0.0,Draw%,1
-Montpellier,2.0,0.99,0.01,0.0,Win%,2
-Montpellier,0.0,0.21,0.0,0.79,Lose%,0
-Montpellier,2.0,1.0,0.0,0.0,Win%,2
-Montpellier,0.0,0.0,0.0,1.0,Lose%,0
-Montpellier,1.0,0.0,0.98,0.02,Draw%,1
-Nantes,0.0,0.0,0.0,1.0,Lose%,0
-Nantes,1.0,0.0,0.82,0.18,Draw%,1
+Montpellier,2.0,0.0,0.07,0.93,Lose%,0
+Montpellier,0.0,0.91,0.0,0.09,Win%,2
+Montpellier,2.0,0.0,0.0,1.0,Lose%,0
+Montpellier,0.0,1.0,0.0,0.0,Win%,2
+Montpellier,1.0,0.0,1.0,0.0,Draw%,1
+Montpellier,0.0,0.99,0.01,0.0,Win%,2
+Montpellier,1.0,0.03,0.97,0.0,Draw%,1
+Montpellier,0.0,0.92,0.08,0.0,Win%,2
+Nantes,0.0,1.0,0.0,0.0,Win%,2
+Nantes,1.0,0.13,0.87,0.0,Draw%,1
 Nantes,1.0,0.0,1.0,0.0,Draw%,1
-Nantes,2.0,0.99,0.01,0.0,Win%,2
-Nantes,2.0,1.0,0.0,0.0,Win%,2
-Nantes,0.0,0.22,0.0,0.78,Lose%,0
-Nantes,2.0,1.0,0.0,0.0,Win%,2
-Nantes,2.0,1.0,0.0,0.0,Win%,2
-Nantes,0.0,0.1,0.0,0.9,Lose%,0
-Nantes,0.0,0.0,0.0,1.0,Lose%,0
-Nantes,0.0,0.0,0.0,1.0,Lose%,0
+Nantes,2.0,0.0,0.0,1.0,Lose%,0
+Nantes,2.0,0.0,0.0,1.0,Lose%,0
+Nantes,0.0,0.89,0.0,0.11,Win%,2
+Nantes,2.0,0.0,0.0,1.0,Lose%,0
+Nantes,2.0,0.0,0.0,1.0,Lose%,0
+Nantes,0.0,0.9,0.0,0.1,Win%,2
+Nantes,0.0,1.0,0.0,0.0,Win%,2
+Nantes,0.0,1.0,0.0,0.0,Win%,2
+Nantes,1.0,0.0,1.0,0.0,Draw%,1
+Nantes,2.0,0.0,0.01,0.99,Lose%,0
 Nice,1.0,0.0,1.0,0.0,Draw%,1
 Nice,1.0,0.0,1.0,0.0,Draw%,1
-Nice,2.0,0.09,0.91,0.0,Draw%,1
-Nice,2.0,1.0,0.0,0.0,Win%,2
-Nice,2.0,1.0,0.0,0.0,Win%,2
-Nice,1.0,0.47,0.53,0.0,Draw%,1
-Nice,2.0,1.0,0.0,0.0,Win%,2
-Nice,2.0,1.0,0.0,0.0,Win%,2
-Nice,2.0,1.0,0.0,0.0,Win%,2
-Nice,2.0,1.0,0.0,0.0,Win%,2
+Nice,2.0,0.0,0.47,0.53,Lose%,0
+Nice,2.0,0.0,0.0,1.0,Lose%,0
+Nice,2.0,0.0,0.0,1.0,Lose%,0
+Nice,1.0,0.0,0.27,0.73,Lose%,0
+Nice,2.0,0.0,0.0,1.0,Lose%,0
+Nice,2.0,0.0,0.0,1.0,Lose%,0
+Nice,2.0,0.0,0.0,1.0,Lose%,0
+Nice,2.0,0.0,0.0,1.0,Lose%,0
 Nice,1.0,0.0,1.0,0.0,Draw%,1
+Nice,2.0,0.0,0.0,1.0,Lose%,0
+Nice,0.0,1.0,0.0,0.0,Win%,2
 Paris Saint Germain,1.0,0.0,1.0,0.0,Draw%,1
-Paris Saint Germain,2.0,0.91,0.09,0.0,Win%,2
-Paris Saint Germain,2.0,1.0,0.0,0.0,Win%,2
-Paris Saint Germain,0.0,0.07,0.0,0.93,Lose%,0
-Paris Saint Germain,2.0,1.0,0.0,0.0,Win%,2
+Paris Saint Germain,2.0,0.0,0.11,0.89,Lose%,0
+Paris Saint Germain,2.0,0.0,0.0,1.0,Lose%,0
+Paris Saint Germain,0.0,0.99,0.0,0.01,Win%,2
+Paris Saint Germain,2.0,0.0,0.0,1.0,Lose%,0
 Paris Saint Germain,1.0,0.0,1.0,0.0,Draw%,1
-Paris Saint Germain,2.0,0.97,0.03,0.0,Win%,2
-Paris Saint Germain,2.0,1.0,0.0,0.0,Win%,2
-Paris Saint Germain,2.0,1.0,0.0,0.0,Win%,2
-Paris Saint Germain,2.0,1.0,0.0,0.0,Win%,2
-Paris Saint Germain,2.0,1.0,0.0,0.0,Win%,2
-Reims,2.0,1.0,0.0,0.0,Win%,2
-Reims,2.0,1.0,0.0,0.0,Win%,2
-Reims,1.0,0.8,0.2,0.0,Win%,2
-Reims,0.0,0.0,0.01,0.99,Lose%,0
-Reims,2.0,0.4,0.0,0.6,Lose%,0
-Reims,2.0,1.0,0.0,0.0,Win%,2
-Reims,0.0,0.08,0.0,0.92,Lose%,0
+Paris Saint Germain,2.0,0.0,0.0,1.0,Lose%,0
+Paris Saint Germain,2.0,0.0,0.0,1.0,Lose%,0
+Paris Saint Germain,2.0,0.0,0.0,1.0,Lose%,0
+Paris Saint Germain,2.0,0.0,0.0,1.0,Lose%,0
+Paris Saint Germain,2.0,0.0,0.0,1.0,Lose%,0
+Paris Saint Germain,2.0,0.0,0.0,1.0,Lose%,0
+Paris Saint Germain,2.0,0.0,0.0,1.0,Lose%,0
+Reims,2.0,0.0,0.0,1.0,Lose%,0
+Reims,2.0,0.0,0.0,1.0,Lose%,0
+Reims,1.0,0.0,0.83,0.17,Draw%,1
+Reims,0.0,1.0,0.0,0.0,Win%,2
+Reims,2.0,0.67,0.0,0.33,Win%,2
+Reims,2.0,0.0,0.0,1.0,Lose%,0
+Reims,0.0,0.93,0.0,0.07,Win%,2
 Reims,1.0,0.0,1.0,0.0,Draw%,1
-Reims,2.0,1.0,0.0,0.0,Win%,2
-Reims,2.0,1.0,0.0,0.0,Win%,2
-Reims,0.0,0.02,0.0,0.98,Lose%,0
+Reims,2.0,0.0,0.0,1.0,Lose%,0
+Reims,2.0,0.0,0.0,1.0,Lose%,0
+Reims,0.0,0.97,0.0,0.03,Win%,2
+Reims,0.0,1.0,0.0,0.0,Win%,2
+Reims,2.0,0.49,0.0,0.51,Lose%,0
+Rennes,1.0,0.0,0.99,0.01,Draw%,1
 Rennes,1.0,0.0,1.0,0.0,Draw%,1
 Rennes,1.0,0.0,1.0,0.0,Draw%,1
 Rennes,1.0,0.0,1.0,0.0,Draw%,1
 Rennes,1.0,0.0,1.0,0.0,Draw%,1
-Rennes,1.0,0.0,1.0,0.0,Draw%,1
-Rennes,2.0,1.0,0.0,0.0,Win%,2
-Rennes,0.0,0.0,0.0,1.0,Lose%,0
-Rennes,0.0,0.0,0.0,1.0,Lose%,0
-Rennes,1.0,0.0,0.96,0.04,Draw%,1
-Rennes,0.0,0.0,0.0,1.0,Lose%,0
-Rennes,0.0,0.0,0.0,1.0,Lose%,0
-Strasbourg,0.0,0.0,0.0,1.0,Lose%,0
-Strasbourg,2.0,1.0,0.0,0.0,Win%,2
-Strasbourg,0.0,0.01,0.0,0.99,Lose%,0
-Strasbourg,1.0,0.0,0.99,0.01,Draw%,1
-Strasbourg,2.0,0.97,0.03,0.0,Win%,2
-Strasbourg,0.0,0.01,0.0,0.99,Lose%,0
-Strasbourg,0.0,0.0,0.0,1.0,Lose%,0
-Strasbourg,0.0,0.0,0.0,1.0,Lose%,0
-Strasbourg,1.0,0.0,0.98,0.02,Draw%,1
+Rennes,2.0,0.0,0.01,0.99,Lose%,0
+Rennes,0.0,1.0,0.0,0.0,Win%,2
+Rennes,0.0,1.0,0.0,0.0,Win%,2
+Rennes,1.0,0.01,0.99,0.0,Draw%,1
+Rennes,0.0,1.0,0.0,0.0,Win%,2
+Rennes,0.0,1.0,0.0,0.0,Win%,2
+Rennes,2.0,0.02,0.0,0.98,Lose%,0
+Rennes,0.0,1.0,0.0,0.0,Win%,2
+Strasbourg,0.0,1.0,0.0,0.0,Win%,2
+Strasbourg,2.0,0.0,0.0,1.0,Lose%,0
+Strasbourg,0.0,0.98,0.0,0.02,Win%,2
+Strasbourg,1.0,0.0,1.0,0.0,Draw%,1
+Strasbourg,2.0,0.0,0.0,1.0,Lose%,0
+Strasbourg,0.0,1.0,0.0,0.0,Win%,2
+Strasbourg,0.0,1.0,0.0,0.0,Win%,2
+Strasbourg,0.0,1.0,0.0,0.0,Win%,2
+Strasbourg,1.0,0.0,1.0,0.0,Draw%,1
+Strasbourg,1.0,0.0,1.0,0.0,Draw%,1
+Strasbourg,1.0,0.0,1.0,0.0,Draw%,1
+Strasbourg,0.0,0.24,0.75,0.01,Draw%,1
 Strasbourg,1.0,0.0,1.0,0.0,Draw%,1
 Toulouse,1.0,0.0,1.0,0.0,Draw%,1
-Toulouse,0.0,0.0,0.03,0.97,Lose%,0
-Toulouse,1.0,0.0,0.87,0.13,Draw%,1
+Toulouse,0.0,1.0,0.0,0.0,Win%,2
+Toulouse,1.0,0.01,0.99,0.0,Draw%,1
 Toulouse,1.0,0.0,1.0,0.0,Draw%,1
-Toulouse,0.0,0.0,0.5,0.5,Lose%,0
-Toulouse,2.0,1.0,0.0,0.0,Win%,2
+Toulouse,0.0,0.26,0.74,0.0,Draw%,1
+Toulouse,2.0,0.0,0.0,1.0,Lose%,0
 Toulouse,1.0,0.0,1.0,0.0,Draw%,1
 Toulouse,1.0,0.0,1.0,0.0,Draw%,1
-Toulouse,0.0,0.0,0.02,0.98,Lose%,0
-Toulouse,0.0,0.0,0.0,1.0,Lose%,0
-Toulouse,1.0,0.0,0.37,0.63,Lose%,0
+Toulouse,0.0,0.99,0.01,0.0,Win%,2
+Toulouse,0.0,1.0,0.0,0.0,Win%,2
+Toulouse,1.0,0.43,0.57,0.0,Draw%,1
+Toulouse,0.0,0.72,0.28,0.0,Win%,2
+Toulouse,1.0,0.33,0.67,0.0,Draw%,1

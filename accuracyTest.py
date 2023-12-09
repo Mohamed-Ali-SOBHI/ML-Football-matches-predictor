@@ -117,11 +117,6 @@ if __name__ == '__main__':
     predictions_with_teams = predictions_with_teams.dropna()
     
     predictions_with_teams['Predicted_Result'] = predictions_with_teams['Predicted_Result'].replace({'Win%': 'Lose%', 'Lose%': 'Win%'})
-    temp_win = predictions_with_teams['Win%']
-    temp_lose = predictions_with_teams['Lose%']
-    predictions_with_teams['Win%'] = temp_lose
-    predictions_with_teams['Lose%'] = temp_win
-    print(predictions_with_teams)
     
     # Créer un mapping des noms de colonnes aux valeurs de résultat
     result_mapping = {'Win%': 2, 'Draw%': 1, 'Lose%': 0}

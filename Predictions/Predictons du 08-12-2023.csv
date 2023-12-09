@@ -1,0 +1,97 @@
+team,Predicted_Result,Confidence
+Alaves,Lose,0.7
+Almeria,Lose,1.0
+Athletic Club,Win,0.55
+Atletico Madrid,Win,1.0
+Barcelona,Draw,0.6
+Cadiz,Draw,0.75
+Celta Vigo,Lose,0.99
+Getafe,Draw,0.99
+Girona,Win,1.0
+Granada,Lose,1.0
+Las Palmas,Draw,0.51
+Mallorca,Lose,0.61
+Osasuna,Lose,0.72
+Rayo Vallecano,Draw,0.99
+Real Betis,Draw,0.66
+Real Madrid,Win,1.0
+Real Sociedad,Win,0.49
+Sevilla,Draw,0.91
+Valencia,Draw,0.94
+Villarreal,Lose,0.78
+Augsburg,Draw,0.87
+Bayer Leverkusen,Win,1.0
+Bayern Munich,Win,1.0
+Bochum,Draw,0.97
+Borussia Dortmund,Draw,0.6
+Borussia M.Gladbach,Draw,0.78
+Darmstadt,Lose,1.0
+Eintracht Frankfurt,Draw,1.0
+FC Cologne,Lose,1.0
+FC Heidenheim,Lose,1.0
+Freiburg,Draw,0.57
+Hoffenheim,Win,0.59
+Mainz 05,Lose,0.84
+RasenBallsport Leipzig,Win,0.93
+Union Berlin,Lose,0.72
+VfB Stuttgart,Win,0.99
+Werder Bremen,Lose,1.0
+Wolfsburg,Lose,0.73
+Arsenal,Win,0.74
+Aston Villa,Win,0.92
+Bournemouth,Lose,1.0
+Brentford,Draw,0.5
+Brighton,Draw,0.64
+Burnley,Lose,1.0
+Chelsea,Lose,0.8
+Crystal Palace,Lose,0.85
+Everton,Lose,1.0
+Fulham,Lose,0.76
+Liverpool,Draw,0.64
+Luton,Lose,1.0
+Manchester City,Win,0.97
+Manchester United,Win,0.91
+Newcastle United,Draw,0.59
+Nottingham Forest,Lose,0.95
+Sheffield United,Lose,1.0
+Tottenham,Draw,0.54
+West Ham,Win,0.48
+Wolverhampton Wanderers,Lose,1.0
+AC Milan,Win,0.64
+Atalanta,Lose,0.71
+Bologna,Draw,1.0
+Cagliari,Lose,1.0
+Empoli,Lose,1.0
+Fiorentina,Draw,0.64
+Frosinone,Lose,0.66
+Genoa,Lose,0.81
+Inter,Win,1.0
+Juventus,Draw,0.6
+Lazio,Lose,1.0
+Lecce,Draw,1.0
+Monza,Draw,0.98
+Napoli,Win,1.0
+Roma,Draw,0.83
+Salernitana,Draw,0.9
+Sassuolo,Lose,1.0
+Torino,Draw,0.84
+Udinese,Draw,0.6
+Verona,Draw,0.92
+Brest,Draw,0.92
+Clermont Foot,Lose,1.0
+Le Havre,Draw,1.0
+Lens,Draw,1.0
+Lille,Draw,0.53
+Lorient,Draw,0.74
+Lyon,Lose,1.0
+Marseille,Draw,0.99
+Metz,Draw,0.61
+Monaco,Win,0.88
+Montpellier,Lose,0.5
+Nantes,Lose,1.0
+Nice,Win,0.98
+Paris Saint Germain,Win,0.99
+Reims,Win,0.88
+Rennes,Draw,1.0
+Strasbourg,Draw,0.56
+Toulouse,Draw,1.0
