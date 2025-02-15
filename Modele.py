@@ -82,9 +82,11 @@ def train_model(X: ndarray, y: ndarray) -> Tuple[Sequential, float, float]:
     
     # Define the deep learning model
     model = Sequential([
-        Dense(128, activation='relu', input_shape=(X_train.shape[1],)),
-        Dense(64, activation='relu'),
-        Dense(32, activation='relu'),
+        Dense(128, activation='sigmoid', input_shape=(X_train.shape[1],)),  
+        Dense(64, activation='sigmoid'),
+        Dense(32, activation='sigmoid'),
+        Dense(16, activation='sigmoid'),
+        Dense(8, activation='sigmoid'),
         Dense(3, activation='softmax')  # 3 classes: win, draw, lose
     ])
     
@@ -95,7 +97,7 @@ def train_model(X: ndarray, y: ndarray) -> Tuple[Sequential, float, float]:
     early_stopping = EarlyStopping(monitor='val_loss', patience=5)
     
     # Train the model with early stopping callback
-    history = model.fit(X_train, y_train, epochs=100, batch_size=32, validation_data=(X_val, y_val), callbacks=[early_stopping])
+    history = model.fit(X_train, y_train, epochs=1000, batch_size=32, validation_data=(X_val, y_val), callbacks=[early_stopping])
     
     # Evaluate the model
     val_loss, val_acc = model.evaluate(X_val, y_val)
