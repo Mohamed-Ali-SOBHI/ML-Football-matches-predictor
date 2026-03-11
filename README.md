@@ -5,8 +5,9 @@ Pipeline minimal et reproductible pour aller :
 1. de la data brute Understat
 2. a l'enrichissement par cotes d'ouverture
 3. a un dataset pre-match sans fuite
-4. a une strategie de pari filtree
+4. a une ou plusieurs strategies de pari filtrees
 5. a une evaluation hors echantillon sur la saison 2025/26
+6. a une inference live sur un portefeuille de strategies
 
 Le depot est volontairement concentre sur le chemin utile. Les datasets intermediaires et la plupart des exports sont regeneres a la demande.
 
@@ -63,11 +64,18 @@ Couverture actuelle :
 - `train/seasonal_protocol.py` : protocole train/val/test par saisons
 - `train/walkforward_monthly.py` : walk-forward mensuel
 - `train/filtered_strategy_search.py` : recherche de strategie de pari filtree
+- `train/portfolio_strategy_search.py` : recherche de portefeuille de strategies complementaires
 - `train/run_positive_epl_draw.ps1` : runner de la strategie positive retenue
+- `train/run_positive_strategy_portfolio.ps1` : portefeuille selectionne sur validation
+- `train/run_exploratory_positive_strategy_portfolio.ps1` : portefeuille selectionne sur test, a titre exploratoire
 - `train/generate_readme_figures.py` : regeneration des figures du README
+- `inference/portfolio_presets.py` : presets figes du portefeuille live
 - `inference/fetch_sportytrader_epl_odds.py` : recuperation auto des fixtures/cotes EPL a venir
-- `inference/predict_upcoming_epl_draw.py` : scoring des matchs a venir et plan de mise
-- `inference/run_weekend_predictions.ps1` : runner inference pour le week-end courant
+- `inference/predict_upcoming_epl_draw.py` : scoring EPL historique, conserve pour reference
+- `inference/fetch_sportytrader_portfolio_odds.py` : recuperation auto des fixtures/cotes du portefeuille multi-ligues
+- `inference/predict_upcoming_portfolio.py` : scoring live du portefeuille multi-strategies
+- `inference/run_upcoming_portfolio.ps1` : pipeline live multi-strategies sur une plage de dates
+- `inference/run_weekend_predictions.ps1` : runner inference portfolio pour le week-end courant
 - `docs/` : figures generees pour le README
 
 En pratique :
@@ -242,6 +250,38 @@ Resultat sur la saison `2025/26`, sans entrainement sur cette saison :
 Export conserve :
 - `train/output/positive_epl_draw_bets.csv`
 
+## Portefeuille multi-strategies
+
+Le depot contient maintenant deux niveaux de recherche :
+- une strategie unitaire `EPL draw`, utile comme preuve de concept simple
+- un portefeuille de strategies complementaires, utile pour diversifier les paris live
+
+Recherche disponible dans `train/portfolio_strategy_search.py` :
+- mode `validation` : propre methodologiquement, selection sur `2024`, evaluation sur `2025/26`
+- mode `test` : exploratoire, selection directement sur `2025/26` pour identifier plusieurs poches d'edge simultanees
+
+Le preset live branche dans `inference/portfolio_presets.py` est volontairement le preset exploratoire, parce c'est celui qui fournit aujourd'hui plusieurs strategies actives en meme temps.
+
+Strategies du portefeuille live actuel :
+- `Bundesliga draw nonfavorite [2.20, 4.00)`
+- `EPL draw nonfavorite [4.00, 10.00)`
+- `Ligue 1 draw nonfavorite [2.00, 10.00)`
+- `Serie A draw nonfavorite [4.00, 10.00)`
+
+Export de recherche exploratoire :
+- `train/output/positive_strategy_portfolio_summary_test_selected.csv`
+- `train/output/positive_strategy_portfolio_bets_test_selected.csv`
+
+Resultat exploratoire du portefeuille sur `2025/26` :
+
+| Metrique | Valeur |
+| --- | ---: |
+| Strategies retenues | `4` |
+| Paris selectionnes | `97` |
+| Profit cumule | `+45.63` unites |
+| ROI | `+47.04%` |
+| Hit rate | `31.96%` |
+
 ## Graphiques
 
 ### 1. Profit cumule sur la saison test
@@ -318,17 +358,58 @@ Strategie positive retenue :
 powershell -ExecutionPolicy Bypass -File .\train\run_positive_epl_draw.ps1
 ```
 
+Portefeuille multi-strategies selectionne sur validation :
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\train\run_positive_strategy_portfolio.ps1 -Trials 12
+```
+
+Portefeuille exploratoire force vers plusieurs strategies positives sur `2025/26` :
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\train\run_exploratory_positive_strategy_portfolio.ps1 -Trials 6
+```
+
 Regenerer les graphiques du README :
 
 ```powershell
 python .\train\generate_readme_figures.py
 ```
 
-Predire automatiquement le prochain week-end EPL :
+Rechercher un portefeuille proprement sur validation :
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\train\run_positive_strategy_portfolio.ps1 -Trials 12
+```
+
+Rechercher un portefeuille exploratoire multi-strategies :
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\train\run_exploratory_positive_strategy_portfolio.ps1 -Trials 6
+```
+
+Predire automatiquement le prochain week-end du portefeuille live :
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File .\inference\run_weekend_predictions.ps1 -BankrollEur 50
 ```
+
+Predire une plage de dates explicite avec le portefeuille live :
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\inference\run_upcoming_portfolio.ps1 -DateFrom 2026-03-13 -DateTo 2026-03-16 -BankrollEur 50
+```
+
+Exemple de run live verifie pour la fenetre du `13 mars 2026` au `16 mars 2026` :
+- `37` fixtures recuperees
+- `7` paris recommandes
+- bankroll exemple `50 EUR`
+- mise flat recommande : `1.79 EUR` par pari
+
+Exports live :
+- `inference/output/sportytrader_upcoming_portfolio_odds.csv`
+- `inference/output/upcoming_portfolio_predictions.csv`
+- `inference/output/upcoming_portfolio_bets.csv`
 
 ## Notes
 
@@ -336,3 +417,6 @@ powershell -ExecutionPolicy Bypass -File .\inference\run_weekend_predictions.ps1
 - `train/dataset_home.csv` est regenere au besoin.
 - Le depot garde le CSV final des paris positifs pour documenter le resultat retenu.
 - Les sorties d'inference sont regenerees dans `inference/output/`.
+- Le portefeuille `validation` reste le mode propre pour la selection.
+- Le portefeuille `test` est utile pour explorer des strategies complementaires positives, mais il ne doit pas etre interprete comme une validation hors echantillon propre.
+- Le preset live actuel est donc operationnel, mais exploratoire du point de vue statistique.

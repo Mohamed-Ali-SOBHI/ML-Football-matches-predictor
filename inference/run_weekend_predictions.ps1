@@ -33,7 +33,7 @@ if (-not $DateFrom -or -not $DateTo) {
 }
 
 $scriptDir = Split-Path -Parent $MyInvocation.MyCommand.Path
-$runner = Join-Path $scriptDir "run_upcoming_epl_draw.ps1"
+$runner = Join-Path $scriptDir "run_upcoming_portfolio.ps1"
 
 $argsList = @(
     "-ExecutionPolicy", "Bypass",

@@ -10,7 +10,28 @@ from pathlib import Path
 import pandas as pd
 
 
-SPORTYTRADER_EPL_URL = "https://www.sportytrader.com/en/odds/football/england/premier-league-49/"
+SPORTYTRADER_LEAGUE_CONFIGS = {
+    "EPL": {
+        "url": "https://www.sportytrader.com/en/odds/football/england/premier-league-49/",
+        "title_contains": "Premier League",
+        "section_title": "Upcoming Premier League matches",
+    },
+    "Bundesliga": {
+        "url": "https://www.sportytrader.com/en/odds/football/germany/bundesliga-65/",
+        "title_contains": "Bundesliga",
+        "section_title": "Upcoming Bundesliga matches",
+    },
+    "Serie_A": {
+        "url": "https://www.sportytrader.com/en/odds/football/italy/serie-a-79/",
+        "title_contains": "Serie A",
+        "section_title": "Upcoming Serie A matches",
+    },
+    "Ligue_1": {
+        "url": "https://www.sportytrader.com/en/odds/football/france/ligue-1-123/",
+        "title_contains": "Ligue 1",
+        "section_title": "Upcoming Ligue 1 matches",
+    },
+}
 NPX_EXECUTABLE = shutil.which("npx") or shutil.which("npx.cmd") or "npx"
 PLAYWRIGHT_CLI = [
     NPX_EXECUTABLE,
@@ -64,7 +85,7 @@ def extract_result_block(output: str):
     return json.loads(payload)
 
 
-def wait_until_ready(wait_seconds: float, timeout_seconds: float) -> None:
+def wait_until_ready(*, wait_seconds: float, timeout_seconds: float, title_contains: str, section_title: str) -> None:
     deadline = time.time() + timeout_seconds
     while time.time() < deadline:
         time.sleep(wait_seconds)
@@ -81,22 +102,36 @@ def wait_until_ready(wait_seconds: float, timeout_seconds: float) -> None:
         except Exception:
             continue
 
-        if "Premier League" in result.get("title", "") and "Upcoming Premier League matches" in result.get("head", ""):
+        if title_contains in result.get("title", "") and section_title in result.get("head", ""):
             return
-    raise TimeoutError("Timed out waiting for Sportytrader EPL odds page to become readable")
+    raise TimeoutError(f"Timed out waiting for Sportytrader page to become readable: {title_contains}")
 
 
-def fetch_epl_page_text(*, wait_seconds: float, timeout_seconds: float) -> str:
+def fetch_league_page_text(
+    league: str,
+    *,
+    wait_seconds: float,
+    timeout_seconds: float,
+) -> str:
+    if league not in SPORTYTRADER_LEAGUE_CONFIGS:
+        raise KeyError(f"Unsupported Sportytrader league: {league}")
+
+    config = SPORTYTRADER_LEAGUE_CONFIGS[league]
     _reset_playwright_state()
     try:
-        run_playwright(["open", SPORTYTRADER_EPL_URL, "--headed"], timeout=40.0)
+        run_playwright(["open", config["url"], "--headed"], timeout=40.0)
     except RuntimeError as exc:
         if "EADDRINUSE" not in str(exc):
             raise
         _reset_playwright_state()
-        run_playwright(["open", SPORTYTRADER_EPL_URL, "--headed"], timeout=40.0)
+        run_playwright(["open", config["url"], "--headed"], timeout=40.0)
     try:
-        wait_until_ready(wait_seconds, timeout_seconds)
+        wait_until_ready(
+            wait_seconds=wait_seconds,
+            timeout_seconds=timeout_seconds,
+            title_contains=config["title_contains"],
+            section_title=config["section_title"],
+        )
         result = extract_result_block(
             run_playwright(["eval", "() => document.body.innerText"], timeout=30.0)
         )
@@ -132,14 +167,24 @@ def parse_fixture_timestamp(raw: str, date_from: pd.Timestamp) -> pd.Timestamp:
     return pd.Timestamp(f"{year:04d}-{month:02d}-{int(day_str):02d} {time_part}:00")
 
 
-def parse_upcoming_fixtures(page_text: str, date_from: pd.Timestamp, date_to: pd.Timestamp) -> pd.DataFrame:
+def parse_upcoming_fixtures(
+    page_text: str,
+    *,
+    date_from: pd.Timestamp,
+    date_to: pd.Timestamp,
+    league: str,
+) -> pd.DataFrame:
+    if league not in SPORTYTRADER_LEAGUE_CONFIGS:
+        raise KeyError(f"Unsupported Sportytrader league: {league}")
+
+    section_title = SPORTYTRADER_LEAGUE_CONFIGS[league]["section_title"]
     raw_lines = [line.strip().replace("\xa0", " ") for line in page_text.splitlines()]
     lines = [line for line in raw_lines if line]
 
     try:
-        start = lines.index("Upcoming Premier League matches") + 1
+        start = lines.index(section_title) + 1
     except ValueError as exc:
-        raise ValueError("Could not find 'Upcoming Premier League matches' section in Sportytrader page text") from exc
+        raise ValueError(f"Could not find {section_title!r} section in Sportytrader page text") from exc
 
     fixtures: list[dict[str, object]] = []
     i = start
@@ -155,6 +200,7 @@ def parse_upcoming_fixtures(page_text: str, date_from: pd.Timestamp, date_to: pd
         fixtures.append(
             {
                 "date": parse_fixture_timestamp(lines[i], date_from),
+                "league": league,
                 "home_team": home_team,
                 "away_team": away_team,
                 "home_win_odds_open": float(lines[i + 3]),
@@ -172,11 +218,71 @@ def parse_upcoming_fixtures(page_text: str, date_from: pd.Timestamp, date_to: pd
     end_of_day = date_to + pd.Timedelta(days=1) - pd.Timedelta(seconds=1)
     return (
         frame[(frame["date"] >= date_from) & (frame["date"] <= end_of_day)]
-        .sort_values("date")
+        .sort_values(["date", "home_team", "away_team"])
         .reset_index(drop=True)
     )
 
 
 def fetch_upcoming_epl_fixtures(*, date_from: pd.Timestamp, date_to: pd.Timestamp, wait_seconds: float, timeout_seconds: float) -> pd.DataFrame:
-    page_text = fetch_epl_page_text(wait_seconds=wait_seconds, timeout_seconds=timeout_seconds)
-    return parse_upcoming_fixtures(page_text, date_from=date_from, date_to=date_to)
+    return fetch_upcoming_league_fixtures(
+        "EPL",
+        date_from=date_from,
+        date_to=date_to,
+        wait_seconds=wait_seconds,
+        timeout_seconds=timeout_seconds,
+    )
+
+
+def fetch_upcoming_league_fixtures(
+    league: str,
+    *,
+    date_from: pd.Timestamp,
+    date_to: pd.Timestamp,
+    wait_seconds: float,
+    timeout_seconds: float,
+) -> pd.DataFrame:
+    page_text = fetch_league_page_text(
+        league,
+        wait_seconds=wait_seconds,
+        timeout_seconds=timeout_seconds,
+    )
+    return parse_upcoming_fixtures(
+        page_text,
+        date_from=date_from,
+        date_to=date_to,
+        league=league,
+    )
+
+
+def fetch_upcoming_fixtures_for_leagues(
+    leagues: list[str],
+    *,
+    date_from: pd.Timestamp,
+    date_to: pd.Timestamp,
+    wait_seconds: float,
+    timeout_seconds: float,
+) -> pd.DataFrame:
+    frames = [
+        fetch_upcoming_league_fixtures(
+            league,
+            date_from=date_from,
+            date_to=date_to,
+            wait_seconds=wait_seconds,
+            timeout_seconds=timeout_seconds,
+        )
+        for league in leagues
+    ]
+    if not frames:
+        return pd.DataFrame(
+            columns=[
+                "date",
+                "league",
+                "home_team",
+                "away_team",
+                "home_win_odds_open",
+                "draw_odds_open",
+                "away_win_odds_open",
+                "source",
+            ]
+        )
+    return pd.concat(frames, ignore_index=True).sort_values(["date", "league", "home_team"]).reset_index(drop=True)

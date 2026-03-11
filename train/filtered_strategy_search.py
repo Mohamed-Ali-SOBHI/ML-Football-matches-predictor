@@ -5,6 +5,7 @@ import numpy as np
 import pandas as pd
 
 from ml_common import build_xgb_model, get_feature_cols, load_dataset, make_sample_weight
+from strategy_search_common import apply_strategy, build_base_bets, sample_params, threshold_values
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
@@ -16,18 +17,6 @@ def resolve_path(path: str) -> str:
     if candidate.is_absolute():
         return str(candidate)
     return str((Path.cwd() / candidate).resolve())
-
-
-def sample_params(rng: np.random.Generator) -> dict:
-    return {
-        "max_depth": int(rng.integers(3, 9)),
-        "min_child_weight": float(rng.uniform(1.0, 12.0)),
-        "subsample": float(rng.uniform(0.55, 1.0)),
-        "colsample_bytree": float(rng.uniform(0.55, 1.0)),
-        "gamma": float(rng.uniform(0.0, 4.0)),
-        "reg_lambda": float(rng.uniform(0.5, 8.0)),
-        "learning_rate": float(rng.uniform(0.015, 0.08)),
-    }
 
 
 def parse_args() -> argparse.Namespace:
@@ -50,78 +39,6 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--min-val-bets", type=int, default=60)
     parser.add_argument("--export-bets", default="")
     return parser.parse_args()
-
-
-def build_base_bets(eval_df: pd.DataFrame, proba: np.ndarray) -> pd.DataFrame:
-    odds = np.column_stack(
-        [
-            eval_df["market_away_win_odds_open"].to_numpy(),
-            eval_df["market_draw_odds_open"].to_numpy(),
-            eval_df["market_home_win_odds_open"].to_numpy(),
-        ]
-    )
-    fair_probs = 1.0 / odds
-    fair_probs = fair_probs / fair_probs.sum(axis=1, keepdims=True)
-    expected_value = proba * odds - 1.0
-    chosen = expected_value.argmax(axis=1)
-    chosen_ev = expected_value[np.arange(len(expected_value)), chosen]
-    outcome_map = np.array(["away_win", "draw", "home_win"], dtype=object)
-
-    bet_df = eval_df.copy()
-    bet_df["selected_outcome"] = outcome_map[chosen]
-    bet_df["selected_odds"] = odds[np.arange(len(odds)), chosen]
-    bet_df["predicted_probability"] = proba[np.arange(len(proba)), chosen]
-    bet_df["market_probability"] = fair_probs[np.arange(len(fair_probs)), chosen]
-    bet_df["edge"] = bet_df["predicted_probability"] - bet_df["market_probability"]
-    bet_df["expected_value"] = chosen_ev
-    bet_df["won_bet"] = chosen == bet_df["target"].astype(int).to_numpy()
-    bet_df["profit"] = np.where(bet_df["won_bet"], bet_df["selected_odds"] - 1.0, -1.0)
-
-    valid_mask = np.isfinite(odds).all(axis=1) & (odds > 1.0).all(axis=1)
-    bet_df = bet_df[valid_mask].copy()
-
-    market_probs = bet_df[
-        [
-            "market_home_prob_open",
-            "market_draw_prob_open",
-            "market_away_prob_open",
-        ]
-    ].to_numpy()
-    market_fav_idx = market_probs.argmax(axis=1)
-    selected_idx = pd.Series(bet_df["selected_outcome"]).map({"away_win": 0, "draw": 1, "home_win": 2}).to_numpy()
-    bet_df["bet_is_market_favorite"] = selected_idx == market_fav_idx
-    return bet_df
-
-
-def apply_strategy(
-    base_bets: pd.DataFrame,
-    *,
-    threshold: float,
-    edge_min: float,
-    bet_league: str,
-    outcome: str,
-    odds_min: float,
-    odds_max: float,
-    market_favorite_mode: str,
-) -> pd.DataFrame:
-    bets = base_bets[base_bets["expected_value"] > threshold].copy()
-    if bet_league:
-        bets = bets[bets["league"] == bet_league]
-    bets = bets[bets["selected_outcome"] == outcome]
-    bets = bets[(bets["selected_odds"] >= odds_min) & (bets["selected_odds"] < odds_max)]
-    bets = bets[bets["edge"] >= edge_min]
-    if market_favorite_mode == "favorite":
-        bets = bets[bets["bet_is_market_favorite"]]
-    elif market_favorite_mode == "nonfavorite":
-        bets = bets[~bets["bet_is_market_favorite"]]
-    return bets
-
-
-def threshold_values(start: float, stop: float, step: float) -> list[float]:
-    values = np.arange(start, stop + step / 2.0, step)
-    return [round(float(value), 10) for value in values]
-
-
 def main() -> None:
     args = parse_args()
 
