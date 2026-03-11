@@ -53,9 +53,9 @@ Couverture actuelle :
 ## Structure du depot
 
 - `Data/` : CSV bruts par equipe et saison
-- `scrapper.py` : recuperation Understat
-- `market_data.py` : matching matchs + injection tirs/cotes
-- `enrich_data.py` : enrichissement de tous les CSV de `Data/`
+- `data_pipeline/scrapper.py` : recuperation Understat
+- `data_pipeline/market_data.py` : matching matchs + injection tirs/cotes
+- `data_pipeline/enrich_data.py` : enrichissement de tous les CSV de `Data/`
 - `train/make_dataset.py` : construction du dataset match-level pre-match
 - `train/ml_common.py` : selection de features, split, modele XGBoost, evaluation
 - `train/train_model.py` : entrainement/evaluation 1X2 standard
@@ -65,7 +65,15 @@ Couverture actuelle :
 - `train/filtered_strategy_search.py` : recherche de strategie de pari filtree
 - `train/run_positive_epl_draw.ps1` : runner de la strategie positive retenue
 - `train/generate_readme_figures.py` : regeneration des figures du README
+- `inference/fetch_sportytrader_epl_odds.py` : recuperation auto des fixtures/cotes EPL a venir
+- `inference/predict_upcoming_epl_draw.py` : scoring des matchs a venir et plan de mise
+- `inference/run_weekend_predictions.ps1` : runner inference pour le week-end courant
 - `docs/` : figures generees pour le README
+
+En pratique :
+- `data_pipeline/` contient l'ingestion et l'enrichissement
+- `train/` contient l'entrainement, le tuning et la recherche de strategie
+- `inference/` contient la prediction live
 
 ## Prerequis
 
@@ -316,8 +324,15 @@ Regenerer les graphiques du README :
 python .\train\generate_readme_figures.py
 ```
 
+Predire automatiquement le prochain week-end EPL :
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\inference\run_weekend_predictions.ps1 -BankrollEur 50
+```
+
 ## Notes
 
 - Les datasets intermediaires ne sont pas versionnes.
 - `train/dataset_home.csv` est regenere au besoin.
 - Le depot garde le CSV final des paris positifs pour documenter le resultat retenu.
+- Les sorties d'inference sont regenerees dans `inference/output/`.

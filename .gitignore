@@ -1,5 +1,8 @@
 __pycache__/
 */__pycache__/
+.playwright-cli/
 train/dataset_home.csv
 train/output/*
 !train/output/positive_epl_draw_bets.csv
+inference/output/*
+!inference/output/.gitkeep

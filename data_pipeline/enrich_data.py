@@ -1,9 +1,17 @@
 import argparse
 import glob
+import sys
+from pathlib import Path
 
 import pandas as pd
 
-from market_data import enrich_team_rows_with_market_data
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_ROOT = SCRIPT_DIR.parent
+if str(REPO_ROOT) not in sys.path:
+    sys.path.append(str(REPO_ROOT))
+
+from data_pipeline.market_data import enrich_team_rows_with_market_data
 
 
 def main() -> None:

@@ -349,6 +349,9 @@ def compute_match_elo(matches: pd.DataFrame, config: EloConfig) -> pd.DataFrame:
             exp_home = 1.0 / (1.0 + 10 ** ((a_elo - (h_elo + config.home_adv)) / 400.0))
             p_home.append(exp_home)
 
+            if pd.isna(row.result):
+                continue
+
             if row.result == "w":
                 score_home = 1.0
             elif row.result == "d":
@@ -569,7 +572,7 @@ def build_home_perspective_dataset(team_rows: pd.DataFrame, windows: tuple[int, 
         )
 
     matches = add_market_implied_features(matches)
-    matches["target"] = matches["result"].map({"l": 0, "d": 1, "w": 2}).astype(int)
+    matches["target"] = matches["result"].map({"l": 0, "d": 1, "w": 2}).astype("Int64")
     matches = matches.drop(columns=["away_opponent_id"])
 
     return matches

@@ -1,10 +1,18 @@
 import argparse
+import os
+import sys
+
 import pandas as pd
 import requests
 from tqdm import tqdm
-import os
 
-from market_data import enrich_team_rows_with_market_data
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+REPO_ROOT = os.path.dirname(SCRIPT_DIR)
+if REPO_ROOT not in sys.path:
+    sys.path.append(REPO_ROOT)
+
+from data_pipeline.market_data import enrich_team_rows_with_market_data
 
 
 DEFAULT_LEAGUES = ["La_liga", "Bundesliga", "EPL", "Serie_A", "Ligue_1"]

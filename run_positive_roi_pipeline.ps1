@@ -18,12 +18,12 @@ Push-Location $repoRoot
 
 try {
     if ($RefreshRawData) {
-        python .\scrapper.py
-        Assert-LastExitCode "scrapper.py"
+        python .\data_pipeline\scrapper.py
+        Assert-LastExitCode "data_pipeline\\scrapper.py"
     }
 
-    python .\enrich_data.py --data-dir $DataDir
-    Assert-LastExitCode "enrich_data.py"
+    python .\data_pipeline\enrich_data.py --data-dir $DataDir
+    Assert-LastExitCode "data_pipeline\\enrich_data.py"
 
     python .\train\make_dataset.py --data-dir $DataDir --output $DatasetPath
     Assert-LastExitCode "train\\make_dataset.py"
