@@ -1,0 +1,5 @@
+__pycache__/
+*/__pycache__/
+train/dataset_home.csv
+train/output/*
+!train/output/positive_epl_draw_bets.csv
