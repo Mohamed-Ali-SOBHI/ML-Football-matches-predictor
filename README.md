@@ -282,6 +282,37 @@ Resultat exploratoire du portefeuille sur `2025/26` :
 | ROI | `+47.04%` |
 | Hit rate | `31.96%` |
 
+## Graphiques portefeuille
+
+### 1. Profit cumule du portefeuille
+
+Ce graphe montre la trajectoire globale du portefeuille exploratoire. L'objectif est de verifier si le resultat vient d'une seule anomalie ou d'une suite de paris qui s'accumulent de facon plus reguliere.
+
+![Portfolio cumulative profit](docs/portfolio_cumulative_profit.png)
+
+### 2. Profit cumule par strategie
+
+Ici on regarde si une seule strategie porte tout le portefeuille, ou si plusieurs composantes contribuent. C'est important pour juger si le portefeuille est vraiment diversifie.
+
+![Portfolio cumulative by strategy](docs/portfolio_cumulative_by_strategy.png)
+
+### 3. ROI mensuel par ligue
+
+Ce graphe sert a voir si l'edge est concentre dans une ligue ou un mois particulier. En pratique, c'est un bon test visuel de stabilite et de diversification.
+
+![Portfolio monthly ROI by league](docs/portfolio_monthly_roi_by_league.png)
+
+### 4. Contribution par strategie
+
+Ce graphe decompose le profit total, le nombre de paris et le ROI moyen par strategie. Il permet de separer les strategies qui apportent du volume de celles qui apportent surtout de la marge.
+
+![Portfolio strategy contribution](docs/portfolio_strategy_contribution.png)
+
+Lecture correcte de ces graphes :
+- le portefeuille exploratoire est plus large que la strategie EPL historique
+- on observe plusieurs poches d'edge, pas une seule ligne dominante
+- la lecture reste exploratoire, car ces strategies ont ete retenues en regardant `2025/26`
+
 ## Graphiques
 
 ### 1. Profit cumule sur la saison test
