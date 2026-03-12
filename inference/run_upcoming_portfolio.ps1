@@ -4,6 +4,7 @@ param(
     [string]$FixturesCsv = "",
     [string]$Portfolio = "exploratory_multi_strategy_portfolio_2025",
     [double]$BankrollEur = 50.0,
+    [string]$TrackingLedger = ".\\inference\\output\\live_portfolio_bet_log.csv",
     [switch]$RefreshRawData
 )
 
@@ -40,7 +41,8 @@ try {
         ".\\inference\\predict_upcoming_portfolio.py",
         "--fixtures-csv", $FixturesCsv,
         "--portfolio", $Portfolio,
-        "--bankroll-eur", $BankrollEur
+        "--bankroll-eur", $BankrollEur,
+        "--tracking-ledger", $TrackingLedger
     )
     & $command[0] $command[1..($command.Length - 1)]
     Assert-LastExitCode "predict_upcoming_portfolio.py"

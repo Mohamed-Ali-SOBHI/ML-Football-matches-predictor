@@ -81,10 +81,18 @@ Les fichiers importants sont :
 - `train/ml_common.py`
 - `train/strategy_search_common.py`
 - `train/portfolio_strategy_search.py`
+- `train/validation_io.py`
+- `train/validation_metrics.py`
+- `train/validation_context.py`
+- `train/validation_verdict.py`
+- `train/validation_markdown.py`
+- `train/scientific_validation_report.py`
 - `train/run_positive_strategy_portfolio.ps1`
 - `train/run_exploratory_positive_strategy_portfolio.ps1`
+- `train/run_scientific_validation.ps1`
 - `train/generate_readme_figures.py`
 - `inference/portfolio_presets.py`
+- `inference/live_tracking.py`
 - `inference/fetch_sportytrader_portfolio_odds.py`
 - `inference/predict_upcoming_portfolio.py`
 - `inference/upcoming_portfolio_strategy.py`
@@ -233,6 +241,43 @@ Lecture correcte :
 - c'est exploitable pour de l'inference live
 - mais ce n'est pas encore une preuve finale de robustesse
 
+## Comment on mesure la robustesse
+
+On ne peut pas prouver mathematiquement que le portefeuille gagnera dans le futur.
+
+En revanche, on peut mesurer si la preuve actuelle est faible, moyenne ou encourageante.
+Le projet le fait maintenant avec un bloc separe de validation scientifique.
+
+Le rapport regarde :
+- le ROI observe
+- un intervalle de confiance bootstrap sur le ROI
+- la probabilite bootstrap que le ROI soit au-dessus de zero
+- le hit rate
+- le drawdown maximal
+- la plus longue serie de pertes
+- le mode de selection du portefeuille : `validation` ou `test`
+- la presence ou non de donnees de closing line
+
+Lecture simple :
+- un ROI positif seul ne suffit pas
+- si le portefeuille a ete choisi sur la meme saison qu'il gagne, la preuve reste faible
+- si le portefeuille est gele puis gagne ensuite sur des matchs jamais vus, la preuve devient plus serieuse
+
+Aujourd'hui :
+- le portefeuille exploratoire sur `2025/26` reste classe `faible`
+- le portefeuille choisi proprement sur validation reste negatif
+
+Donc la bonne suite, au `12 mars 2026`, c'est de geler la strategie live maintenant et de suivre uniquement la fin de saison `2025/26`.
+
+Fichiers de rapport generes :
+- `train/output/positive_strategy_portfolio_bets_test_selected_scientific_report.md`
+- `train/output/positive_strategy_portfolio_bets_test_selected_scientific_report.json`
+- `train/output/positive_strategy_portfolio_bets_scientific_report.md`
+- `train/output/positive_strategy_portfolio_bets_scientific_report.json`
+
+En live, chaque recommandation est aussi archivee ici :
+- `inference/output/live_portfolio_bet_log.csv`
+
 ## Les graphiques, en version simple
 
 ### 1. Profit cumule du portefeuille
@@ -349,6 +394,12 @@ Recherche exploratoire multi-strategies :
 powershell -ExecutionPolicy Bypass -File .\train\run_exploratory_positive_strategy_portfolio.ps1 -Trials 6
 ```
 
+Generer le rapport de validation scientifique :
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\train\run_scientific_validation.ps1
+```
+
 Regenerer les graphiques du README :
 
 ```powershell
@@ -372,5 +423,7 @@ powershell -ExecutionPolicy Bypass -File .\inference\run_upcoming_portfolio.ps1 
 - Les datasets intermediaires ne sont pas versionnes.
 - `train/dataset_home.csv` est regenere au besoin.
 - Les sorties live sont regenerees dans `inference/output/`.
+- `inference/output/live_portfolio_bet_log.csv` sert a figer les paris recommandes au moment ou ils sont proposes.
 - Le mode `validation` est le plus propre pour selectionner une strategie.
 - Le mode `test` sert surtout a explorer plusieurs poches d'edge complementaires.
+- Le vrai test prospectif propre a partir d'aujourd'hui est la fin de saison `2025/26`, pas un backtest reouvert apres coup.

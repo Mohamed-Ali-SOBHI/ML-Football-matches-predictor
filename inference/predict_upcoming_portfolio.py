@@ -11,6 +11,7 @@ if str(REPO_ROOT) not in sys.path:
     sys.path.append(str(REPO_ROOT))
 
 from inference.portfolio_presets import DEFAULT_PORTFOLIO_NAME, PORTFOLIO_PRESETS
+from inference.live_tracking import append_tracking_rows, build_tracking_rows
 from inference.upcoming_portfolio_strategy import (
     assign_flat_stakes,
     build_dataset_with_fixtures,
@@ -26,6 +27,7 @@ DEFAULT_DATA_DIR = REPO_ROOT / "Data"
 DEFAULT_FIXTURES_PATH = SCRIPT_DIR / "output" / "sportytrader_upcoming_portfolio_odds.csv"
 DEFAULT_OUTPUT_ALL = SCRIPT_DIR / "output" / "upcoming_portfolio_predictions.csv"
 DEFAULT_OUTPUT_BETS = SCRIPT_DIR / "output" / "upcoming_portfolio_bets.csv"
+DEFAULT_TRACKING_LEDGER = SCRIPT_DIR / "output" / "live_portfolio_bet_log.csv"
 
 
 def resolve_path(path: str) -> Path:
@@ -45,6 +47,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-total-exposure-fraction", type=float, default=0.25)
     parser.add_argument("--output-all", default=str(DEFAULT_OUTPUT_ALL))
     parser.add_argument("--output-bets", default=str(DEFAULT_OUTPUT_BETS))
+    parser.add_argument("--tracking-ledger", default=str(DEFAULT_TRACKING_LEDGER))
     return parser.parse_args()
 
 
@@ -130,6 +133,10 @@ def main() -> None:
     output_bets = resolve_path(args.output_bets)
     write_exports(scored, bets, output_all=output_all, output_bets=output_bets)
 
+    tracking_ledger = resolve_path(args.tracking_ledger)
+    tracking_rows = build_tracking_rows(bets, portfolio_name=args.portfolio)
+    append_tracking_rows(tracking_rows, tracking_ledger)
+
     print(
         {
             "portfolio": args.portfolio,
@@ -139,6 +146,7 @@ def main() -> None:
             "bankroll_eur": round(args.bankroll_eur, 2),
             "output_all": str(output_all),
             "output_bets": str(output_bets),
+            "tracking_ledger": str(tracking_ledger),
         }
     )
     if not bets.empty:
