@@ -16,9 +16,9 @@ LEAGUE_COLORS = {
     "Serie_A": "#f4a261",
 }
 STRATEGY_COLORS = {
-    "train=ALL|bet=Bundesliga|outcome=draw|odds=[4.00,10.00)|fav=nonfavorite": "#1d4ed8",
-    "train=ALL|bet=EPL|outcome=draw|odds=[2.00,10.00)|fav=nonfavorite": "#0b6e4f",
-    "train=ALL|bet=Serie_A|outcome=draw|odds=[2.00,10.00)|fav=nonfavorite": "#f4a261",
+    "train=Bundesliga|bet=Bundesliga|outcome=draw|odds=[4.00,10.00)|fav=nonfavorite": "#1d4ed8",
+    "train=ALL|bet=Bundesliga|outcome=draw|odds=[2.00,10.00)|fav=nonfavorite": "#60a5fa",
+    "train=ALL|bet=EPL|outcome=draw|odds=[4.00,10.00)|fav=nonfavorite": "#0b6e4f",
     "train=ALL|bet=La_liga|outcome=draw|odds=[2.20,4.00)|fav=nonfavorite": "#8d0801",
 }
 

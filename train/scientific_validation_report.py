@@ -5,6 +5,8 @@ import json
 from datetime import date
 from pathlib import Path
 
+from clv_io import match_bets_to_closing_market
+from clv_metrics import add_clv_columns, summarize_clv
 from validation_context import build_validation_context
 from validation_io import load_bets, load_summary, resolve_path
 from validation_markdown import build_markdown_report
@@ -21,6 +23,10 @@ def default_report_path(bets_path: Path, suffix: str) -> Path:
     return bets_path.with_name(f"{bets_path.stem}_scientific_report.{suffix}")
 
 
+def default_clv_bets_path(bets_path: Path) -> Path:
+    return bets_path.with_name(f"{bets_path.stem}_with_clv.csv")
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--bets", default=str(DEFAULT_BETS_PATH))
@@ -30,6 +36,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--seed", type=int, default=42)
     parser.add_argument("--output-md", default="")
     parser.add_argument("--output-json", default="")
+    parser.add_argument("--output-bets-clv", default="")
     return parser.parse_args()
 
 
@@ -39,7 +46,9 @@ def main() -> None:
     summary_path = resolve_path(args.summary) if args.summary else None
 
     bets_df = load_bets(bets_path)
+    bets_df = add_clv_columns(match_bets_to_closing_market(bets_df))
     summary_df = load_summary(summary_path)
+    clv_summary = summarize_clv(bets_df)
 
     metrics = summarize_bets(
         bets_df,
@@ -59,10 +68,11 @@ def main() -> None:
         summary_path=summary_path,
         current_date=current_date,
     )
-    verdict = build_validation_verdict(metrics, context=context)
+    verdict = build_validation_verdict(metrics, context=context, clv_metrics=clv_summary)
     report_md = build_markdown_report(
         context=context,
         metrics=metrics,
+        clv_metrics=clv_summary,
         monthly_rows=monthly_rows,
         league_rows=league_rows,
         strategy_rows=strategy_rows,
@@ -71,8 +81,10 @@ def main() -> None:
 
     output_md = resolve_path(args.output_md) if args.output_md else default_report_path(bets_path, "md")
     output_json = resolve_path(args.output_json) if args.output_json else default_report_path(bets_path, "json")
+    output_bets_clv = resolve_path(args.output_bets_clv) if args.output_bets_clv else default_clv_bets_path(bets_path)
     output_md.parent.mkdir(parents=True, exist_ok=True)
     output_json.parent.mkdir(parents=True, exist_ok=True)
+    output_bets_clv.parent.mkdir(parents=True, exist_ok=True)
 
     payload = {
         "bets_path": str(bets_path),
@@ -81,6 +93,7 @@ def main() -> None:
         "strategy_count": context.strategy_count,
         "clv_available": context.clv_available,
         "metrics": metrics,
+        "clv_metrics": clv_summary,
         "verdict": verdict.to_dict(),
         "monthly_rows": monthly_rows,
         "league_rows": league_rows,
@@ -90,6 +103,7 @@ def main() -> None:
 
     output_md.write_text(report_md, encoding="utf-8")
     output_json.write_text(json.dumps(payload, indent=2), encoding="utf-8")
+    bets_df.to_csv(output_bets_clv, index=False)
 
     print(
         {
@@ -102,9 +116,17 @@ def main() -> None:
             "prob_roi_positive": round(metrics["bootstrap_prob_roi_positive"], 6)
             if metrics["bootstrap_prob_roi_positive"] is not None
             else None,
+            "clv_matched_bets": clv_summary["matched_bet_count"],
+            "positive_clv_rate": round(clv_summary["positive_clv_rate"], 6)
+            if clv_summary["positive_clv_rate"] is not None
+            else None,
+            "avg_clv_odds_diff": round(clv_summary["avg_clv_odds_diff"], 6)
+            if clv_summary["avg_clv_odds_diff"] is not None
+            else None,
             "evidence_level": verdict.evidence_level,
             "output_md": str(output_md),
             "output_json": str(output_json),
+            "output_bets_clv": str(output_bets_clv),
         }
     )
 

@@ -54,6 +54,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--max-val-overlap", type=float, default=0.35)
     parser.add_argument("--portfolio-selection-split", choices=["val", "test"], default="val")
     parser.add_argument("--selection-min-roi", type=float, default=0.0)
+    parser.add_argument("--test-fit-scope", choices=["pretest", "train"], default="train")
     parser.add_argument("--export-summary", default=str(DEFAULT_SUMMARY_PATH))
     parser.add_argument("--export-bets", default=str(DEFAULT_BETS_PATH))
     return parser.parse_args()
@@ -244,6 +245,23 @@ def train_and_score(train_df: pd.DataFrame, eval_df: pd.DataFrame, feature_cols:
     return build_base_bets(eval_df, model.predict_proba(eval_df[feature_cols]))
 
 
+def build_test_train_frame(
+    df: pd.DataFrame,
+    *,
+    val_season: int,
+    train_league: str,
+    test_fit_scope: str,
+) -> pd.DataFrame:
+    if test_fit_scope == "train":
+        train_mask = df["season"] < val_season
+    else:
+        train_mask = df["season"] <= val_season
+
+    if train_league != "ALL":
+        train_mask &= df["league"] == train_league
+    return df[train_mask].copy()
+
+
 def main() -> None:
     args = parse_args()
 
@@ -340,12 +358,14 @@ def main() -> None:
     print(f"\nvalidation survivors={len(all_candidates)}")
 
     for candidate in all_candidates:
-        train_mask = df["season"] <= args.val_season
         train_league = candidate["train_league"]
-        if train_league != "ALL":
-            train_mask &= df["league"] == train_league
-        pretest_df = df[train_mask].copy()
-        test_base = train_and_score(pretest_df, test_df, candidate["feature_cols"], candidate["params"], args.seed)
+        test_train_df = build_test_train_frame(
+            df,
+            val_season=args.val_season,
+            train_league=train_league,
+            test_fit_scope=args.test_fit_scope,
+        )
+        test_base = train_and_score(test_train_df, test_df, candidate["feature_cols"], candidate["params"], args.seed)
         test_bets = apply_strategy(
             test_base,
             threshold=candidate["threshold"],
@@ -382,6 +402,7 @@ def main() -> None:
         row = {
             "selected_for_portfolio": candidate["strategy_name"] in selected_names,
             **{k: v for k, v in candidate.items() if not k.endswith("_df") and k not in {"params", "feature_cols"}},
+            "test_fit_scope": args.test_fit_scope,
             "params": str(candidate["params"]),
         }
         summary_rows.append(row)
@@ -411,6 +432,7 @@ def main() -> None:
             "selection_min_roi": args.selection_min_roi,
             "max_strategies": args.max_strategies,
             "max_overlap": args.max_val_overlap,
+            "test_fit_scope": args.test_fit_scope,
         }
     )
     print({**portfolio_val_summary, **portfolio_test_summary})

@@ -2,10 +2,12 @@ param(
     [string]$Data = "dataset_home.csv",
     [string]$ExportSummary = "output\\positive_strategy_portfolio_summary.csv",
     [string]$ExportBets = "output\\positive_strategy_portfolio_bets.csv",
-    [int]$Trials = 12,
+    [int]$Trials = 2,
     [string]$PortfolioSelectionSplit = "val",
     [double]$SelectionMinRoi = 0.0,
-    [int]$MaxStrategies = 4
+    [int]$MaxStrategies = 4,
+    [ValidateSet("pretest", "train")]
+    [string]$TestFitScope = "train"
 )
 
 function Assert-LastExitCode([string]$StepName) {
@@ -29,6 +31,7 @@ try {
         --portfolio-selection-split $PortfolioSelectionSplit `
         --selection-min-roi $SelectionMinRoi `
         --max-strategies $MaxStrategies `
+        --test-fit-scope $TestFitScope `
         --export-summary $ExportSummary `
         --export-bets $ExportBets
     Assert-LastExitCode "portfolio_strategy_search.py"

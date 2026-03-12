@@ -39,10 +39,29 @@ def render_verdict_lines(items: list[str], *, fallback: str) -> list[str]:
     return [f"- {item}" for item in items]
 
 
+def format_percent(value) -> str:
+    if value is None:
+        return "N/A"
+    return f"{value*100:.2f}%"
+
+
+def format_decimal(value) -> str:
+    if value is None:
+        return "N/A"
+    return f"{value:.4f}"
+
+
+def format_units(value) -> str:
+    if value is None:
+        return "N/A"
+    return f"{value:.2f}"
+
+
 def build_markdown_report(
     *,
     context: ValidationContext,
     metrics: dict,
+    clv_metrics: dict,
     verdict: ValidationVerdict,
     monthly_rows: list[dict],
     league_rows: list[dict],
@@ -68,6 +87,11 @@ def build_markdown_report(
     )
     strength_lines = render_verdict_lines(verdict.strengths, fallback="Aucun point fort net.")
     risk_lines = render_verdict_lines(verdict.risks, fallback="Aucun risque majeur identifie.")
+    clv_coverage_text = (
+        f"{clv_metrics['matched_bet_count']}/{metrics['bet_count']} ({format_percent(clv_metrics['matched_coverage'])})"
+        if clv_metrics.get("matched_bet_count") is not None
+        else "N/A"
+    )
 
     current_date_text = format_date_fr(context.current_date)
     next_step = (
@@ -91,17 +115,29 @@ def build_markdown_report(
 
 - Nombre de paris : `{metrics['bet_count']}`
 - Profit total : `{metrics['total_profit']:.2f}` unites
-- ROI moyen : `{metrics['roi']*100:.2f}%`
-- IC bootstrap 95% du ROI : `[{metrics['roi_ci_low']*100:.2f}%; {metrics['roi_ci_high']*100:.2f}%]`
-- Proba bootstrap que le ROI soit > 0 : `{metrics['bootstrap_prob_roi_positive']*100:.2f}%`
-- Hit rate : `{metrics['hit_rate']*100:.2f}%`
-- IC bootstrap 95% du hit rate : `[{metrics['hit_rate_ci_low']*100:.2f}%; {metrics['hit_rate_ci_high']*100:.2f}%]`
-- Cote moyenne : `{metrics['avg_odds']:.2f}`
-- Edge moyen : `{metrics['avg_edge']:.4f}`
-- EV moyen : `{metrics['avg_expected_value']:.4f}`
-- Max drawdown : `{metrics['max_drawdown']:.2f}` unites
+- ROI moyen : `{format_percent(metrics['roi'])}`
+- IC bootstrap 95% du ROI : `[{format_percent(metrics['roi_ci_low'])}; {format_percent(metrics['roi_ci_high'])}]`
+- Proba bootstrap que le ROI soit > 0 : `{format_percent(metrics['bootstrap_prob_roi_positive'])}`
+- Hit rate : `{format_percent(metrics['hit_rate'])}`
+- IC bootstrap 95% du hit rate : `[{format_percent(metrics['hit_rate_ci_low'])}; {format_percent(metrics['hit_rate_ci_high'])}]`
+- Cote moyenne : `{format_units(metrics['avg_odds'])}`
+- Edge moyen : `{format_decimal(metrics['avg_edge'])}`
+- EV moyen : `{format_decimal(metrics['avg_expected_value'])}`
+- Max drawdown : `{format_units(metrics['max_drawdown'])}` unites
 - Plus longue serie de pertes : `{metrics['longest_losing_streak']}`
 - Periode couverte : `{metrics['start_date']} -> {metrics['end_date']}`
+
+## CLV
+
+- Paris relies a la closing line : `{clv_coverage_text}`
+- Cote moyenne prise : `{format_units(metrics['avg_odds'])}`
+- Cote moyenne de cloture : `{format_units(clv_metrics['avg_closing_odds'])}`
+- CLV moyen en cote (`opening - closing`) : `{format_units(clv_metrics['avg_clv_odds_diff'])}`
+- CLV median en cote : `{format_units(clv_metrics['median_clv_odds_diff'])}`
+- CLV moyen en pourcentage de cote : `{format_percent(clv_metrics['avg_clv_odds_ratio'])}`
+- Taux de CLV positif : `{format_percent(clv_metrics['positive_clv_rate'])}`
+- Delta moyen de proba implicite (`closing - opening`) : `{format_decimal(clv_metrics['avg_clv_probability_diff'])}`
+- Delta median de proba implicite : `{format_decimal(clv_metrics['median_clv_probability_diff'])}`
 
 ## Verdict
 
@@ -118,6 +154,7 @@ Points qui empechent encore de parler de robustesse forte :
 - Ce rapport ne peut pas prouver mathematiquement que la strategie gagnera dans le futur.
 - Il peut seulement mesurer si le signal observe a l'air fragile, moyen ou encourageant.
 - Le vrai test propre reste une strategie gelee suivie en live sans retouche.
+- Le CLV historique sur `2025/26` sert ici a verifier si les prix pris battaient deja la cloture sur les matchs testes.
 
 ## Repartition mensuelle
 
@@ -135,7 +172,7 @@ Points qui empechent encore de parler de robustesse forte :
 
 - Geler le portefeuille utilise en live.
 - Logger chaque pari recommande avec sa date de generation.
-- Ajouter plus tard la cote de cloture pour mesurer le CLV.
+- Continuer a logger la cote de cloture pour prolonger le CLV sur la fin de saison.
 - Evaluer uniquement les matchs joues apres la date de gel.
 
 {next_step}

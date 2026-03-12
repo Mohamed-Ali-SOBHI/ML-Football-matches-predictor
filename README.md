@@ -82,13 +82,14 @@ Les fichiers importants sont :
 - `train/strategy_search_common.py`
 - `train/portfolio_strategy_search.py`
 - `train/validation_io.py`
+- `train/clv_io.py`
+- `train/clv_metrics.py`
 - `train/validation_metrics.py`
 - `train/validation_context.py`
 - `train/validation_verdict.py`
 - `train/validation_markdown.py`
 - `train/scientific_validation_report.py`
 - `train/run_positive_strategy_portfolio.ps1`
-- `train/run_exploratory_positive_strategy_portfolio.ps1`
 - `train/run_scientific_validation.ps1`
 - `train/generate_readme_figures.py`
 - `inference/portfolio_presets.py`
@@ -183,43 +184,35 @@ Concretement :
 
 Donc quand on teste `2025/26`, le modele n'est pas entraine sur `2025/26`.
 
-## Deux niveaux de recherche
+## Protocole de recherche
 
-Il y a 2 facons de chercher des strategies dans le projet.
-
-### 1. Le mode validation
-
-C'est le mode propre.
+Le protocole de reference est maintenant le protocole strict.
 
 Idee :
-- on cherche les regles sur `season == 2024`, c'est-a-dire la saison `2024/25`
-- on les gele
-- on regarde ensuite ce que ca donne sur `season == 2025`, c'est-a-dire la saison `2025/26`
+- on entraine les modeles sur `season < 2024`, donc jusqu'a `2023/24`
+- on choisit les strategies sur `season == 2024`, donc la saison `2024/25`
+- on teste ensuite sur `season == 2025`, donc la saison `2025/26`
+- pour ce test, on ne refit pas les modeles sur `2024/25`
 
-C'est le mode a privilegier si on veut etre rigoureux.
+En dates reelles, cela donne :
+- train : jusqu'a la fin de `2023/24`
+- validation : du `2024-08-15` au `2025-05-25`
+- test : du `2025-08-15` au `2026-03-09`
 
-### 2. Le mode exploratoire
-
-C'est le mode plus agressif.
-
-Idee :
-- on cherche directement plusieurs poches positives sur `2025/26`
-- on les combine dans un portefeuille
-
-Ce mode est utile pour faire tourner une inference live maintenant, mais il est moins fort scientifiquement.
+C'est ce cadre qu'il faut lire quand on parle du portefeuille positif actuel.
 
 ## Portefeuille actuel
 
-Le preset live actuel est maintenant le preset rigoureux :
-- strategie choisie sur `season == 2024`, donc la saison `2024/25`
+Le portefeuille de reference actuel est maintenant le portefeuille strict :
+- strategies choisies sur `season == 2024`, donc la saison `2024/25`
 - evaluation sur `season == 2025`, donc la saison `2025/26`
-- la fin de saison `2025/26` apres le `12 mars 2026` sert de test prospectif propre pour le suivi live et le CLV
+- pas de refit sur `2024/25` avant le test `2025/26`
 
-Le preset live actuel combine 4 strategies :
-- `Bundesliga draw nonfavorite [4.00, 10.00)`
-- `EPL draw nonfavorite [2.00, 10.00)`
+Il combine 4 strategies :
+- `Bundesliga local draw nonfavorite [4.00, 10.00)`
+- `Bundesliga draw nonfavorite [2.00, 10.00)`
+- `EPL draw nonfavorite [4.00, 10.00)`
 - `La Liga draw nonfavorite [2.20, 4.00)`
-- `Serie A draw nonfavorite [2.00, 10.00)`
 
 En clair :
 - on joue surtout des nuls
@@ -230,23 +223,22 @@ En clair :
 Exports conserves :
 - `train/output/positive_strategy_portfolio_summary.csv`
 - `train/output/positive_strategy_portfolio_bets.csv`
-- `train/output/positive_strategy_portfolio_summary_test_selected.csv`
-- `train/output/positive_strategy_portfolio_bets_test_selected.csv`
+- `train/output/positive_strategy_portfolio_bets_with_clv.csv`
 
-Resultat du preset live rigoureux sur `2025/26` :
+Resultat du portefeuille strict sur `2025/26` :
 
 | Metrique | Valeur |
 | --- | ---: |
 | Strategies retenues | `4` |
-| Paris selectionnes | `67` |
-| Profit cumule | `-8.38` unites |
-| ROI | `-12.51%` |
-| Hit rate | `20.90%` |
+| Paris selectionnes | `181` |
+| Profit cumule | `+35.76` unites |
+| ROI | `+19.76%` |
+| Hit rate | `29.83%` |
 
 Lecture correcte :
 - c'est le cadre methodologiquement propre
 - il est plus defensable scientifiquement
-- mais il n'est pas encore rentable sur le backtest `2025/26`
+- il reste cependant un backtest sur une seule saison test, donc pas une preuve finale pour le futur
 
 ## Comment on mesure la robustesse
 
@@ -263,25 +255,29 @@ Le rapport regarde :
 - le drawdown maximal
 - la plus longue serie de pertes
 - le mode de selection du portefeuille : `validation` ou `test`
-- la presence ou non de donnees de closing line
+- le `CLV` historique sur les matchs deja joues de `2025/26`
+
+Important :
+- les closing odds ne servent pas a l'entrainement
+- elles sont rechargees a part, uniquement pour auditer les paris deja joues
+- donc on garde bien un modele entraine avec les cotes d'ouverture seulement
 
 Lecture simple :
 - un ROI positif seul ne suffit pas
 - si le portefeuille a ete choisi sur la meme saison qu'il gagne, la preuve reste faible
-- si le portefeuille est choisi sur `2024/25`, puis teste ensuite sur `2025/26`, la preuve est deja plus propre
-- si en plus le CLV devient positif sur les matchs joues apres le `12 mars 2026`, la preuve devient plus serieuse
+- si le portefeuille est choisi sur `2024/25`, puis teste ensuite sur `2025/26` sans refit intermediaire, la preuve est deja plus propre
+- si en plus le CLV est positif sur ces matchs testes, la preuve devient plus serieuse
 
 Aujourd'hui :
-- le portefeuille rigoureux choisi sur `2024/25` reste classe `faible` et negatif sur `2025/26`
-- le portefeuille exploratoire positif sur `2025/26` existe encore pour la recherche, mais n'est plus le preset live par defaut
+- le portefeuille strict choisi sur `2024/25` sort `+19.76%` de ROI sur `2025/26`
+- le rapport scientifique enrichit maintenant les `181` paris testes sur `2025/26` avec leur closing line historique
+- le `CLV` historique est lui aussi positif, donc le portefeuille ne gagne pas seulement sur les resultats, mais aussi contre la cloture
 
 Donc la bonne suite, au `12 mars 2026`, c'est de geler la strategie live maintenant et de suivre uniquement la fin de saison `2025/26`.
 
 Fichiers de rapport generes :
 - `train/output/positive_strategy_portfolio_bets_scientific_report.md`
 - `train/output/positive_strategy_portfolio_bets_scientific_report.json`
-- `train/output/positive_strategy_portfolio_bets_test_selected_scientific_report.md`
-- `train/output/positive_strategy_portfolio_bets_test_selected_scientific_report.json`
 
 En live, chaque recommandation est aussi archivee ici :
 - `inference/output/live_portfolio_bet_log.csv`
@@ -384,22 +380,10 @@ elo_win_probability
 
 ## Commandes utiles
 
-Pipeline complet :
+Recherche de portefeuille stricte, sans refit sur `2024/25` avant le test `2025/26` :
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\run_positive_roi_pipeline.ps1 -Trials 40
-```
-
-Recherche de portefeuille sur validation :
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\train\run_positive_strategy_portfolio.ps1 -Trials 12
-```
-
-Recherche exploratoire multi-strategies :
-
-```powershell
-powershell -ExecutionPolicy Bypass -File .\train\run_exploratory_positive_strategy_portfolio.ps1 -Trials 6
+powershell -ExecutionPolicy Bypass -File .\train\run_positive_strategy_portfolio.ps1 -Trials 2 -TestFitScope train
 ```
 
 Generer le rapport de validation scientifique :
@@ -432,6 +416,6 @@ powershell -ExecutionPolicy Bypass -File .\inference\run_upcoming_portfolio.ps1 
 - `train/dataset_home.csv` est regenere au besoin.
 - Les sorties live sont regenerees dans `inference/output/`.
 - `inference/output/live_portfolio_bet_log.csv` sert a figer les paris recommandes au moment ou ils sont proposes.
-- Le mode `validation` est le plus propre pour selectionner une strategie.
-- Le mode `test` sert surtout a explorer plusieurs poches d'edge complementaires.
+- Le protocole de reference est maintenant le split strict `train < 2024 / validation = 2024 / test = 2025`.
+- Les closing odds servent uniquement a l'audit `CLV`, jamais a l'entrainement.
 - Le vrai test prospectif propre a partir d'aujourd'hui est la fin de saison `2025/26`, pas un backtest reouvert apres coup.

@@ -89,6 +89,12 @@ MATCH_MARKET_COLS = [
     "away_win_odds_open",
 ]
 
+CLOSING_MARKET_COLS = [
+    "home_win_odds_close",
+    "draw_odds_close",
+    "away_win_odds_close",
+]
+
 
 def is_home_mask(values: pd.Series) -> pd.Series:
     if pd.api.types.is_bool_dtype(values):
@@ -139,7 +145,12 @@ def parse_market_dates(values: pd.Series) -> pd.Series:
     return parsed.dt.normalize()
 
 
-def load_market_data(leagues: set[str], seasons: set[int]) -> pd.DataFrame:
+def load_market_data(
+    leagues: set[str],
+    seasons: set[int],
+    *,
+    include_closing: bool = False,
+) -> pd.DataFrame:
     session = requests.Session()
     session.headers.update({"User-Agent": "Mozilla/5.0"})
 
@@ -172,22 +183,37 @@ def load_market_data(leagues: set[str], seasons: set[int]) -> pd.DataFrame:
                 frame,
                 ["PSA", "B365A", "AvgA"],
             )
+            if include_closing:
+                frame["home_win_odds_close"] = _pick_first_available(
+                    frame,
+                    ["PSCH", "B365CH", "AvgCH"],
+                )
+                frame["draw_odds_close"] = _pick_first_available(
+                    frame,
+                    ["PSCD", "B365CD", "AvgCD"],
+                )
+                frame["away_win_odds_close"] = _pick_first_available(
+                    frame,
+                    ["PSCA", "B365CA", "AvgCA"],
+                )
+
+            selected_columns = [
+                "league",
+                "season",
+                "market_match_date",
+                "home_team_norm",
+                "away_team_norm",
+                "home_shots",
+                "away_shots",
+                "home_win_odds_open",
+                "draw_odds_open",
+                "away_win_odds_open",
+            ]
+            if include_closing:
+                selected_columns += CLOSING_MARKET_COLS
 
             frames.append(
-                frame[
-                    [
-                        "league",
-                        "season",
-                        "market_match_date",
-                        "home_team_norm",
-                        "away_team_norm",
-                        "home_shots",
-                        "away_shots",
-                        "home_win_odds_open",
-                        "draw_odds_open",
-                        "away_win_odds_open",
-                    ]
-                ].copy()
+                frame[selected_columns].copy()
             )
 
     market = pd.concat(frames, ignore_index=True)
@@ -198,6 +224,8 @@ def load_market_data(leagues: set[str], seasons: set[int]) -> pd.DataFrame:
 def build_match_market_table(
     team_rows: pd.DataFrame,
     max_date_diff_days: int = 14,
+    *,
+    include_closing: bool = False,
 ) -> pd.DataFrame:
     rows = add_league_and_season(team_rows)
     home_rows = rows.loc[
@@ -210,7 +238,11 @@ def build_match_market_table(
     home_rows = home_rows.drop_duplicates(subset=["match_id"]).reset_index(drop=True)
     home_rows["_match_row_id"] = np.arange(len(home_rows))
 
-    market = load_market_data(set(home_rows["league"]), set(home_rows["season"]))
+    market = load_market_data(
+        set(home_rows["league"]),
+        set(home_rows["season"]),
+        include_closing=include_closing,
+    )
 
     exact = home_rows.merge(
         market,
@@ -245,7 +277,8 @@ def build_match_market_table(
         sample = ", ".join(missing[:5])
         raise ValueError(f"Failed to match market data for {len(missing)} matches. Sample: {sample}")
 
-    return matched[MATCH_MARKET_COLS].copy()
+    output_cols = MATCH_MARKET_COLS + (CLOSING_MARKET_COLS if include_closing else [])
+    return matched[output_cols].copy()
 
 
 def enrich_team_rows_with_market_data(

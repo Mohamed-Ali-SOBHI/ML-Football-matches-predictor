@@ -20,6 +20,7 @@ def build_validation_verdict(
     metrics: dict[str, Any],
     *,
     context: ValidationContext,
+    clv_metrics: dict[str, Any] | None = None,
 ) -> ValidationVerdict:
     reasons: list[str] = []
     strengths: list[str] = []
@@ -61,11 +62,30 @@ def build_validation_verdict(
         reasons.append("Le volume de paris est trop faible pour conclure fortement.")
         score -= 1
 
-    if context.clv_available:
-        strengths.append("Des donnees de closing line sont disponibles pour verifier le CLV.")
-        score += 1
-    else:
+    if not context.clv_available:
         reasons.append("Le CLV n'est pas encore mesurable car les cotes de cloture ne sont pas stockees.")
+    else:
+        matched_bet_count = int((clv_metrics or {}).get("matched_bet_count") or 0)
+        positive_clv_rate = (clv_metrics or {}).get("positive_clv_rate")
+        avg_clv_odds_diff = (clv_metrics or {}).get("avg_clv_odds_diff")
+
+        if matched_bet_count >= bet_count and bet_count > 0:
+            strengths.append("La closing line historique est disponible sur tous les paris du test 2025/26.")
+            score += 1
+        else:
+            reasons.append("La couverture historique de closing line est incomplete sur le test 2025/26.")
+
+        if (
+            positive_clv_rate is not None
+            and avg_clv_odds_diff is not None
+            and positive_clv_rate > 0.5
+            and avg_clv_odds_diff > 0.0
+        ):
+            strengths.append("Le CLV historique est positif : le portefeuille prend en moyenne une meilleure cote que la cloture.")
+            score += 1
+        else:
+            reasons.append("Le CLV historique sur 2025/26 n'est pas positif.")
+            score -= 1
 
     if score >= 3:
         evidence_level = "encourageante"
