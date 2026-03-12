@@ -1,26 +1,46 @@
 # Foot IA
 
-Pipeline concentre sur un seul chemin utile :
+Projet de prediction foot centre sur une idee simple :
 
-1. recuperer les matchs bruts Understat
-2. enrichir avec les cotes d'ouverture
-3. construire un dataset strictement pre-match
-4. chercher un portefeuille de strategies complementaires
-5. lancer une inference live sur les matchs a venir
+- recuperer des matchs historiques
+- ajouter les cotes d'ouverture
+- entrainer un modele pre-match
+- comparer l'avis du modele a l'avis du marche
+- ne parier que sur quelques cas tres filtres
 
-L'ancienne strategie unitaire a ete retiree du depot. Le projet documente maintenant uniquement le portefeuille multi-strategies encore utilise.
+L'ancienne strategie unitaire a ete retiree. Le depot garde maintenant uniquement le portefeuille multi-strategies encore utilise.
 
-## Idee centrale
+## En 30 secondes
 
-Le coeur du pipeline n'est pas de battre le marche sur tous les matchs.
+Si on resume vraiment :
 
-La logique est :
-- prendre le marche comme baseline forte
-- estimer des probabilites pre-match avec un modele tabulaire
-- comparer explicitement `p_modele` et `p_marche`
-- ne jouer qu'une poche etroite de situations ou le desaccord semble exploitable
+- le bookmaker donne deja une tres bonne estimation via les cotes
+- le modele essaie de dire : "ici, la cote me parait un peu trop haute"
+- on ne parie pas sur tous les matchs
+- on garde seulement les matchs ou l'ecart entre modele et marche est assez fort
+- au lieu d'une seule strategie, on combine plusieurs petites strategies
 
-Autrement dit, on cherche des sous-regimes ou le marche parait legerement mal price, pas une recette universelle sur tout le 1X2.
+Le projet n'essaie donc pas de deviner tous les resultats.  
+Il essaie juste de reperer quelques situations ou le marche semble legerement se tromper.
+
+## L'idee de base
+
+Le point cle, c'est de ne pas traiter les cotes comme un ennemi.
+
+Les cotes sont deja une synthese enorme d'information :
+- niveau des equipes
+- absences
+- forme recente
+- perception du marche
+- marge bookmaker
+
+Donc le bon reflexe n'est pas :
+- "je vais ignorer les cotes et faire mieux"
+
+Le bon reflexe est :
+- "je vais prendre les cotes comme point de depart"
+- "je vais ajouter des infos foot utiles"
+- "je vais regarder seulement les matchs ou mon modele n'est pas d'accord avec le marche"
 
 ## Pipeline
 
@@ -33,27 +53,27 @@ flowchart LR
     E --> F["Live weekend inference"]
 ```
 
-## Sources de donnees
+## D'ou viennent les donnees
 
 - Matchs et stats : Understat
 - Cotes historiques : [football-data.co.uk](https://www.football-data.co.uk/)
 - Cotes live : Sportytrader via Playwright
-- Cotes conservees dans le dataset : uniquement les cotes d'ouverture
+- Cotes gardees dans le dataset : uniquement les cotes d'ouverture
 
 Couverture actuelle :
 - `21 128` matchs enrichis
 - `1 291` matchs pour `season == 2025`
 - `0` match `season == 2025` sans cotes d'ouverture completes
 
-## Structure
+## Structure du depot
 
 - `Data/` : CSV bruts par equipe et saison
-- `data_pipeline/` : ingestion Understat, matching, enrichissement cotes
-- `train/` : dataset builder, modele, tuning, recherche de portefeuille, graphes README
-- `inference/` : recuperation des cotes futures et predictions live
-- `docs/` : figures du README
+- `data_pipeline/` : collecte et enrichissement de la data
+- `train/` : generation dataset, modele, recherche de strategies, graphes
+- `inference/` : predictions live pour les matchs a venir
+- `docs/` : figures utilisees dans ce README
 
-Fichiers cle :
+Les fichiers importants sont :
 - `data_pipeline/scrapper.py`
 - `data_pipeline/market_data.py`
 - `data_pipeline/enrich_data.py`
@@ -71,29 +91,29 @@ Fichiers cle :
 - `inference/run_upcoming_portfolio.ps1`
 - `inference/run_weekend_predictions.ps1`
 
-## Prerequis
+## Ce que fait le modele, concretement
 
-Python 3.10+ avec :
-- `pandas`
-- `numpy`
-- `requests`
-- `tqdm`
-- `scikit-learn`
-- `xgboost`
-- `matplotlib`
+Le modele donne 3 probabilites pour chaque match :
+- victoire domicile
+- nul
+- victoire exterieur
 
-Pour l'inference live, Playwright doit aussi etre disponible sur la machine.
+Le marche donne aussi son avis via les cotes.
 
-## Formulation
+Exemple simple :
+- si la cote du nul est `4.00`, le marche dit en gros "le nul a autour de 25% de chances", avant correction de marge
+- si le modele pense plutot `32%`
+- alors il y a un ecart
 
-Le modele predit `P(home)`, `P(draw)`, `P(away)` pour chaque match.
+Cet ecart ne suffit pas tout seul.
+On regarde aussi :
+- si l'esperance est positive
+- si la cote est dans une plage interessante
+- si le pari correspond a une strategie deja retenue
 
-Les cotes d'ouverture donnent :
-- `market_home_win_odds_open`
-- `market_draw_odds_open`
-- `market_away_win_odds_open`
+## Comment une decision est prise
 
-On derive ensuite :
+Le calcul important est celui-ci :
 
 ```text
 p_market_raw = 1 / odds
@@ -102,18 +122,158 @@ edge = p_model - p_market
 expected_value = p_model * odds - 1
 ```
 
-La strategie ne parie pas sur tous les matchs. Elle filtre seulement les cas ou `edge` et `expected_value` depassent des seuils definis pendant la recherche.
+Version simple :
+- `p_market` = ce que pense le marche
+- `p_model` = ce que pense le modele
+- `edge` = la difference entre les deux
+- `expected_value` = est-ce que la cote paie assez par rapport a la proba du modele
 
-## Features du modele
+Le pipeline ne parie donc pas "par instinct".
+Il dit plutot :
+- "mon modele voit plus de chances que le marche"
+- "la cote paie assez"
+- "ce type de match a deja bien fonctionne dans la recherche"
 
-Le selecteur est dans `train/ml_common.py`. Le modele utilise `51` features numeriques pre-match :
-- 3 cotes d'ouverture brutes
-- 9 variables marche derivees
-- 13 variables de forme, repos, tendance et priors de saison precedente
-- 24 variables matchup home-away sur fenetres `1`, `3`, `5` et versions carry
-- 2 variables Elo
+## Ce que regarde le modele
 
-Liste exacte :
+Le modele utilise `51` variables pre-match.  
+En pratique, on peut les resumer en 4 blocs faciles a comprendre :
+
+1. Les cotes d'ouverture
+- elles donnent l'avis initial du marche
+
+2. La forme recente
+- resultats recents
+- tendances xG
+- efficacite offensive
+- solidite defensive
+
+3. Le matchup entre les deux equipes
+- avantage offensif
+- avantage defensif
+- pression
+- volume d'occasions
+
+4. Le contexte long terme
+- Elo
+- niveau de la saison precedente
+- carry d'une saison a l'autre
+- repos entre deux matchs
+
+La liste technique complete est plus bas si tu veux voir les noms exacts.
+
+## Pourquoi ce n'est pas de la triche
+
+Le modele ne voit jamais le futur.
+
+Concretement :
+- les stats d'un match ne servent qu'aux matchs suivants
+- les rolling windows sont calculees avant le match a predire
+- l'Elo est lu avant la mise a jour du resultat
+- seules les cotes d'ouverture sont utilisees
+- les saisons sont separees dans le temps
+
+Donc quand on teste `2025/26`, le modele n'est pas entraine sur `2025/26`.
+
+## Deux niveaux de recherche
+
+Il y a 2 facons de chercher des strategies dans le projet.
+
+### 1. Le mode validation
+
+C'est le mode propre.
+
+Idee :
+- on cherche les regles sur `2024`
+- on les gele
+- on regarde ensuite ce que ca donne sur `2025/26`
+
+C'est le mode a privilegier si on veut etre rigoureux.
+
+### 2. Le mode exploratoire
+
+C'est le mode plus agressif.
+
+Idee :
+- on cherche directement plusieurs poches positives sur `2025/26`
+- on les combine dans un portefeuille
+
+Ce mode est utile pour faire tourner une inference live maintenant, mais il est moins fort scientifiquement.
+
+## Portefeuille actuel
+
+Le preset live actuel combine 4 strategies :
+- `Bundesliga draw nonfavorite [2.20, 4.00)`
+- `EPL draw nonfavorite [4.00, 10.00)`
+- `Ligue 1 draw nonfavorite [2.00, 10.00)`
+- `Serie A draw nonfavorite [4.00, 10.00)`
+
+En clair :
+- on joue surtout des nuls
+- pas quand cette issue est deja favorite
+- avec des plages de cotes bien definies
+- sur plusieurs ligues pour eviter de dependre d'une seule poche
+
+Exports conserves :
+- `train/output/positive_strategy_portfolio_summary_test_selected.csv`
+- `train/output/positive_strategy_portfolio_bets_test_selected.csv`
+
+Resultat exploratoire observe sur `2025/26` :
+
+| Metrique | Valeur |
+| --- | ---: |
+| Strategies retenues | `4` |
+| Paris selectionnes | `97` |
+| Profit cumule | `+45.63` unites |
+| ROI | `+47.04%` |
+| Hit rate | `31.96%` |
+
+Lecture correcte :
+- c'est interessant
+- c'est exploitable pour de l'inference live
+- mais ce n'est pas encore une preuve finale de robustesse
+
+## Les graphiques, en version simple
+
+### 1. Profit cumule du portefeuille
+
+Question a laquelle ce graphe repond :
+- "est-ce que tout vient d'un seul gros coup de chance ?"
+
+S'il monte de facon relativement progressive, c'est plus rassurant qu'un seul pic isole.
+
+![Portfolio cumulative profit](docs/portfolio_cumulative_profit.png)
+
+### 2. Profit cumule par strategie
+
+Question :
+- "est-ce qu'une seule strategie fait tout le travail ?"
+
+Si plusieurs lignes contribuent, le portefeuille est plus credible.
+
+![Portfolio cumulative by strategy](docs/portfolio_cumulative_by_strategy.png)
+
+### 3. ROI mensuel par ligue
+
+Question :
+- "est-ce que l'edge existe partout ou seulement a un endroit ?"
+
+Ca aide a voir si le signal est un minimum diversifie.
+
+![Portfolio monthly ROI by league](docs/portfolio_monthly_roi_by_league.png)
+
+### 4. Contribution par strategie
+
+Question :
+- "qui apporte du volume, et qui apporte de la marge ?"
+
+Ca permet de separer les strategies utiles de celles qui sont juste spectaculaires sur peu de paris.
+
+![Portfolio strategy contribution](docs/portfolio_strategy_contribution.png)
+
+## Les features exactes
+
+Si tu veux le detail technique complet, voici les noms exacts utilises par le modele :
 
 ```text
 market_home_win_odds_open
@@ -169,74 +329,6 @@ elo_rating_gap
 elo_win_probability
 ```
 
-## Protocole scientifique
-
-Deux cadres coexistent :
-- `validation` : recherche sur `2024`, puis evaluation sur `2025/26`
-- `test` : recherche exploratoire directement sur `2025/26` pour identifier plusieurs poches d'edge complementaires
-
-Le preset live utilise aujourd'hui le portefeuille exploratoire, parce que c'est celui qui fournit plusieurs strategies actives en meme temps.
-
-Le modele ne voit que des variables pre-match :
-- stats historiques avec `shift(1)`
-- rolling windows pre-match
-- Elo lu avant mise a jour par le resultat
-- cotes d'ouverture uniquement
-- split temporel par saisons
-
-## Portefeuille actuel
-
-Strategies du preset live :
-- `Bundesliga draw nonfavorite [2.20, 4.00)`
-- `EPL draw nonfavorite [4.00, 10.00)`
-- `Ligue 1 draw nonfavorite [2.00, 10.00)`
-- `Serie A draw nonfavorite [4.00, 10.00)`
-
-Exports conserves pour cette version :
-- `train/output/positive_strategy_portfolio_summary_test_selected.csv`
-- `train/output/positive_strategy_portfolio_bets_test_selected.csv`
-
-Resultat exploratoire du portefeuille sur `2025/26` :
-
-| Metrique | Valeur |
-| --- | ---: |
-| Strategies retenues | `4` |
-| Paris selectionnes | `97` |
-| Profit cumule | `+45.63` unites |
-| ROI | `+47.04%` |
-| Hit rate | `31.96%` |
-
-## Graphiques
-
-### Profit cumule du portefeuille
-
-Montre si le resultat vient d'un seul gros coup ou d'une accumulation plus reguliere.
-
-![Portfolio cumulative profit](docs/portfolio_cumulative_profit.png)
-
-### Profit cumule par strategie
-
-Permet de verifier si plusieurs strategies contribuent vraiment ou si une seule porte tout le portefeuille.
-
-![Portfolio cumulative by strategy](docs/portfolio_cumulative_by_strategy.png)
-
-### ROI mensuel par ligue
-
-Permet de voir si l'edge est concentre sur une seule ligue ou s'il se repartit.
-
-![Portfolio monthly ROI by league](docs/portfolio_monthly_roi_by_league.png)
-
-### Contribution par strategie
-
-Decompose profit, volume et ROI moyen de chaque composante du portefeuille.
-
-![Portfolio strategy contribution](docs/portfolio_strategy_contribution.png)
-
-Lecture correcte :
-- le resultat est diversifie sur plusieurs strategies
-- le preset live reste exploratoire
-- il est utile operationnellement, pas encore etabli comme preuve definitive de robustesse
-
 ## Commandes utiles
 
 Pipeline complet :
@@ -280,5 +372,5 @@ powershell -ExecutionPolicy Bypass -File .\inference\run_upcoming_portfolio.ps1 
 - Les datasets intermediaires ne sont pas versionnes.
 - `train/dataset_home.csv` est regenere au besoin.
 - Les sorties live sont regenerees dans `inference/output/`.
-- Le portefeuille `validation` est le mode propre pour selectionner une strategie.
-- Le portefeuille `test` sert a explorer plusieurs poches d'edge, pas a demontrer une robustesse statistique finale.
+- Le mode `validation` est le plus propre pour selectionner une strategie.
+- Le mode `test` sert surtout a explorer plusieurs poches d'edge complementaires.
