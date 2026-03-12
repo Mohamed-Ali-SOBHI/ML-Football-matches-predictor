@@ -1,4 +1,4 @@
-# Foot IA
+# ScorePredict
 
 Projet de prediction foot centre sur une idee simple :
 
