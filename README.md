@@ -122,7 +122,25 @@ On regarde aussi :
 
 ## Comment une decision est prise
 
-Le calcul important est celui-ci :
+Version tres simple :
+
+1. Le modele regarde un match avant qu'il commence.
+2. Il donne 3 probabilites :
+- domicile
+- nul
+- exterieur
+3. On compare ces 3 probabilites a celles du marche.
+4. Si le modele voit un nul plus probable que le marche, on calcule si la cote paie assez.
+5. Si ce match rentre dans une des 4 strategies du portefeuille, on garde le pari.
+6. Sinon, on ne fait rien.
+
+En clair, on ne demande pas au modele :
+- "donne-moi un vainqueur a tout prix"
+
+On lui demande :
+- "est-ce qu'il y a ici un prix interessant, dans une zone que le backtest a deja validee ?"
+
+Le calcul de base reste celui-ci :
 
 ```text
 p_market_raw = 1 / odds
@@ -137,11 +155,19 @@ Version simple :
 - `edge` = la difference entre les deux
 - `expected_value` = est-ce que la cote paie assez par rapport a la proba du modele
 
-Le pipeline ne parie donc pas "par instinct".
-Il dit plutot :
-- "mon modele voit plus de chances que le marche"
-- "la cote paie assez"
-- "ce type de match a deja bien fonctionne dans la recherche"
+La decision finale ressemble donc a une check-list :
+- le modele aime l'issue
+- le marche la paie assez
+- la cote est dans la bonne plage
+- l'issue n'est pas deja favorite si la strategie interdit de suivre le favori
+- le match appartient a une ligue que la strategie couvre
+
+Exemple concret :
+- le marche voit le nul a `24%`
+- le modele voit le nul a `31%`
+- la cote du nul est `4.60`
+- la strategie autorise les nuls entre `4.00` et `10.00`
+- alors le match peut etre retenu
 
 ## Ce que regarde le modele
 
@@ -188,16 +214,37 @@ Donc quand on teste `2025/26`, le modele n'est pas entraine sur `2025/26`.
 
 Le protocole de reference est maintenant le protocole strict.
 
-Idee :
-- on entraine les modeles sur `season < 2024`, donc jusqu'a `2023/24`
-- on choisit les strategies sur `season == 2024`, donc la saison `2024/25`
-- on teste ensuite sur `season == 2025`, donc la saison `2025/26`
-- pour ce test, on ne refit pas les modeles sur `2024/25`
+Version simple :
+
+1. On apprend d'abord a predire sur l'ancien historique.
+2. Ensuite, on prend la saison `2024/25` comme terrain d'essai pour chercher quelles regles marchent le mieux.
+3. Quand ces regles sont choisies, on les gele.
+4. Puis on les envoie sur une nouvelle saison, `2025/26`, sans les modifier.
+
+Le point important :
+- la recherche se fait sur `2024/25`
+- la verification se fait sur `2025/26`
+- donc on ne choisit pas la strategie en regardant directement la saison test
 
 En dates reelles, cela donne :
 - train : jusqu'a la fin de `2023/24`
 - validation : du `2024-08-15` au `2025-05-25`
 - test : du `2025-08-15` au `2026-03-09`
+
+Comment la recherche marche, tres concretement :
+
+1. Le code entraine plusieurs modeles candidats.
+2. Pour chaque modele, il teste beaucoup de regles de pari :
+- quelle ligue jouer
+- quel type d'issue jouer
+- quelle plage de cotes accepter
+- quel seuil minimum d'edge et d'expected value demander
+3. Il garde seulement les strategies qui sont bonnes sur `2024/25`.
+4. Parmi elles, il construit un portefeuille :
+- pas trop de recouvrement
+- pas de strategies qui se marchent dessus sur le meme match
+- maximum `4` strategies
+5. Ce portefeuille est ensuite teste tel quel sur `2025/26`.
 
 C'est ce cadre qu'il faut lire quand on parle du portefeuille positif actuel.
 
@@ -239,6 +286,42 @@ Lecture correcte :
 - c'est le cadre methodologiquement propre
 - il est plus defensable scientifiquement
 - il reste cependant un backtest sur une seule saison test, donc pas une preuve finale pour le futur
+
+## Exemples de paris gagnants en 2026
+
+Pour rendre le resultat plus concret, voici des paris du portefeuille strict qui ont gagne en `2026`, c'est-a-dire entre le `1 janvier 2026` et le `9 mars 2026`.
+
+Resume rapide :
+- `29` paris gagnants sur cette periode
+- `14` en `La Liga`
+- `8` en `EPL`
+- `7` en `Bundesliga`
+
+Exemples marquants :
+
+| Date | Ligue | Match | Pari | Cote | Profit |
+| --- | --- | --- | --- | ---: | ---: |
+| `2026-01-17` | `EPL` | `Liverpool vs Burnley` | `draw` | `6.50` | `+5.50` |
+| `2026-01-31` | `Bundesliga` | `Hamburger SV vs Bayern Munich` | `draw` | `6.50` | `+5.50` |
+| `2026-02-21` | `EPL` | `Chelsea vs Burnley` | `draw` | `6.50` | `+5.50` |
+| `2026-03-04` | `EPL` | `Manchester City vs Nottingham Forest` | `draw` | `5.00` | `+4.00` |
+| `2026-02-15` | `Bundesliga` | `RasenBallsport Leipzig vs Wolfsburg` | `draw` | `4.75` | `+3.75` |
+| `2026-01-01` | `EPL` | `Liverpool vs Leeds` | `draw` | `4.45` | `+3.45` |
+| `2026-01-08` | `EPL` | `Arsenal vs Liverpool` | `draw` | `4.35` | `+3.35` |
+| `2026-02-10` | `EPL` | `Chelsea vs Leeds` | `draw` | `4.33` | `+3.33` |
+| `2026-02-01` | `EPL` | `Tottenham vs Manchester City` | `draw` | `4.10` | `+3.10` |
+| `2026-02-28` | `Bundesliga` | `Bayer Leverkusen vs Mainz 05` | `draw` | `4.00` | `+3.00` |
+| `2026-02-21` | `La Liga` | `Real Sociedad vs Real Oviedo` | `draw` | `3.90` | `+2.90` |
+| `2026-03-09` | `La Liga` | `Espanyol vs Real Oviedo` | `draw` | `3.40` | `+2.40` |
+
+La liste complete est dans :
+- `train/output/positive_strategy_portfolio_bets.csv`
+
+Si tu filtres :
+- `won_bet = True`
+- `date >= 2026-01-01`
+
+tu retrouves tous les paris gagnants de l'annee 2026 presents dans ce backtest.
 
 ## Comment on mesure la robustesse
 
