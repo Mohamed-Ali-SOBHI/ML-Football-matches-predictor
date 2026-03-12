@@ -2,7 +2,7 @@ param(
     [string]$DateFrom,
     [string]$DateTo,
     [string]$FixturesCsv = "",
-    [string]$Portfolio = "exploratory_multi_strategy_portfolio_2025",
+    [string]$Portfolio = "validation_multi_strategy_portfolio_2024",
     [double]$BankrollEur = 50.0,
     [string]$TrackingLedger = ".\\inference\\output\\live_portfolio_bet_log.csv",
     [switch]$RefreshRawData

@@ -13,8 +13,8 @@ from validation_verdict import build_validation_verdict
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-DEFAULT_BETS_PATH = SCRIPT_DIR / "output" / "positive_strategy_portfolio_bets_test_selected.csv"
-DEFAULT_SUMMARY_PATH = SCRIPT_DIR / "output" / "positive_strategy_portfolio_summary_test_selected.csv"
+DEFAULT_BETS_PATH = SCRIPT_DIR / "output" / "positive_strategy_portfolio_bets.csv"
+DEFAULT_SUMMARY_PATH = SCRIPT_DIR / "output" / "positive_strategy_portfolio_summary.csv"
 
 
 def default_report_path(bets_path: Path, suffix: str) -> Path:

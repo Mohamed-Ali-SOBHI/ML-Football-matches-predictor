@@ -31,6 +31,11 @@ SPORTYTRADER_LEAGUE_CONFIGS = {
         "title_contains": "Ligue 1",
         "section_title": "Upcoming Ligue 1 matches",
     },
+    "La_liga": {
+        "url": "https://www.sportytrader.com/en/odds/football/spain/laliga-108/",
+        "title_contains": "LaLiga",
+        "section_title": "Upcoming LaLiga matches",
+    },
 }
 NPX_EXECUTABLE = shutil.which("npx") or shutil.which("npx.cmd") or "npx"
 PLAYWRIGHT_CLI = [

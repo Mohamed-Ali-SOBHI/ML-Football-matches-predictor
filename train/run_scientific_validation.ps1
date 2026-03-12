@@ -1,6 +1,6 @@
 param(
-    [string]$Bets = "output\\positive_strategy_portfolio_bets_test_selected.csv",
-    [string]$Summary = "output\\positive_strategy_portfolio_summary_test_selected.csv",
+    [string]$Bets = "output\\positive_strategy_portfolio_bets.csv",
+    [string]$Summary = "output\\positive_strategy_portfolio_summary.csv",
     [int]$BootstrapIterations = 10000,
     [string]$OutputMd = "",
     [string]$OutputJson = ""

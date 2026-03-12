@@ -6,19 +6,20 @@ import pandas as pd
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-DEFAULT_PORTFOLIO_BETS = SCRIPT_DIR / "output" / "positive_strategy_portfolio_bets_test_selected.csv"
+DEFAULT_PORTFOLIO_BETS = SCRIPT_DIR / "output" / "positive_strategy_portfolio_bets.csv"
 DEFAULT_DOCS = SCRIPT_DIR.parent / "docs"
 LEAGUE_COLORS = {
     "EPL": "#0b6e4f",
     "Bundesliga": "#1d4ed8",
+    "La_liga": "#8d0801",
     "Ligue_1": "#bc4749",
     "Serie_A": "#f4a261",
 }
 STRATEGY_COLORS = {
-    "train=ALL|bet=Bundesliga|outcome=draw|odds=[2.20,4.00)|fav=nonfavorite": "#1d4ed8",
-    "train=EPL|bet=EPL|outcome=draw|odds=[4.00,10.00)|fav=nonfavorite": "#0b6e4f",
-    "train=ALL|bet=Ligue_1|outcome=draw|odds=[2.00,10.00)|fav=nonfavorite": "#bc4749",
-    "train=Serie_A|bet=Serie_A|outcome=draw|odds=[4.00,10.00)|fav=nonfavorite": "#f4a261",
+    "train=ALL|bet=Bundesliga|outcome=draw|odds=[4.00,10.00)|fav=nonfavorite": "#1d4ed8",
+    "train=ALL|bet=EPL|outcome=draw|odds=[2.00,10.00)|fav=nonfavorite": "#0b6e4f",
+    "train=ALL|bet=Serie_A|outcome=draw|odds=[2.00,10.00)|fav=nonfavorite": "#f4a261",
+    "train=ALL|bet=La_liga|outcome=draw|odds=[2.20,4.00)|fav=nonfavorite": "#8d0801",
 }
 
 
@@ -57,7 +58,7 @@ def plot_portfolio_cumulative_profit(df: pd.DataFrame, output_path: Path) -> Non
     final_roi = df["profit"].mean() * 100.0
     ax.set_title(
         (
-            "Exploratory multi-strategy portfolio on 2025/26\n"
+            "Validation-selected multi-strategy portfolio on 2025/26\n"
             f"{len(df)} bets, cumulative profit {final_profit:.2f}u, ROI {final_roi:.2f}%"
         ),
         fontsize=13,
@@ -87,7 +88,7 @@ def plot_portfolio_cumulative_by_strategy(df: pd.DataFrame, output_path: Path) -
         )
 
     ax.axhline(0.0, color="#444444", linewidth=1.0, linestyle="--")
-    ax.set_title("Cumulative profit by strategy inside the exploratory portfolio", fontsize=13)
+    ax.set_title("Cumulative profit by strategy inside the validation-selected portfolio", fontsize=13)
     ax.set_xlabel("Global bet number")
     ax.set_ylabel("Strategy cumulative profit (units)")
     ax.grid(alpha=0.25)
@@ -104,7 +105,7 @@ def plot_portfolio_monthly_roi_by_league(df: pd.DataFrame, output_path: Path) ->
         .agg(bets=("profit", "size"), roi=("profit", "mean"), profit=("profit", "sum"))
     )
     months = list(dict.fromkeys(monthly["month"].tolist()))
-    leagues = [league for league in ["Bundesliga", "EPL", "Ligue_1", "Serie_A"] if league in set(monthly["league"])]
+    leagues = [league for league in ["Bundesliga", "EPL", "La_liga", "Ligue_1", "Serie_A"] if league in set(monthly["league"])]
     x = np.arange(len(months))
     width = 0.18 if leagues else 0.6
 
@@ -138,7 +139,7 @@ def plot_portfolio_monthly_roi_by_league(df: pd.DataFrame, output_path: Path) ->
     ax.axhline(0.0, color="#444444", linewidth=1.0, linestyle="--")
     ax.set_xticks(x)
     ax.set_xticklabels(months)
-    ax.set_title("Monthly ROI by league inside the exploratory portfolio", fontsize=13)
+    ax.set_title("Monthly ROI by league inside the validation-selected portfolio", fontsize=13)
     ax.set_xlabel("Month")
     ax.set_ylabel("ROI (%)")
     ax.grid(axis="y", alpha=0.25)
@@ -165,7 +166,7 @@ def plot_portfolio_strategy_contribution(df: pd.DataFrame, output_path: Path) ->
     fig, ax = plt.subplots(figsize=(12.0, 6.2))
     bars = ax.barh(labels, summary["profit"], color=colors, alpha=0.9)
     ax.axvline(0.0, color="#444444", linewidth=1.0, linestyle="--")
-    ax.set_title("Strategy contribution inside the exploratory portfolio", fontsize=13)
+    ax.set_title("Strategy contribution inside the validation-selected portfolio", fontsize=13)
     ax.set_xlabel("Profit (units)")
     ax.set_ylabel("Strategy")
     ax.grid(axis="x", alpha=0.25)

@@ -192,9 +192,9 @@ Il y a 2 facons de chercher des strategies dans le projet.
 C'est le mode propre.
 
 Idee :
-- on cherche les regles sur `2024`
+- on cherche les regles sur `season == 2024`, c'est-a-dire la saison `2024/25`
 - on les gele
-- on regarde ensuite ce que ca donne sur `2025/26`
+- on regarde ensuite ce que ca donne sur `season == 2025`, c'est-a-dire la saison `2025/26`
 
 C'est le mode a privilegier si on veut etre rigoureux.
 
@@ -210,11 +210,16 @@ Ce mode est utile pour faire tourner une inference live maintenant, mais il est 
 
 ## Portefeuille actuel
 
+Le preset live actuel est maintenant le preset rigoureux :
+- strategie choisie sur `season == 2024`, donc la saison `2024/25`
+- evaluation sur `season == 2025`, donc la saison `2025/26`
+- la fin de saison `2025/26` apres le `12 mars 2026` sert de test prospectif propre pour le suivi live et le CLV
+
 Le preset live actuel combine 4 strategies :
-- `Bundesliga draw nonfavorite [2.20, 4.00)`
-- `EPL draw nonfavorite [4.00, 10.00)`
-- `Ligue 1 draw nonfavorite [2.00, 10.00)`
-- `Serie A draw nonfavorite [4.00, 10.00)`
+- `Bundesliga draw nonfavorite [4.00, 10.00)`
+- `EPL draw nonfavorite [2.00, 10.00)`
+- `La Liga draw nonfavorite [2.20, 4.00)`
+- `Serie A draw nonfavorite [2.00, 10.00)`
 
 En clair :
 - on joue surtout des nuls
@@ -223,23 +228,25 @@ En clair :
 - sur plusieurs ligues pour eviter de dependre d'une seule poche
 
 Exports conserves :
+- `train/output/positive_strategy_portfolio_summary.csv`
+- `train/output/positive_strategy_portfolio_bets.csv`
 - `train/output/positive_strategy_portfolio_summary_test_selected.csv`
 - `train/output/positive_strategy_portfolio_bets_test_selected.csv`
 
-Resultat exploratoire observe sur `2025/26` :
+Resultat du preset live rigoureux sur `2025/26` :
 
 | Metrique | Valeur |
 | --- | ---: |
 | Strategies retenues | `4` |
-| Paris selectionnes | `97` |
-| Profit cumule | `+45.63` unites |
-| ROI | `+47.04%` |
-| Hit rate | `31.96%` |
+| Paris selectionnes | `67` |
+| Profit cumule | `-8.38` unites |
+| ROI | `-12.51%` |
+| Hit rate | `20.90%` |
 
 Lecture correcte :
-- c'est interessant
-- c'est exploitable pour de l'inference live
-- mais ce n'est pas encore une preuve finale de robustesse
+- c'est le cadre methodologiquement propre
+- il est plus defensable scientifiquement
+- mais il n'est pas encore rentable sur le backtest `2025/26`
 
 ## Comment on mesure la robustesse
 
@@ -261,19 +268,20 @@ Le rapport regarde :
 Lecture simple :
 - un ROI positif seul ne suffit pas
 - si le portefeuille a ete choisi sur la meme saison qu'il gagne, la preuve reste faible
-- si le portefeuille est gele puis gagne ensuite sur des matchs jamais vus, la preuve devient plus serieuse
+- si le portefeuille est choisi sur `2024/25`, puis teste ensuite sur `2025/26`, la preuve est deja plus propre
+- si en plus le CLV devient positif sur les matchs joues apres le `12 mars 2026`, la preuve devient plus serieuse
 
 Aujourd'hui :
-- le portefeuille exploratoire sur `2025/26` reste classe `faible`
-- le portefeuille choisi proprement sur validation reste negatif
+- le portefeuille rigoureux choisi sur `2024/25` reste classe `faible` et negatif sur `2025/26`
+- le portefeuille exploratoire positif sur `2025/26` existe encore pour la recherche, mais n'est plus le preset live par defaut
 
 Donc la bonne suite, au `12 mars 2026`, c'est de geler la strategie live maintenant et de suivre uniquement la fin de saison `2025/26`.
 
 Fichiers de rapport generes :
-- `train/output/positive_strategy_portfolio_bets_test_selected_scientific_report.md`
-- `train/output/positive_strategy_portfolio_bets_test_selected_scientific_report.json`
 - `train/output/positive_strategy_portfolio_bets_scientific_report.md`
 - `train/output/positive_strategy_portfolio_bets_scientific_report.json`
+- `train/output/positive_strategy_portfolio_bets_test_selected_scientific_report.md`
+- `train/output/positive_strategy_portfolio_bets_test_selected_scientific_report.json`
 
 En live, chaque recommandation est aussi archivee ici :
 - `inference/output/live_portfolio_bet_log.csv`
